@@ -1,0 +1,913 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>윤건언어</title>
+    <meta
+      name="description"
+      content="윤건언어의 개요, 역사, 언어적 특징, 문법, 어휘, 사전, 인공어샵, 후원 정보를 정리한 안내 사이트입니다."
+    />
+    <meta property="og:title" content="윤건언어" />
+    <meta
+      property="og:description"
+      content="윤건이 창안한 인공어 윤건언어의 역사, 특징, 문법, 어휘, 후원 정보를 정리했습니다."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="ko_KR" />
+    <style>
+      :root {
+        color-scheme: light;
+        --black: #050505;
+        --ink: #111111;
+        --muted: #555555;
+        --line: #cfcfcf;
+        --soft: #f1f1f1;
+        --white: #ffffff;
+        --page: #fbfbfb;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        background: var(--page);
+        color: var(--ink);
+        font-family:
+          Pretendard, "Noto Sans KR", "Apple SD Gothic Neo", "Malgun Gothic",
+          system-ui, sans-serif;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      p {
+        margin: 0;
+      }
+
+      .topbar {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        border-bottom: 1px solid var(--line);
+        background: rgba(255, 255, 255, 0.94);
+        backdrop-filter: blur(16px);
+      }
+
+      .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        width: min(100% - 40px, 1180px);
+        margin: 0 auto;
+        padding: 12px 0;
+      }
+
+      .brand {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        font-weight: 900;
+      }
+
+      .brand-mark {
+        display: grid;
+        place-items: center;
+        width: 32px;
+        height: 32px;
+        border-radius: 8px;
+        background: var(--black);
+        color: var(--white);
+        font-weight: 900;
+      }
+
+      .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+      }
+
+      .nav-links a,
+      .toc a {
+        border-radius: 8px;
+        color: var(--muted);
+        font-size: 14px;
+        font-weight: 700;
+        padding: 9px 12px;
+      }
+
+      .nav-links a:hover,
+      .toc a:hover {
+        background: var(--soft);
+        color: var(--ink);
+      }
+
+      .hero,
+      .support {
+        border-bottom: 1px solid var(--black);
+        background: var(--black);
+        color: var(--white);
+      }
+
+      .hero-inner {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) 430px;
+        gap: 42px;
+        width: min(100% - 40px, 1180px);
+        margin: 0 auto;
+        padding: 56px 0;
+      }
+
+      .eyebrow {
+        display: inline-flex;
+        width: fit-content;
+        border: 1px solid rgba(255, 255, 255, 0.28);
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.1);
+        color: var(--white);
+        font-size: 14px;
+        font-weight: 800;
+        padding: 6px 10px;
+      }
+
+      h1 {
+        margin: 18px 0 0;
+        color: var(--white);
+        font-size: clamp(44px, 8vw, 72px);
+        font-weight: 950;
+        letter-spacing: 0;
+        line-height: 1.05;
+      }
+
+      .hero-copy {
+        max-width: 760px;
+        margin-top: 22px;
+        color: rgba(255, 255, 255, 0.74);
+        font-size: 20px;
+        line-height: 1.75;
+      }
+
+      .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 28px;
+      }
+
+      .button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 42px;
+        border: 1px solid rgba(255, 255, 255, 0.28);
+        border-radius: 8px;
+        font-size: 14px;
+        font-weight: 900;
+        padding: 10px 16px;
+      }
+
+      .button.primary {
+        border-color: var(--white);
+        background: var(--white);
+        color: var(--black);
+      }
+
+      .facts {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
+        margin-top: 36px;
+      }
+
+      .fact,
+      .hero-panel,
+      .plan,
+      .article-card,
+      .note-list li {
+        border-radius: 8px;
+      }
+
+      .fact {
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        background: var(--white);
+        color: var(--ink);
+        padding: 16px;
+      }
+
+      .fact dt {
+        margin: 0;
+        color: var(--muted);
+        font-size: 14px;
+        font-weight: 800;
+      }
+
+      .fact dd {
+        margin: 8px 0 0;
+        font-size: 16px;
+        font-weight: 900;
+      }
+
+      .hero-panel {
+        align-self: start;
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        background: var(--white);
+        color: var(--ink);
+        padding: 24px;
+        box-shadow: 0 24px 70px rgba(0, 0, 0, 0.28);
+      }
+
+      .founder,
+      .language,
+      .direction {
+        border-radius: 8px;
+      }
+
+      .founder {
+        border: 1px solid var(--line);
+        background: var(--soft);
+        padding: 20px;
+      }
+
+      .label {
+        color: var(--ink);
+        font-size: 14px;
+        font-weight: 900;
+      }
+
+      .founder-name {
+        margin-top: 12px;
+        color: var(--muted);
+        font-size: 18px;
+        font-weight: 800;
+      }
+
+      .languages {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
+        margin-top: 18px;
+      }
+
+      .language {
+        border: 1px solid var(--line);
+        background: var(--white);
+        font-size: 14px;
+        font-weight: 900;
+        padding: 16px 10px;
+        text-align: center;
+      }
+
+      .direction {
+        margin-top: 18px;
+        background: var(--black);
+        color: var(--white);
+        padding: 20px;
+      }
+
+      .direction .label {
+        color: rgba(255, 255, 255, 0.68);
+      }
+
+      .direction p:last-child {
+        margin-top: 10px;
+        font-size: 20px;
+        font-weight: 900;
+        line-height: 1.6;
+      }
+
+      .support-inner {
+        width: min(100% - 40px, 1180px);
+        margin: 0 auto;
+        padding: 48px 0;
+      }
+
+      .section-head {
+        display: flex;
+        align-items: end;
+        justify-content: space-between;
+        gap: 24px;
+        margin-bottom: 28px;
+      }
+
+      .section-kicker {
+        color: rgba(255, 255, 255, 0.72);
+        font-size: 14px;
+        font-weight: 900;
+      }
+
+      h2 {
+        margin: 10px 0 0;
+        font-size: 34px;
+        font-weight: 950;
+        letter-spacing: 0;
+        line-height: 1.2;
+      }
+
+      .support-copy {
+        max-width: 640px;
+        color: rgba(255, 255, 255, 0.72);
+        font-size: 16px;
+        line-height: 1.7;
+      }
+
+      .plans {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+      }
+
+      .plan {
+        border: 1px solid var(--line);
+        background: var(--white);
+        color: var(--ink);
+        padding: 22px;
+      }
+
+      .plan h3 {
+        margin: 0;
+        font-size: 22px;
+        font-weight: 950;
+        letter-spacing: 0;
+        text-transform: uppercase;
+      }
+
+      .price {
+        display: flex;
+        align-items: end;
+        gap: 8px;
+        margin-top: 18px;
+      }
+
+      .price strong {
+        font-size: 40px;
+        line-height: 1;
+      }
+
+      .price span {
+        color: var(--muted);
+        font-size: 14px;
+        font-weight: 800;
+      }
+
+      .plan-note {
+        min-height: 52px;
+        margin-top: 18px;
+        color: var(--muted);
+        font-size: 16px;
+        line-height: 1.7;
+      }
+
+      .support-panel {
+        margin-top: 18px;
+        border: 1px solid rgba(255, 255, 255, 0.28);
+        border-radius: 8px;
+        background: var(--white);
+        color: var(--ink);
+        padding: 22px;
+      }
+
+      .support-panel h3 {
+        margin: 0;
+        font-size: 22px;
+        font-weight: 950;
+        letter-spacing: 0;
+      }
+
+      .support-panel p {
+        margin-top: 12px;
+        color: var(--muted);
+        font-size: 16px;
+        line-height: 1.8;
+      }
+
+      .mail-link {
+        font-weight: 950;
+        text-decoration: underline;
+        text-underline-offset: 3px;
+      }
+
+      .download-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 18px;
+      }
+
+      .download-links a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 42px;
+        border: 1px solid var(--black);
+        border-radius: 8px;
+        background: var(--black);
+        color: var(--white);
+        font-size: 14px;
+        font-weight: 900;
+        padding: 10px 14px;
+      }
+
+      .download-links a.secondary {
+        background: var(--white);
+        color: var(--black);
+      }
+
+      .article-layout {
+        display: grid;
+        grid-template-columns: 230px minmax(0, 1fr);
+        gap: 34px;
+        width: min(100% - 40px, 1180px);
+        margin: 0 auto;
+        padding: 48px 0;
+      }
+
+      .toc {
+        position: sticky;
+        top: 76px;
+        align-self: start;
+        max-height: calc(100vh - 96px);
+        overflow: auto;
+      }
+
+      .toc-title {
+        margin: 0 0 10px;
+        font-size: 14px;
+        font-weight: 950;
+      }
+
+      .toc a {
+        display: block;
+      }
+
+      .article-card {
+        border: 1px solid var(--line);
+        background: var(--white);
+        padding: 32px;
+        box-shadow: 0 12px 32px rgba(0, 0, 0, 0.05);
+      }
+
+      .article-section {
+        scroll-margin-top: 92px;
+        border-bottom: 1px solid var(--line);
+        padding: 34px 0;
+      }
+
+      .article-section:first-child {
+        padding-top: 0;
+      }
+
+      .article-section:last-child {
+        border-bottom: 0;
+        padding-bottom: 0;
+      }
+
+      .article-section h2 {
+        color: var(--ink);
+      }
+
+      .article-section h3 {
+        margin: 28px 0 0;
+        font-size: 21px;
+        font-weight: 950;
+        letter-spacing: 0;
+      }
+
+      .article-section p {
+        margin-top: 16px;
+        color: #2a2a2a;
+        font-size: 16px;
+        line-height: 1.9;
+      }
+
+      .shop-link {
+        display: inline-flex;
+        align-items: center;
+        margin-top: 20px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: var(--white);
+        color: var(--ink);
+        font-size: 14px;
+        font-weight: 900;
+        padding: 10px 14px;
+      }
+
+      .shop-link:hover {
+        border-color: var(--black);
+      }
+
+      .note-list {
+        display: grid;
+        gap: 12px;
+        margin: 20px 0 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .note-list li {
+        border: 1px solid var(--line);
+        background: var(--soft);
+        color: var(--ink);
+        font-size: 16px;
+        line-height: 1.8;
+        padding: 13px 16px;
+      }
+
+      @media (max-width: 900px) {
+        .nav-links {
+          display: none;
+        }
+
+        .hero-inner,
+        .article-layout {
+          grid-template-columns: 1fr;
+        }
+
+        .hero-inner {
+          padding: 44px 0;
+        }
+
+        .toc {
+          position: static;
+          max-height: none;
+        }
+
+        .toc nav {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 6px;
+        }
+
+        .facts,
+        .plans {
+          grid-template-columns: 1fr;
+        }
+
+        .section-head {
+          display: block;
+        }
+
+        .support-copy {
+          margin-top: 14px;
+        }
+      }
+
+      @media (max-width: 560px) {
+        .nav,
+        .hero-inner,
+        .support-inner,
+        .article-layout {
+          width: min(100% - 28px, 1180px);
+        }
+
+        .languages {
+          grid-template-columns: 1fr;
+        }
+
+        .article-card {
+          padding: 22px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="topbar">
+      <nav class="nav" aria-label="주요 메뉴">
+        <a class="brand" href="#top">
+          <span class="brand-mark">윤</span>
+          <span>윤건언어</span>
+        </a>
+        <div class="nav-links">
+          <a href="#overview">개요</a>
+          <a href="#history">역사</a>
+          <a href="#grammar">문법</a>
+          <a href="#support">후원</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section id="top" class="hero">
+        <div class="hero-inner">
+          <div>
+            <p class="eyebrow">인공어 안내</p>
+            <h1>윤건언어</h1>
+            <p class="hero-copy">
+              윤건(潤建)이 창안한 인공어로, 2025년부터 형성되기 시작해
+              2026년 4월경 공식적으로 선포되었다. 스페인어, 영어, 독일어의
+              영향을 바탕으로 독자적인 단어와 표현 체계를 발전시키고 있다.
+            </p>
+            <div class="actions">
+              <a class="button primary" href="#article">본문 읽기</a>
+              <a class="button" href="#support">후원 보기</a>
+              <a class="button" href="https://smartstore.naver.com/wowotshop">인공어샵</a>
+            </div>
+            <dl class="facts">
+              <div class="fact">
+                <dt>형성기</dt>
+                <dd>2025년</dd>
+              </div>
+              <div class="fact">
+                <dt>공식 선포</dt>
+                <dd>2026년 4월경</dd>
+              </div>
+              <div class="fact">
+                <dt>주요 기반</dt>
+                <dd>스페인어, 영어, 독일어</dd>
+              </div>
+            </dl>
+          </div>
+
+          <aside class="hero-panel" aria-label="윤건언어 핵심 정보">
+            <div class="founder">
+              <p class="label">창립자</p>
+              <p class="founder-name">윤건</p>
+            </div>
+            <div class="languages" aria-label="윤건언어 주요 기반 언어">
+              <div class="language">Español</div>
+              <div class="language">English</div>
+              <div class="language">Deutsch</div>
+            </div>
+            <div class="direction">
+              <p class="label">언어의 방향</p>
+              <p>
+                세 언어의 영향을 참고하되, 윤건언어 자체의 어휘와 표현을 쌓아
+                독자적인 정체성을 형성한다.
+              </p>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section id="support" class="support">
+        <div class="support-inner">
+          <div class="section-head">
+            <div>
+              <p class="section-kicker">윤건언어 후원</p>
+              <h2>후원 등급</h2>
+            </div>
+            <p class="support-copy">
+              후원금은 윤건언어 사전, 굿즈, 자료 정리와 같은 관련 콘텐츠를
+              이어 가는 데 쓰일 수 있다.
+            </p>
+          </div>
+          <div class="plans">
+            <article class="plan">
+              <h3>premium</h3>
+              <p class="price"><strong>15,300원</strong><span>월</span></p>
+              <p class="plan-note">윤건언어 활동을 가장 크게 후원하는 등급</p>
+            </article>
+            <article class="plan">
+              <h3>pro</h3>
+              <p class="price"><strong>7,600원</strong><span>월</span></p>
+              <p class="plan-note">사전과 콘텐츠 정리를 꾸준히 돕는 등급</p>
+            </article>
+            <article class="plan">
+              <h3>basic</h3>
+              <p class="price"><strong>3,200원</strong><span>월</span></p>
+              <p class="plan-note">윤건언어의 지속적인 발전을 응원하는 등급</p>
+            </article>
+          </div>
+          <div class="support-panel">
+            <h3>후원 신청</h3>
+            <p>
+              후원을 원하시면
+              <a class="mail-link" href="mailto:yungunlang@naver.com">yungunlang@naver.com</a>
+              으로 메일을 보내 주세요. 제출 양식은 아래 파일을 내려받아 사용할 수 있습니다.
+            </p>
+            <div class="download-links" aria-label="제출 양식 다운로드">
+              <a href="forms/level.pdf" download="level.pdf">level.pdf 다운로드</a>
+              <a class="secondary" href="forms/grade.pdf" download="등급.pdf">등급.pdf 다운로드</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="article" class="article-layout">
+        <aside class="toc">
+          <p class="toc-title">목차</p>
+          <nav aria-label="본문 목차">
+            <a href="#overview">개요</a>
+            <a href="#name">명칭</a>
+            <a href="#history">역사</a>
+            <a href="#features">언어적 특징</a>
+            <a href="#writing">문자와 표기</a>
+            <a href="#grammar">문법</a>
+            <a href="#vocabulary">어휘</a>
+            <a href="#conversation">회화</a>
+            <a href="#numbers">숫자</a>
+            <a href="#dictionary">윤건언어 사전</a>
+            <a href="#shop">인공어샵</a>
+            <a href="#respect">언어 사용과 존중에 관한 입장</a>
+            <a href="#difference">다른 인공어와의 차이</a>
+            <a href="#notes">여담</a>
+          </nav>
+        </aside>
+
+        <article class="article-card">
+          <section id="overview" class="article-section">
+            <h2>개요</h2>
+            <p>윤건언어는 윤건(潤建)이 창안한 인공어이다. 2025년부터 만들어지고 발전하기 시작했으며, 2026년 4월경 공식적으로 윤건언어라는 이름으로 선포되었다.</p>
+            <p>윤건언어는 스페인어(Español), 영어(English), 독일어(Deutsch)를 주요 기반으로 하는 인공어이다. 세 언어에서 어휘, 발음, 표현 방식 등의 영향을 받았으며, 이를 바탕으로 윤건언어만의 단어와 표현 체계를 만들어 나가는 것을 특징으로 한다.</p>
+            <p>초기에는 스페인어의 영향이 비교적 두드러졌기 때문에 윤건언어를 단순히 스페인어를 변형한 언어로 생각하기 쉽지만, 실제 윤건언어는 영어와 독일어의 요소 역시 포함하고 있다. 따라서 윤건언어 측에서는 스페인어의 변형이나 방언이 아니라 세 언어를 바탕으로 독자적으로 발전하고 있는 인공어로 정의하고 있다.</p>
+            <p>윤건언어는 처음부터 모든 어휘와 문법이 완성된 상태로 발표된 언어가 아니다. 2025년부터 여러 단어와 표현이 만들어지고 사용되는 과정에서 점차 언어의 형태를 갖추기 시작했으며, 이후 새로운 어휘와 규칙이 추가되는 방식으로 발전하고 있다.</p>
+            <p>2026년 4월경에는 창립자 윤건이 그동안 발전시켜 온 언어를 공식적으로 윤건언어라고 선포하였다. 이에 따라 2025년을 윤건언어의 형성기, 2026년 4월경을 공식적인 출범 시기로 볼 수 있다.</p>
+            <p>윤건언어 측에서는 윤건언어를 단순한 장난이나 일회성 유행어가 아닌 실제로 사용하고 발전시키기 위한 언어라고 설명하고 있다. 또한 윤건언어를 사용한다는 이유만으로 사용자를 조롱하거나 차별해서는 안 되며 언어 사용과 창작 활동이 존중되어야 한다는 입장을 가지고 있다.</p>
+            <p>윤건언어와 관련된 사전 및 굿즈도 제작되고 있으며, 관련 상품은 인공어샵이라는 온라인 스토어를 통해 판매되고 있다.</p>
+          </section>
+
+          <section id="name" class="article-section">
+            <h2>명칭</h2>
+            <p>윤건언어라는 명칭은 언어의 창립자인 윤건(潤建)의 이름에서 유래하였다.</p>
+            <p>즉, 윤건이 만든 언어라는 의미에서 윤건언어라는 명칭이 만들어졌다.</p>
+            <p>2025년 언어가 형성되기 시작한 이후 여러 단어와 표현이 만들어졌으며, 2026년 4월경 언어를 공식적으로 선포하면서 윤건언어라는 명칭과 언어로서의 정체성이 보다 명확하게 확립되었다.</p>
+            <p>윤건언어라는 명칭은 특정 자연어의 방언이나 변형을 뜻하는 것이 아니라 독자적인 인공어의 고유 명칭으로 사용된다.</p>
+          </section>
+
+          <section id="history" class="article-section">
+            <h2>역사</h2>
+            <h3>탄생</h3>
+            <p>윤건언어의 시작은 2025년으로 거슬러 올라간다.</p>
+            <p>창립자 윤건은 기존에 존재하는 여러 언어의 특징을 참고하면서 새로운 단어와 표현을 만들기 시작하였다. 특히 스페인어, 영어, 독일어가 윤건언어 형성에 중요한 영향을 주었다.</p>
+            <p>처음부터 완성된 문법과 대규모 어휘를 가지고 출발한 것은 아니었다. 필요한 표현을 만들고 실제로 사용하면서 새로운 단어를 추가하는 방식으로 언어의 규모가 점차 커졌다.</p>
+            <p>이러한 과정을 거치면서 개별적인 단어나 표현의 집합에 가까웠던 초기 형태에서 점차 하나의 언어 체계를 지향하는 형태로 발전하였다.</p>
+            <h3>2025년 형성기</h3>
+            <p>2025년은 윤건언어의 형성기에 해당한다.</p>
+            <p>이 시기에는 윤건언어의 기본적인 단어와 표현이 만들어지기 시작하였다. 기존 언어의 어휘를 참고하여 새로운 형태로 변형하거나 윤건언어만의 표현을 만드는 등의 작업이 이루어졌다.</p>
+            <p>초기에는 특히 스페인어의 영향이 눈에 띄었으나 발전 과정에서 영어와 독일어의 요소가 추가되면서 현재와 같은 세 언어 기반의 특징이 형성되었다.</p>
+            <p>또한 실제로 표현을 사용하면서 발음하기 어렵거나 의미가 불분명한 표현을 수정하는 등 시행착오를 거치며 언어의 형태를 갖추기 시작하였다.</p>
+            <p>따라서 2025년은 윤건언어가 공식적인 하나의 언어로 선포되기 이전의 실험 및 발전 단계라고 할 수 있다.</p>
+            <h3>2026년 공식 선포</h3>
+            <p>2026년 4월경 창립자 윤건은 2025년부터 발전시켜 온 언어를 윤건언어라는 이름으로 공식 선포하였다.</p>
+            <p>이는 윤건언어의 역사에서 중요한 시점으로 취급된다.</p>
+            <p>공식 선포를 통해 기존에 만들어진 여러 표현과 단어가 단순한 개별적인 표현이 아니라 윤건언어라는 하나의 언어 체계에 속하는 어휘라는 정체성을 가지게 되었다.</p>
+            <p>이에 따라 윤건언어의 탄생 시기와 공식 선포 시기는 구별된다. 2025년부터 윤건언어의 형성과 발전이 시작되었으며, 2026년 4월경 공식적으로 윤건언어가 선포된 것이다.</p>
+            <h3>공식 선포 이후</h3>
+            <p>공식 선포 이후 윤건언어의 기존 어휘를 정리하고 새로운 단어와 표현을 추가하는 작업이 계속되고 있다.</p>
+            <p>윤건언어는 아직 비교적 역사가 짧은 인공어이기 때문에 새로운 어휘와 규칙이 추가되거나 기존 표현이 수정될 가능성이 있다.</p>
+            <p>관련 사전과 상품도 제작되면서 단순한 개인적인 언어 창작에서 벗어나 윤건언어를 하나의 콘텐츠로 정리하고 알리려는 활동도 이루어지고 있다.</p>
+          </section>
+
+          <section id="features" class="article-section">
+            <h2>언어적 특징</h2>
+            <p>윤건언어의 가장 큰 특징은 스페인어, 영어, 독일어의 영향을 동시에 받았다는 것이다.</p>
+            <p>세 언어의 특징을 참고하지만 기존 언어의 단어를 단순히 나열하거나 아무런 규칙 없이 섞는 것을 목적으로 하지는 않는다. 기존 언어에서 착안한 단어를 변형하거나 새로운 표현을 만들어 윤건언어 자체의 어휘로 사용하는 것을 지향한다.</p>
+            <h3>스페인어의 영향</h3>
+            <p>스페인어(Español)는 윤건언어 형성에 큰 영향을 준 언어 중 하나이다.</p>
+            <p>특히 윤건언어의 초기 형성 과정에서는 스페인어의 영향이 비교적 강하게 나타났다.</p>
+            <p>이 때문에 윤건언어를 처음 접한 사람에게는 일부 표현이 스페인어와 비슷하게 느껴질 수 있다.</p>
+            <p>그러나 윤건언어는 스페인어 자체를 사용하는 것이 아니며 스페인어의 방언으로 만들어진 것도 아니다.</p>
+            <h3>영어의 영향</h3>
+            <p>영어(English) 역시 윤건언어를 구성하는 중요한 기반 언어 중 하나이다.</p>
+            <p>윤건언어의 발전 과정에서 영어의 어휘와 표현 방식 등이 참고되었으며, 이에 따라 일부 윤건언어 표현에서는 영어의 영향을 확인할 수 있다.</p>
+            <p>따라서 윤건언어를 스페인어만을 바탕으로 만들어진 인공어라고 설명하는 것은 윤건언어의 전체적인 특징을 설명하기 어렵다.</p>
+            <h3>독일어의 영향</h3>
+            <p>독일어(Deutsch)는 윤건언어를 구성하는 세 번째 주요 기반 언어이다.</p>
+            <p>독일어 역시 단어와 발음 및 표현 체계를 만드는 과정에서 참고되는 언어 가운데 하나이다.</p>
+            <p>윤건언어가 스페인어와 영어뿐만 아니라 독일어까지 주요 기반 언어로 삼고 있다는 점은 윤건언어의 중요한 특징 중 하나이다.</p>
+            <h3>윤건언어 고유 요소</h3>
+            <p>윤건언어는 스페인어, 영어, 독일어를 참고하지만 세 언어의 표현을 그대로 사용하는 것만을 목적으로 하지 않는다.</p>
+            <p>기존 언어에서 착안한 뒤 철자나 발음을 변화시키거나 의미를 새롭게 부여할 수 있으며, 기존 세 언어에 직접적으로 대응하지 않는 독자적인 어휘 역시 만들어질 수 있다.</p>
+            <p>따라서 특정 윤건언어 단어의 어원을 쉽게 알아볼 수 있는 경우도 있는 반면 상당한 변형을 거쳐 원래 어느 언어에서 영향을 받았는지 쉽게 알기 어려운 경우도 생길 수 있다.</p>
+            <p>이러한 독자적인 어휘와 표현의 축적을 통해 윤건언어 자체의 언어적 정체성을 형성하는 것을 목표로 한다.</p>
+          </section>
+
+          <section id="writing" class="article-section">
+            <h2>문자와 표기</h2>
+            <h3>문자</h3>
+            <p>윤건언어의 문자 및 표기 체계는 윤건언어의 발전과 함께 정리되고 있다.</p>
+            <p>윤건언어가 스페인어, 영어, 독일어의 영향을 받기 때문에 로마자를 이용한 표기가 중요한 부분을 차지할 수 있으나, 구체적인 문자 사용 규칙은 실제 윤건언어의 표준에 따른다.</p>
+            <h3>철자법</h3>
+            <p>윤건언어의 철자는 단어를 구별하고 정확한 발음을 전달하기 위한 중요한 요소이다.</p>
+            <p>외국어에서 유래한 단어라고 하더라도 원래 언어의 철자를 반드시 그대로 유지하는 것은 아니며 윤건언어의 발음이나 사용 방식에 따라 별도의 철자가 사용될 수 있다.</p>
+            <h3>발음</h3>
+            <p>윤건언어의 발음은 스페인어, 영어, 독일어의 영향을 받을 수 있다.</p>
+            <p>다만 특정 단어가 어느 언어에서 유래했다고 해서 반드시 원래 언어와 동일하게 발음해야 하는 것은 아니다. 윤건언어 내부에서 별도의 발음이 정해져 있다면 윤건언어의 발음이 우선한다.</p>
+          </section>
+
+          <section id="grammar" class="article-section">
+            <h2>문법</h2>
+            <p>윤건언어의 문법 체계는 언어의 발전과 함께 지속적으로 정립되고 있다.</p>
+            <p>인공어의 특성상 창립자 및 사용자들이 필요에 따라 규칙을 만들고 기존 규칙을 보완할 수 있다.</p>
+            <h3>기본 어순</h3>
+            <p>윤건언어의 기본적인 문장 어순은 실제 사용되는 문장과 공식적인 문법 규칙에 따라 정해진다.</p>
+            <p>아직 공식적으로 정해지지 않은 부분을 기존 스페인어, 영어 또는 독일어의 문법과 동일하다고 임의로 간주해서는 안 된다.</p>
+            <h3>명사</h3>
+            <p>윤건언어의 명사 체계는 지속적으로 발전하고 있다.</p>
+            <p>사람, 장소, 사물, 음식, 자연현상 등 일상적인 의사소통에 필요한 개념을 중심으로 새로운 명사가 만들어질 수 있다.</p>
+            <h3>동사</h3>
+            <p>행동이나 상태를 표현하기 위한 동사 역시 윤건언어의 중요한 어휘를 구성한다.</p>
+            <p>향후 시제나 인칭에 따른 동사의 변화 등 세부적인 규칙이 체계적으로 정리될 경우 윤건언어 문법의 중요한 부분을 구성할 수 있다.</p>
+            <h3>형용사</h3>
+            <p>사람이나 사물의 상태 및 특징을 표현하기 위해 형용사가 사용된다.</p>
+            <p>구체적인 위치와 변화 규칙 등은 윤건언어의 실제 문법 체계에 따른다.</p>
+            <h3>대명사</h3>
+            <p>사람이나 사물 등을 대신하여 표현하는 대명사 체계 역시 윤건언어의 문법 요소 가운데 하나이다.</p>
+            <h3>의문문</h3>
+            <p>질문을 표현하기 위한 의문문의 구성 방식은 윤건언어의 실제 사용 규칙에 따라 정해진다.</p>
+            <h3>부정문</h3>
+            <p>어떤 행동이나 상태를 부정하기 위한 부정 표현 역시 윤건언어의 문법 체계에 포함될 수 있다.</p>
+          </section>
+
+          <section id="vocabulary" class="article-section">
+            <h2>어휘</h2>
+            <p>윤건언어에서는 스페인어, 영어, 독일어의 어휘를 참고하거나 독자적인 방법으로 새로운 단어를 만들어 사용한다.</p>
+            <p>윤건언어는 계속 발전하고 있기 때문에 어휘의 수 역시 고정되어 있지 않으며 새로운 개념을 표현할 필요가 생기면 새로운 단어가 만들어질 수 있다.</p>
+            <h3>기본 어휘</h3>
+            <p>기본 어휘는 일상생활에서 자주 사용하는 개념을 중심으로 구성된다.</p>
+            <p>인사, 사람, 음식, 장소, 행동, 감정, 시간 등 일상적인 대화를 위해 필요한 어휘가 이에 해당한다.</p>
+            <h3>스페인어계 어휘</h3>
+            <p>스페인어에서 영향을 받아 만들어진 어휘를 말한다.</p>
+            <p>스페인어 단어와 형태가 유사한 경우도 있을 수 있지만 윤건언어에서 독자적으로 변형되어 사용될 수도 있다.</p>
+            <h3>영어계 어휘</h3>
+            <p>영어에서 영향을 받아 만들어진 어휘이다.</p>
+            <p>영어 단어의 발음이나 철자 또는 의미에서 착안하여 윤건언어식 표현으로 변화시킬 수 있다.</p>
+            <h3>독일어계 어휘</h3>
+            <p>독일어에서 영향을 받아 만들어진 윤건언어 어휘이다.</p>
+            <h3>독자 어휘</h3>
+            <p>스페인어, 영어, 독일어에서 직접적으로 가져온 것이 아니라 윤건언어 내부에서 독자적으로 만들어진 어휘를 말한다.</p>
+            <p>독자 어휘의 수가 증가할수록 윤건언어가 기존 세 언어와 구별되는 고유한 언어적 특징도 더욱 뚜렷해질 수 있다.</p>
+          </section>
+
+          <section id="conversation" class="article-section">
+            <h2>회화</h2>
+            <p>윤건언어의 목적 중 하나는 단어를 개별적으로 암기하는 것에 그치지 않고 실제 의사소통에서 사용할 수 있도록 하는 것이다.</p>
+            <p>따라서 기본적인 인사부터 일상생활에서 사용할 수 있는 표현까지 다양한 회화 표현을 만들 수 있다.</p>
+            <h3>인사</h3>
+            <p>윤건언어의 기본적인 인사말과 자기소개 등의 표현을 정리하는 부분이다.</p>
+            <h3>일상 회화</h3>
+            <p>음식 주문, 질문, 대답, 감정 표현, 친구와의 대화 등 실제 일상에서 사용할 수 있는 표현이 이에 해당한다.</p>
+            <h3>예문</h3>
+            <p>윤건언어의 문법과 어휘가 정립됨에 따라 실제 문장 형태의 예문을 통해 단어의 사용법을 설명할 수 있다.</p>
+          </section>
+
+          <section id="numbers" class="article-section">
+            <h2>숫자</h2>
+            <p>윤건언어의 숫자 및 수사 체계 역시 언어의 중요한 부분이다.</p>
+            <p>기수뿐 아니라 날짜, 시간, 나이, 가격, 순서 등을 표현하기 위한 체계로 확대될 수 있다.</p>
+          </section>
+
+          <section id="dictionary" class="article-section">
+            <h2>윤건언어 사전</h2>
+            <p>윤건언어의 어휘를 정리한 윤건언어 사전이 존재한다.</p>
+            <p>사전은 윤건언어의 단어와 의미를 정리하여 사용자가 윤건언어를 배우거나 특정 단어의 의미를 확인할 수 있도록 하는 역할을 한다.</p>
+            <p>특히 인공어는 새로운 단어가 만들어질 수 있기 때문에 사전은 현재 사용되는 어휘의 표준을 기록하는 데 중요한 역할을 한다.</p>
+            <p>새로운 어휘가 추가되거나 기존 표현이 수정되면 사전의 내용 역시 이에 따라 확대되거나 변경될 수 있다.</p>
+            <p>윤건언어의 규모가 더욱 커질 경우 단순한 단어 사전을 넘어 회화집이나 문법 자료 등으로 발전할 가능성도 있다.</p>
+          </section>
+
+          <section id="shop" class="article-section">
+            <h2>인공어샵</h2>
+            <p>인공어샵은 윤건언어와 관련된 상품을 판매하는 온라인 스토어이다.</p>
+            <p>윤건언어 관련 사전 및 굿즈 등이 판매되고 있으며 윤건언어를 실제 상품과 콘텐츠의 형태로 접할 수 있다는 특징이 있다.</p>
+            <p>윤건언어 사전은 언어를 처음 접하는 사람이 윤건언어의 어휘를 확인하거나 기존 사용자가 단어의 의미를 찾아보는 자료로 활용될 수 있다.</p>
+            <a class="shop-link" href="https://smartstore.naver.com/wowotshop">인공어샵 바로가기</a>
+          </section>
+
+          <section id="respect" class="article-section">
+            <h2>언어 사용과 존중에 관한 입장</h2>
+            <p>윤건언어 측에서는 윤건언어가 장난으로 만들어진 것이 아니라는 점을 중요하게 강조하고 있다.</p>
+            <p>창립자와 사용자들은 윤건언어를 단순한 말장난이나 일회성 유행어가 아니라 실제로 사용하고 지속적으로 발전시키기 위한 인공어로 바라보고 있다.</p>
+            <p>이에 따라 윤건언어를 사용한다는 이유만으로 사용자를 조롱하거나 비하하는 행위에 반대하며 개인이 자신이 원하는 언어를 만들고 사용하는 활동 역시 존중되어야 한다는 입장을 가지고 있다.</p>
+            <p>윤건언어 측에서는 윤건언어의 사용을 이유 없이 금지하거나 윤건언어 사용자에게 불이익을 주는 것을 인권과 언어 사용의 자유에 관한 문제로 바라보고 있다.</p>
+            <p>다만 윤건언어의 사용을 제한하는 모든 행위가 법률상 곧바로 인권침해에 해당한다는 의미는 아니다. 실제 인권침해 또는 차별에 해당하는지 여부는 행위의 구체적인 내용과 상황 및 적용되는 법률 등에 따라 판단될 수 있다.</p>
+            <p>따라서 이 부분에서 윤건언어가 강조하는 핵심은 윤건언어 사용자 역시 자신이 사용하는 언어를 이유로 부당하게 조롱이나 차별을 받아서는 안 된다는 것이라고 볼 수 있다.</p>
+          </section>
+
+          <section id="difference" class="article-section">
+            <h2>다른 인공어와의 차이</h2>
+            <p>윤건언어는 특정 개인이 의도적으로 만들어 발전시켰다는 점에서 인공어에 해당한다.</p>
+            <p>자연어는 오랜 시간 동안 특정 사회의 구성원들이 사용하면서 자연스럽게 변화하여 형성되는 반면, 인공어는 창립자가 언어의 어휘와 문법을 의도적으로 설계할 수 있다는 차이가 있다.</p>
+            <p>윤건언어 역시 창립자인 윤건이 존재하고 언어가 만들어지기 시작한 시기와 공식 선포 시기를 비교적 명확하게 구분할 수 있다는 점에서 인공어의 특징을 가진다.</p>
+            <p>또한 하나의 자연어만을 기반으로 하지 않고 스페인어, 영어, 독일어라는 세 언어의 영향을 함께 받아 발전한다는 점을 윤건언어의 특징으로 볼 수 있다.</p>
+            <p>다만 윤건언어는 세 언어를 그대로 혼합하는 것만을 목적으로 하지 않는다. 세 언어에서 영향을 받은 요소와 윤건언어 자체에서 만들어진 요소를 함께 사용하여 독자적인 언어 체계를 발전시키는 것을 지향한다.</p>
+          </section>
+
+          <section id="notes" class="article-section">
+            <h2>여담</h2>
+            <ul class="note-list">
+              <li>윤건언어의 창립자는 윤건(潤建)이다.</li>
+              <li>언어의 명칭 역시 창립자의 이름인 윤건에서 유래하였다.</li>
+              <li>2025년부터 발전하기 시작했으며 2026년 4월경 공식적으로 윤건언어가 선포되었다.</li>
+              <li>따라서 2025년을 형성기, 2026년 4월경을 공식 선포 시기로 구분할 수 있다.</li>
+              <li>스페인어의 영향이 눈에 띄기 때문에 스페인어만을 기반으로 하는 언어로 오해할 수 있지만, 실제로는 스페인어(Español) + 영어(English) + 독일어(Deutsch)를 주요 기반으로 한다.</li>
+              <li>아직 역사가 짧은 언어인 만큼 새로운 어휘와 표현이 추가되면서 언어 체계가 계속 발전할 수 있다.</li>
+              <li>윤건언어 측에서는 단순한 장난이나 말놀이가 아닌 실제 사용을 목적으로 발전시키고 있는 언어라는 점을 강조하고 있다.</li>
+              <li>윤건언어 관련 사전 및 굿즈를 판매하는 인공어샵이 존재한다.</li>
+              <li>인공어샵에서는 윤건언어와 관련된 사전 등의 상품을 접할 수 있다.</li>
+            </ul>
+          </section>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>
