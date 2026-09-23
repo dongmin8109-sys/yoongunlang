@@ -1,0 +1,13 @@
+<!-- 1. 번역 위젯이 표시될 위치 (원하는 곳에 배치) -->
+<div id="google_translate_element"></div>
+
+<!-- 2. 구글 번역 스크립트 로드 -->
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({
+    pageLanguage: 'ko', // 내 사이트의 기본 언어 (한국어)
+    layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+  }, 'google_translate_element');
+}
+</script>
+<script type="text/javascript" src="//://google.com"></script>
