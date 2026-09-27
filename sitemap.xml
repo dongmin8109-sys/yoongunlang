@@ -1,6 +1,15 @@
-<?xml version="1.0" encoding="UTF-8"?>
+from pathlib import Path
+
+sitemap = """<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://yoongunlang.site/</loc>
   </url>
+  <url>
+    <loc>https://yoongunlang.site/dictionary.html</loc>
+  </url>
 </urlset>
+"""
+path = Path("/mnt/data/sitemap.xml")
+path.write_text(sitemap, encoding="utf-8")
+print("sitemap.xml 완성: 메인 페이지 + 온라인 사전 페이지")
