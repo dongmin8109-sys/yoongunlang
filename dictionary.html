@@ -61,7 +61,7 @@
   </div>
   <p class="meta" id="meta"></p>
   <div class="results" id="results"></div>
-  <p class="notice">※ 현재 사전은 제공된 윤건언어 사전 자료를 기준으로 작성되었습니다. 발음 버튼은 한글 발음 표기를 기기의 한국어 음성합성 기능으로 읽습니다.</p>
+  <p class="notice">※ 현재 사전은 제공된 윤건언어 사전 자료를 기준으로 작성되었습니다.<br><small>발음 자료는 두 사람이 구간을 나누어 직접 녹음했습니다.</small></p>
 </main>
 <script>
     const dictionary = [
@@ -144,16 +144,24 @@
       return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[c]));
     }
 
-    function speak(text) {
-      if (!('speechSynthesis' in window)) {
-        alert('이 브라우저에서는 발음 듣기를 지원하지 않습니다.');
-        return;
+    function audioFileName(word) {
+      return norm(word)
+        .replace(/'/g, '')
+        .replace(/[^a-z0-9]+/g, '-')
+        .replace(/^-+|-+$/g, '');
+    }
+
+    let currentAudio = null;
+    function speak(word) {
+      if (currentAudio) {
+        currentAudio.pause();
+        currentAudio.currentTime = 0;
       }
-      speechSynthesis.cancel();
-      const u = new SpeechSynthesisUtterance(text);
-      u.lang = 'ko-KR';
-      u.rate = 0.85;
-      speechSynthesis.speak(u);
+      const src = `audio/${audioFileName(word)}.mp3`;
+      currentAudio = new Audio(src);
+      currentAudio.play().catch(() => {
+        alert('발음 파일을 재생할 수 없습니다. audio 폴더가 함께 업로드되었는지 확인해 주세요.');
+      });
     }
 
     function render() {
@@ -187,9 +195,12 @@
     results.addEventListener('click', e => {
       const b = e.target.closest('.speak');
       if (!b) return;
-      speak(dictionary[Number(b.dataset.i)].pronunciation);
+      speak(dictionary[Number(b.dataset.i)].word);
     });
     render();
 </script>
+</body>
+</html>
+
 </body>
 </html>
