@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>윤건언어 배우기 | Yoongunlang</title>
+<meta name="description" content="윤건언어의 인사, 사람, 숫자, 날짜와 시간, 자주 쓰는 표현을 실제 녹음 발음과 함께 배웁니다.">
+<link rel="canonical" href="https://yoongunlang.site/learn.html">
+<style>
+:root{--ink:#111;--muted:#666;--line:#ddd;--soft:#f5f5f5;--white:#fff;--black:#050505}*{box-sizing:border-box}body{margin:0;font-family:Pretendard,"Noto Sans KR","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;color:var(--ink);background:#fbfbfb}a{color:inherit;text-decoration:none}.top{background:#050505;color:#fff}.nav{max-width:1050px;margin:auto;padding:15px 22px;display:flex;align-items:center;justify-content:space-between;gap:15px}.brand{font-weight:900;font-size:18px}.navlinks{display:flex;gap:8px;flex-wrap:wrap}.navlinks a{border:1px solid #555;border-radius:9px;padding:8px 11px;font-size:13px;font-weight:800}.hero{max-width:1050px;margin:auto;padding:58px 22px 54px}.eyebrow{font-size:13px;font-weight:800;color:#bbb}.hero h1{font-size:clamp(38px,7vw,68px);line-height:1;margin:10px 0 18px}.hero p{max-width:700px;color:#d7d7d7;line-height:1.75}.progress-wrap{margin-top:28px;max-width:620px}.progress-label{font-size:13px;margin-bottom:8px;color:#ddd}.progress{height:8px;background:#333;border-radius:99px;overflow:hidden}.progress>div{height:100%;width:0;background:#fff;transition:.25s}.wrap{max-width:1050px;margin:0 auto;padding:36px 22px 70px}.intro{border:1px solid var(--line);background:#fff;border-radius:14px;padding:20px;margin-bottom:26px;line-height:1.7}.lessons{display:grid;gap:22px}.lesson{background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden}.lesson-head{padding:22px 22px 17px;border-bottom:1px solid var(--line)}.num{font-size:12px;font-weight:900;color:#777;text-transform:uppercase}.lesson h2{margin:5px 0 7px;font-size:25px}.lesson-desc{color:var(--muted);font-size:14px}.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;background:var(--line)}.card{background:#fff;padding:18px 20px}.wordrow{display:flex;align-items:center;justify-content:space-between;gap:12px}.word{font-size:20px;font-weight:900;word-break:break-word}.pron{font-size:13px;color:#777;margin-top:4px}.meaning{font-size:15px;font-weight:700;margin-top:10px}.speak{border:1px solid #bbb;background:#fff;border-radius:9px;padding:8px 10px;cursor:pointer;font-weight:800;white-space:nowrap}.speak:hover{background:#111;color:#fff;border-color:#111}.complete{padding:18px 22px;border-top:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:12px;background:#fafafa}.complete button{border:0;background:#111;color:#fff;border-radius:10px;padding:10px 15px;font-weight:900;cursor:pointer}.complete button.done{background:#e8e8e8;color:#222}.tip{margin-top:28px;background:#111;color:#fff;border-radius:16px;padding:24px}.tip h2{margin:0 0 10px}.tip p{color:#ddd;line-height:1.7;margin:0}.bottom{display:flex;gap:10px;flex-wrap:wrap;margin-top:24px}.bottom a{border:1px solid #bbb;background:#fff;border-radius:10px;padding:11px 14px;font-weight:800}.note{font-size:12px;color:#777;margin-top:24px;line-height:1.6}@media(max-width:650px){.cards{grid-template-columns:1fr}.nav{align-items:flex-start;flex-direction:column}.hero{padding-top:42px}.complete{align-items:flex-start;flex-direction:column}}
+</style>
+</head>
+<body>
+<header class="top"><nav class="nav"><a class="brand" href="index.html">윤건언어</a><div class="navlinks"><a href="index.html">홈</a><a href="dictionary.html">온라인 사전</a></div></nav><div class="hero"><div class="eyebrow">YOONGUNLANG · BASIC COURSE</div><h1>윤건언어 배우기</h1><p>윤건언어의 기본 단어를 주제별로 익혀 보세요. 🔊 버튼을 누르면 윤건언어 사용자가 직접 녹음한 발음을 들을 수 있습니다.</p><div class="progress-wrap"><div class="progress-label" id="progressLabel">학습 진도 0 / 5</div><div class="progress"><div id="progressBar"></div></div></div></div></header>
+<main class="wrap">
+<div class="intro"><strong>처음이라면 1강부터 순서대로 시작하세요.</strong><br>이 페이지는 현재 공식 사전에 등록된 단어와 뜻을 바탕으로 구성했습니다. 문법 규칙이 필요한 임의의 문장은 추가하지 않았습니다.</div>
+<div class="lessons" id="lessons"></div>
+<section class="tip"><h2>다 배웠나요?</h2><p>온라인 사전에서 전체 단어를 검색하고 발음을 다시 들어볼 수 있습니다. 앞으로 공식 예문이 추가되면 이 학습 페이지에도 회화 연습을 확장할 수 있습니다.</p></section>
+<div class="bottom"><a href="dictionary.html">📖 온라인 사전 보기</a><a href="index.html">← 윤건언어 홈으로</a></div>
+<p class="note">※ 발음 자료는 두 사람이 구간을 나누어 직접 녹음했습니다.</p>
+</main>
+<script>
+const lessons=[
+ {title:'인사와 기본 표현',desc:'가장 먼저 익히기 좋은 인사와 기본적인 표현입니다.',items:[['haluleno','할루레노','안녕하세요, 안녕','haluleno'],['TThenkcoleno','땡콜레노','감사합니다','tthenkcoleno'],['goleno','골레노','좋다, 좋아하다','goleno'],['nogoleno','노골레노','싫다, 싫어하다','nogoleno'],['Golin Bit Thongg','구린 빗 똥','사랑해','golin-bit-thongg'],['Let’s go baby','레츠 고 베이비','빨리 가자 녀석들아','lets-go-baby']]},
+ {title:'사람과 관계',desc:'나와 너, 가족, 친구처럼 사람을 가리키는 단어를 배웁니다.',items:[['le','레','나','le'],['no','노','너','no'],['emileno','에밀레노','엄마','emileno'],['ebileno','에빌레노','아빠','ebileno'],['egil','에길','남자','egil'],['megil','메길','여자','megil'],['frendeno','프렌데노','친구','frendeno'],['fellow','펠로','그들','fellow'],['BBallo','빨로','그 녀석들','bballo'],['egilmegileno','에길메길레노','성별','egilmegileno']]},
+ {title:'숫자 0–9',desc:'윤건언어의 기본 숫자 열 개를 익혀 보세요.',items:[['burg','베르크','0','burg'],['ae','에','1','ae'],['el','엘','2','el'],['me’','메','3','me'],['zo','조','4','zo'],['pa','파','5','pa'],['de’','데','6','de'],['luc','럭','7','luc'],['Hosbi','호스비','8','hosbi'],['Gouten','구텐','9','gouten']]},
+ {title:'날짜와 시간',desc:'오늘·내일·이번 주처럼 시간과 날짜를 나타내는 단어입니다.',items:[['cocoleno','코콜레노','시간','cocoleno'],['de’ne','데네','오늘','dene'],['do’ne','도네','내일','done'],['dele’ne','델레네','모레','delene'],['di’ne','디네','어제','dine'],['dedoni’ne','데도니네','이번주','dedonine'],['deldode','델도데','다음주','deldode'],['dedoni’ne deldone','데도니네 델도네','다다음주','dedonine-deldone'],['mido’ne','미도네','만나다','midone']]},
+ {title:'자주 쓰는 표현과 상태',desc:'윤건언어 사전에 등록된 여러 표현과 상태 관련 단어를 익힙니다.',items:[['ek’elenol','에길레노','기분 좋을 때 쓰는 단어','ekelenol'],['agolalo','에고라로','기분이 Dirty 할 때 쓰는 단어','agolalo'],['ogolalo','오고라로','에길레노의 사투리','ogolalo'],['oola','울라','야','oola'],['excu’ne','엑스큐네','변명','excune'],['haleu','할르','없다','haleu'],['leu','르','있다','leu'],['maloi','말로이','나쁜','maloi'],['loi','로이','착한','loi'],['piroki','피로키','불량한, 불량','piroki'],['mo’ne','머네','돈','mone'],['mokgolelo','먹고레로','미식부','mokgolelo']]}
+];
+let audio=null;
+function play(file){if(audio){audio.pause();audio.currentTime=0}audio=new Audio(`audio/${file}.mp3`);audio.play().catch(()=>alert('발음 파일을 재생할 수 없습니다. GitHub의 audio 폴더를 확인해 주세요.'))}
+const root=document.getElementById('lessons');
+root.innerHTML=lessons.map((l,i)=>`<section class="lesson"><div class="lesson-head"><div class="num">LESSON ${i+1}</div><h2>${l.title}</h2><div class="lesson-desc">${l.desc}</div></div><div class="cards">${l.items.map(x=>`<article class="card"><div class="wordrow"><div><div class="word">${x[0]}</div><div class="pron">발음 · ${x[1]}</div></div><button class="speak" onclick="play('${x[3]}')">🔊 발음</button></div><div class="meaning">${x[2]}</div></article>`).join('')}</div><div class="complete"><span>이 강의 단어를 모두 확인했나요?</span><button data-lesson="${i}" onclick="toggleDone(${i},this)">✓ 학습 완료</button></div></section>`).join('');
+let done=JSON.parse(localStorage.getItem('yoongunLearnDone')||'[]');
+function update(){document.querySelectorAll('[data-lesson]').forEach(b=>{const i=Number(b.dataset.lesson);b.classList.toggle('done',done.includes(i));b.textContent=done.includes(i)?'✓ 완료됨':'✓ 학습 완료'});document.getElementById('progressLabel').textContent=`학습 진도 ${done.length} / ${lessons.length}`;document.getElementById('progressBar').style.width=`${done.length/lessons.length*100}%`}
+function toggleDone(i){done=done.includes(i)?done.filter(x=>x!==i):[...done,i];done.sort();localStorage.setItem('yoongunLearnDone',JSON.stringify(done));update()}
+update();
+</script>
+</body>
+</html>
