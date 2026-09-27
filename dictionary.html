@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>윤건언어 온라인 사전</title>
+  <meta name="description" content="윤건언어 단어를 윤건언어 또는 한국어로 검색하고 발음을 들을 수 있는 온라인 사전입니다.">
+  <link rel="canonical" href="https://yoongunlang.site/dictionary.html">
+  <style>
+    :root { --black:#050505; --ink:#111; --muted:#666; --line:#cfcfcf; --soft:#f1f1f1; --white:#fff; --page:#fbfbfb; }
+    * { box-sizing:border-box; }
+    body { margin:0; background:var(--page); color:var(--ink); font-family:Pretendard,"Noto Sans KR","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif; }
+    a { color:inherit; text-decoration:none; }
+    .topbar { border-bottom:1px solid var(--line); background:#fff; }
+    .nav { width:min(100% - 40px,900px); margin:auto; padding:12px 0; display:flex; align-items:center; justify-content:space-between; }
+    .brand { display:flex; gap:10px; align-items:center; font-weight:900; }
+    .mark { width:32px;height:32px;border-radius:8px;background:#050505;color:#fff;display:grid;place-items:center; }
+    .back { font-weight:800; font-size:14px; }
+    .hero { background:#050505;color:#fff; }
+    .hero-inner { width:min(100% - 40px,900px); margin:auto; padding:52px 0; }
+    h1 { margin:0; font-size:clamp(38px,7vw,62px); }
+    .lead { margin:18px 0 0;color:#ccc;line-height:1.7; }
+    main { width:min(100% - 40px,900px); margin:36px auto 70px; }
+    .searchbox { display:flex; gap:10px; }
+    input { width:100%; min-height:52px; border:2px solid #111;border-radius:8px;padding:0 16px;font-size:17px; }
+    button { min-height:52px;border:0;border-radius:8px;background:#050505;color:#fff;padding:0 20px;font-weight:900;cursor:pointer; }
+    .meta { margin:14px 0 22px;color:var(--muted);font-size:14px; }
+    .results { display:grid;gap:12px; }
+    .entry { border:1px solid var(--line);border-radius:8px;background:#fff;padding:20px; }
+    .wordline { display:flex;align-items:center;justify-content:space-between;gap:14px; }
+    .word { font-size:25px;font-weight:950;word-break:break-word; }
+    .speak { min-height:38px;padding:0 12px;white-space:nowrap; }
+    .pron { margin-top:9px;font-weight:800; }
+    .meaning { margin-top:9px;color:#333;line-height:1.7; }
+    .empty { border:1px solid var(--line);border-radius:8px;background:var(--soft);padding:22px;line-height:1.7; }
+    .notice { margin-top:30px;padding-top:20px;border-top:1px solid var(--line);color:var(--muted);font-size:13px;line-height:1.7; }
+    @media(max-width:560px) {
+      .nav,.hero-inner,main { width:min(100% - 28px,900px); }
+      .searchbox { display:grid; }
+      .searchbox button { width:100%; }
+    }
+  </style>
+</head>
+<body>
+<header class="topbar">
+  <nav class="nav">
+    <a class="brand" href="index.html"><span class="mark">윤</span><span>윤건언어</span></a>
+    <a class="back" href="index.html">← 홈페이지</a>
+  </nav>
+</header>
+<section class="hero">
+  <div class="hero-inner">
+    <h1>윤건언어 온라인 사전</h1>
+    <p class="lead">윤건언어 철자, 한글 발음 또는 한국어 뜻으로 검색할 수 있습니다.</p>
+  </div>
+</section>
+<main>
+  <div class="searchbox">
+    <input id="q" type="search" placeholder="예: haluleno, 할루레노, 안녕" autocomplete="off">
+    <button id="searchBtn" type="button">검색</button>
+  </div>
+  <p class="meta" id="meta"></p>
+  <div class="results" id="results"></div>
+  <p class="notice">※ 현재 사전은 제공된 윤건언어 사전 자료를 기준으로 작성되었습니다. 발음 버튼은 한글 발음 표기를 기기의 한국어 음성합성 기능으로 읽습니다.</p>
+</main>
+<script>
+    const dictionary = [
+      {word:'ek’elenol', pronunciation:'에길레노', meaning:'기분 좋을 때 쓰는 단어'},
+      {word:'emileno', pronunciation:'에밀레노', meaning:'엄마'},
+      {word:'ebileno', pronunciation:'에빌레노', meaning:'아빠'},
+      {word:'insane', pronunciation:'인세네', meaning:'극도한'},
+      {word:'espanol de mara', pronunciation:'이스파뇰 디 마라', meaning:'스페인어 해봐'},
+      {word:'Dance bari', pronunciation:'댄스바리', meaning:'댄스파티'},
+      {word:'Golin Bit Thongg', pronunciation:'구린 빗 똥', meaning:'사랑해'},
+      {word:'Golioli Galigali Goligali Ga', pronunciation:'구리구리 가리가리 구리가리 까', meaning:'그냥 노래 부르는 것'},
+      {word:'agolalo', pronunciation:'에고라로', meaning:'기분이 Dirty 할 때 쓰는 단어'},
+      {word:'ogolalo', pronunciation:'오고라로', meaning:'에길레노의 사투리'},
+      {word:'babaooIlala', pronunciation:'바바울랄라', meaning:'거시기 (기억이 잘 안나는 것을 지칭할 때의 거시기)'},
+      {word:'Let’s go baby', pronunciation:'레츠 고 베이비', meaning:'빨리 가자 녀석들아'},
+      {word:'mokgolelo', pronunciation:'먹고레로', meaning:'미식부'},
+      {word:'ae', pronunciation:'에', meaning:'1'},
+      {word:'el', pronunciation:'엘', meaning:'2'},
+      {word:'me’', pronunciation:'메', meaning:'3'},
+      {word:'zo', pronunciation:'조', meaning:'4'},
+      {word:'pa', pronunciation:'파', meaning:'5'},
+      {word:'de’', pronunciation:'데', meaning:'6'},
+      {word:'luc', pronunciation:'럭', meaning:'7'},
+      {word:'Hosbi', pronunciation:'호스비', meaning:'8'},
+      {word:'Gouten', pronunciation:'구텐', meaning:'9'},
+      {word:'burg', pronunciation:'베르크', meaning:'0'},
+      {word:'ajuol leno', pronunciation:'아절레노', meaning:'아저씨'},
+      {word:'ajoo leno', pronunciation:'아주레노', meaning:'아줌마'},
+      {word:'le', pronunciation:'레', meaning:'나'},
+      {word:'no', pronunciation:'노', meaning:'너'},
+      {word:'egil', pronunciation:'에길', meaning:'남자'},
+      {word:'megil', pronunciation:'메길', meaning:'여자'},
+      {word:'fellow', pronunciation:'펠로', meaning:'그들'},
+      {word:'BBallo', pronunciation:'빨로', meaning:'그 녀석들'},
+      {word:'egilmegileno', pronunciation:'에길메길레노', meaning:'성별'},
+      {word:'ebiuleno', pronunciation:'이별레노', meaning:'탈퇴, 헤어짐'},
+      {word:'gouleno', pronunciation:'고울레노', meaning:'절교'},
+      {word:'oola', pronunciation:'울라', meaning:'야'},
+      {word:'excu’ne', pronunciation:'엑스큐네', meaning:'변명'},
+      {word:'haluleno', pronunciation:'할루레노', meaning:'안녕하세요, 안녕'},
+      {word:'TThenkcoleno', pronunciation:'땡콜레노', meaning:'감사합니다'},
+      {word:'nogoleno', pronunciation:'노골레노', meaning:'싫다, 싫어하다'},
+      {word:'goleno', pronunciation:'골레노', meaning:'좋다, 좋아하다'},
+      {word:'frendeno', pronunciation:'프렌데노', meaning:'친구'},
+      {word:'mo’ne', pronunciation:'머네', meaning:'돈'},
+      {word:'cocoleno', pronunciation:'코콜레노', meaning:'시간'},
+      {word:'ne’', pronunciation:'네', meaning:'~은, ~는, 이, 가'},
+      {word:'de’ne', pronunciation:'데네', meaning:'오늘'},
+      {word:'do’ne', pronunciation:'도네', meaning:'내일'},
+      {word:'dele’ne', pronunciation:'델레네', meaning:'모레'},
+      {word:'di’ne', pronunciation:'디네', meaning:'어제'},
+      {word:'dedoni’ne', pronunciation:'데도니네', meaning:'이번주'},
+      {word:'deldode', pronunciation:'델도데', meaning:'다음주'},
+      {word:'dedoni’ne deldone', pronunciation:'데도니네 델도네', meaning:'다다음주'},
+      {word:'mido’ne', pronunciation:'미도네', meaning:'만나다'},
+      {word:'sumongleno', pronunciation:'수멍레노', meaning:'멍청이, 바보'},
+      {word:'nomoleno', pronunciation:'노모레노', meaning:'망할'},
+      {word:'nogrisa haleu', pronunciation:'구리짜 할르', meaning:'싸가지가 없는 (할르 대신 ‘르’를 쓰면 싸가지가 있다로 대체가능)'},
+      {word:'bokerano', pronunciation:'보캐라노', meaning:'양아치, 비행청소년'},
+      {word:'basahi', pronunciation:'바사이', meaning:'쓰레기'},
+      {word:'haleu', pronunciation:'할르', meaning:'없다'},
+      {word:'leu', pronunciation:'르', meaning:'있다'},
+      {word:'aguda haleu', pronunciation:'아구다 할르', meaning:'눈치가 없는 (할르 대신 ‘르’를 쓰면 눈치가 있다로 대체가능)'},
+      {word:'haleu pole’', pronunciation:'할르 폴래', meaning:'못한다 (할르 대신 ‘르’를 쓰면 할수 있다로 대체가능)'},
+      {word:'amide', pronunciation:'울라 아미대', meaning:'人馬 (한자니 그대로 발음하세요)'},
+      {word:'maloi', pronunciation:'말로이', meaning:'나쁜'},
+      {word:'loi', pronunciation:'로이', meaning:'착한'},
+      {word:'piroki', pronunciation:'피로키', meaning:'불량한, 불량'}
+    ];
+
+    const q = document.getElementById('q');
+    const results = document.getElementById('results');
+    const meta = document.getElementById('meta');
+
+    function norm(s) {
+      return String(s).toLowerCase().replace(/[’‘`]/g, "'").replace(/\s+/g,' ').trim();
+    }
+
+    function escapeHTML(s) {
+      return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[c]));
+    }
+
+    function speak(text) {
+      if (!('speechSynthesis' in window)) {
+        alert('이 브라우저에서는 발음 듣기를 지원하지 않습니다.');
+        return;
+      }
+      speechSynthesis.cancel();
+      const u = new SpeechSynthesisUtterance(text);
+      u.lang = 'ko-KR';
+      u.rate = 0.85;
+      speechSynthesis.speak(u);
+    }
+
+    function render() {
+      const term = norm(q.value);
+      const found = term ? dictionary.filter(x =>
+        norm(x.word).includes(term) ||
+        norm(x.pronunciation).includes(term) ||
+        norm(x.meaning).includes(term)
+      ) : dictionary;
+
+      meta.textContent = term ? `검색 결과 ${found.length}개` : `현재 ${dictionary.length}개 항목`;
+      if (!found.length) {
+        results.innerHTML = '<div class="empty">검색 결과가 없습니다. 다른 철자나 한국어 뜻으로 검색해 보세요.</div>';
+        return;
+      }
+      results.innerHTML = found.map((x,i) => `
+        <article class="entry">
+          <div class="wordline">
+            <div class="word">${escapeHTML(x.word)}</div>
+            <button class="speak" type="button" data-i="${dictionary.indexOf(x)}">🔊 발음</button>
+          </div>
+          <div class="pron">발음: ${escapeHTML(x.pronunciation)}</div>
+          <div class="meaning">뜻: ${escapeHTML(x.meaning)}</div>
+        </article>
+      `).join('');
+    }
+
+    document.getElementById('searchBtn').addEventListener('click', render);
+    q.addEventListener('input', render);
+    q.addEventListener('keydown', e => { if(e.key === 'Enter') render(); });
+    results.addEventListener('click', e => {
+      const b = e.target.closest('.speak');
+      if (!b) return;
+      speak(dictionary[Number(b.dataset.i)].pronunciation);
+    });
+    render();
+</script>
+</body>
+</html>
