@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
   <meta name="theme-color" content="#11182d">
-  <title>윤건언어 아레나 · 1인 플레이</title>
+  <title>윤건언어 아레나 · 미식부</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Nunito:wght@600;700;800;900&display=swap');
     :root{--ink:#152039;--cream:#fff8e9;--sun:#ffca53;--coral:#ff786f;--blue:#42d5ee;--purple:#a87cff}
@@ -29,9 +29,7 @@
   <aside class="side">
     <header class="brand"><span class="eyebrow">MOKGOLELO PRESENTS</span><h1>윤건언어<br>아레나</h1><p>말의 힘으로 승리하라!</p></header>
     <section class="card"><h2>나의 전사</h2><div class="pilot"><div class="pilot-face">✦</div><div class="pilot-copy"><b id="pilotName">할루</b><small>윤건언어 탐험가</small></div></div><div class="stat"><span>체력</span><b id="hpText">100 / 100</b></div><div class="meter"><i id="hpBar"></i></div><div class="stat"><span>필살기</span><b id="superText">0%</b></div><div class="meter purple"><i id="superBar"></i></div><div class="stat"><span>KO</span><b id="koText">0</b></div></section>
-    <section class="card account-card"><h2>1인 플레이 기록</h2>
-      <div id="soloRecord" class="account-small">최고 기록을 불러오는 중...</div>
-    </section>
+    <section class="card account-card"><h2>나의 계정 · 누적 기록</h2><div id="sideAccount"><div class="account-small">Google로 로그인하면 온라인 대전 기록이 저장됩니다.</div></div><button class="blue-btn mini wide" id="sideAccountBtn">Google 로그인</button></section>
     <section class="card"><h2>조작 방법</h2><div class="how"><span class="key">W A S D</span><span>이동</span></div><div class="how"><span class="key">마우스</span><span>조준 · 클릭하여 발사</span></div><div class="how"><span class="key">SPACE</span><span>필살기 발사</span></div><div class="how"><span class="key">Q</span><span>윤건언어 미션</span></div><div class="how"><span class="key">모바일</span><span>왼쪽 이동 · 오른쪽 조준/발사</span></div></section>
     <div class="side-foot">윤건언어 사전의 단어와 실제 발음 녹음 65개를 사용합니다. <a href="dictionary.html">사전 보기 ↗</a></div>
   </aside>
@@ -41,19 +39,35 @@
     <div class="bottom-hud"><div class="ammo" id="ammo" aria-label="탄약"><i class="ready"></i><i class="ready"></i><i class="ready"></i></div><div class="super-hud">✦ <div class="super-track"><i id="hudSuper"></i></div><b id="hudSuperText">0%</b></div></div>
     <div class="mobile-controls"><div class="stick left" id="moveStick"><div class="knob"></div><span class="stick-label">이동</span></div><button class="mobile-mission" id="mobileMission" aria-label="윤건언어 미션">🔊</button><button class="mobile-super" id="mobileSuper" aria-label="필살기">✦</button><div class="stick right" id="aimStick"><div class="knob"></div><span class="stick-label">조준 · 발사</span></div></div>
     <div class="reward-banner" id="toast"></div>
-    <div class="overlay" id="menuOverlay"><div class="modal"><span class="modal-kicker">WELCOME TO THE ARENA</span><h2>윤건언어<br>아레나</h2><p>3분 동안 봇들과 싸워 가장 많은 KO를 기록하세요.<br>윤건언어 녹음을 듣고 정답을 맞히면 전투 보상을 얻습니다.</p><div class="modal-actions"><button class="gold-btn" id="soloBtn">⚔ 1인 플레이 시작</button><input class="field" id="nameInput" maxlength="12" placeholder="플레이어 이름 (기본: 할루)" aria-label="플레이어 이름"></div><p class="status" id="menuStatus"></p><p class="tiny-note">로그인과 서버 없이 바로 플레이할 수 있습니다. 최고 기록은 이 브라우저에 저장됩니다.</p></div></div>
-    <div class="overlay hidden" id="accountOverlay" style="display:none"><div class="modal"><span class="modal-kicker">YUNGEON PROFILE</span><h2>나의 계정</h2><div id="accountFormPanel"><p>계정을 만들거나 로그인하면 온라인 점수와 티어가 계속 저장됩니다.</p><input class="field" id="accountName" maxlength="16" autocomplete="username" placeholder="아이디 (3~16자)" aria-label="계정 아이디"><input class="field" id="accountPassword" type="password" minlength="8" maxlength="72" autocomplete="current-password" placeholder="비밀번호 (8자 이상)" aria-label="비밀번호" style="margin-top:9px"><div class="account-tabs" style="margin-top:12px"><button class="blue-btn mini" id="loginBtn">로그인</button><button class="gold-btn mini" id="registerBtn">회원가입</button></div></div><div id="accountProfilePanel" class="hidden"><p><span id="accountNameDisplay"></span> 님의 전적</p><div class="account-profile"><span id="accountTierDisplay"></span><b id="accountPointsDisplay"></b><span id="accountRecordDisplay"></span><div id="accountNextDisplay" class="account-small"></div><div class="meter purple"><i id="accountProgressBar"></i></div></div><button class="ghost-btn mini" id="logoutBtn">로그아웃</button></div><p class="status" id="accountStatus"></p><button class="ghost-btn mini wide" id="accountCloseBtn">닫기</button></div></div>
-    <div class="overlay hidden" id="lobbyOverlay" style="display:none"><div class="modal"><span class="modal-kicker">ONLINE BATTLE</span><h2>친구를 초대해!</h2><p>친구에게 방 코드를 알려 주세요.<br>2~4명이 모이면 3분 개인전을 시작할 수 있습니다.</p><div class="code" id="roomCode">----</div><button class="ghost-btn mini" id="copyBtn">코드 복사</button><div class="lobby-list" id="lobbyList"></div><div class="modal-actions"><button class="gold-btn" id="startBtn">대전 시작</button><button class="ghost-btn" id="leaveBtn">방 나가기</button></div><p class="status" id="lobbyStatus"></p></div></div>
+    <div class="overlay" id="menuOverlay"><div class="modal"><span class="modal-kicker">WELCOME TO THE ARENA</span><h2>윤건언어<br>아레나</h2><p>3분 동안 싸워 가장 많은 KO를 기록하세요.<br>녹음을 듣고 정답을 맞히면 전투 보상을 얻습니다.</p><div class="modal-actions"><button class="gold-btn" id="soloBtn">⚔ 혼자 연습 시작</button><button class="blue-btn" id="createBtn">🌐 온라인 방 만들기</button><div class="form-row"><input class="field" id="roomInput" placeholder="방 코드 4자리" maxlength="4" aria-label="방 코드"><button class="ghost-btn" id="joinBtn">참가</button></div><button class="ghost-btn" id="accountOpenBtn">👤 로그인 / 회원가입</button><input class="field" id="nameInput" maxlength="12" placeholder="연습전 이름 (기본: 할루)" aria-label="연습전 플레이어 이름"></div><p class="status" id="menuStatus"></p><p class="tiny-note">온라인 전적은 계정에 누적됩니다. 연습전은 로그인 없이 플레이할 수 있습니다.</p></div></div>
+    <div class="overlay hidden" id="accountOverlay"><div class="modal"><span class="modal-kicker">YUNGEON PROFILE</span><h2>나의 계정</h2><div id="accountFormPanel"><p>Google 계정으로 로그인하면 온라인 점수와 티어가 계속 저장됩니다.</p><button class="blue-btn wide" id="googleLoginBtn">G&nbsp;&nbsp;Google로 로그인</button><p class="tiny-note">윤건언어 사이트는 Google 비밀번호를 저장하지 않습니다.</p></div><div id="accountProfilePanel" class="hidden"><p><span id="accountNameDisplay"></span> 님의 전적</p><div class="account-profile"><span id="accountTierDisplay"></span><b id="accountPointsDisplay"></b><span id="accountRecordDisplay"></span><div id="accountNextDisplay" class="account-small"></div><div class="meter purple"><i id="accountProgressBar"></i></div></div><button class="ghost-btn mini" id="logoutBtn">로그아웃</button></div><p class="status" id="accountStatus"></p><button class="ghost-btn mini wide" id="accountCloseBtn">닫기</button></div></div>
+    <div class="overlay hidden" id="lobbyOverlay"><div class="modal"><span class="modal-kicker">ONLINE BATTLE</span><h2>친구를 초대해!</h2><p>친구에게 방 코드를 알려 주세요.<br>2~4명이 모이면 3분 개인전을 시작할 수 있습니다.</p><div class="code" id="roomCode">----</div><button class="ghost-btn mini" id="copyBtn">코드 복사</button><div class="lobby-list" id="lobbyList"></div><div class="modal-actions"><button class="gold-btn" id="startBtn">대전 시작</button><button class="ghost-btn" id="leaveBtn">방 나가기</button></div><p class="status" id="lobbyStatus"></p></div></div>
     <div class="overlay hidden" id="missionOverlay"><div class="modal"><span class="modal-kicker">🔊 YUNGEON LANGUAGE QUEST</span><h2>단어를 맞혀라!</h2><p>발음을 듣고 윤건언어 단어의 뜻을 고르세요.</p><div class="question"><b id="missionTerm">haluleno</b><small id="missionPron">할루레노</small></div><button class="blue-btn mini" id="listenBtn">🔊 실제 녹음 듣기</button><div class="choices" id="choices"></div><div class="mission-time" id="missionTime">남은 시간 14초</div></div></div>
     <div class="overlay hidden" id="endOverlay"><div class="modal"><span class="modal-kicker">MATCH COMPLETE</span><h2 id="endTitle">경기 종료!</h2><p id="endDescription"></p><div class="lobby-list" id="endScores"></div><button class="gold-btn wide" id="againBtn">다시 플레이</button></div></div>
   </section>
   <aside class="side right-panel">
     <section class="card"><h2>실시간 순위</h2><div class="live-label" id="liveLabel">대기 중</div><div id="leaderboard"></div></section>
-    <section class="card"><h2>내 최고 기록</h2><div id="globalBoard" class="account-small">아직 기록이 없습니다.</div></section>
+    <section class="card"><h2>누적 랭킹</h2><div id="globalBoard" class="account-small">서버에서 랭킹을 불러옵니다.</div></section>
     <section class="card mission-card"><h2>🔊 윤건언어 미션</h2><p>실제 녹음을 듣고 뜻을 맞혀 보세요. 실드, 회복, 공격 강화, 필살기 충전 중 하나를 받습니다.</p><button class="gold-btn wide" id="missionBtn">미션 시작 <small>(Q)</small></button><p class="status" id="missionCooldown"></p></section>
     <section class="card"><h2>전투 규칙</h2><div class="how"><span>⏱️</span><span>3분 개인전 · KO 순위</span></div><div class="how"><span>🔸</span><span>탄약 3발 · 자동 재장전</span></div><div class="how"><span>💚</span><span>피격 5초 후 자동 회복</span></div><div class="how"><span>🌿</span><span>풀에 들어가면 몸이 가려짐</span></div></section>
   </aside>
 </main>
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/12.3.0/firebase-app.js";
+import { getAuth, GoogleAuthProvider, signInWithPopup, signOut, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/12.3.0/firebase-auth.js";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyDdr9sOy21W5bgWTgnVQCZ-Z4_i4WgYWkI",
+  authDomain: "yoongunlang.firebaseapp.com",
+  projectId: "yoongunlang",
+  storageBucket: "yoongunlang.firebasestorage.app",
+  messagingSenderId: "655996813570",
+  appId: "1:655996813570:web:c17c99e0d56272555ac21b",
+  measurementId: "G-2SY659PECT"
+};
+const firebaseApp=initializeApp(firebaseConfig);
+window.yungeonAuth={auth:getAuth(firebaseApp),provider:new GoogleAuthProvider(),signInWithPopup,signOut,onAuthStateChanged};
+</script>
 <script>
 (() => {
   "use strict";
@@ -75,52 +89,36 @@
   function floating(x,y,text,color="#fff"){effects.push({x,y,vx:rand(-15,15),vy:-75,life:.9,max:.9,text,color});}
   function getMe(){return players.find(p=>p.id===myId);}
   let authToken="",accountProfile=null,lastEarned=null;
-  try {authToken=localStorage.getItem("yungeonArenaToken")||"";} catch {}
-  function setToken(token){authToken=token;try{if(token)localStorage.setItem("yungeonArenaToken",token);else localStorage.removeItem("yungeonArenaToken");}catch{}}
+  function setToken(token){authToken=token||"";}
   function renderAccount(){
-    const profile=accountProfile;
-    show("accountFormPanel",!profile);show("accountProfilePanel",!!profile);
-    $("accountOpenBtn").textContent=profile?`👤 ${profile.name} · ${profile.tier} ${profile.points}점`:"👤 로그인 / 회원가입";
-    $("sideAccountBtn").textContent=profile?"계정 보기":"로그인 / 회원가입";
-    if(!profile){$("sideAccount").innerHTML='<div class="account-small">로그인하면 온라인 대전 기록이 저장됩니다.</div>';return;}
-    $("sideAccount").innerHTML=`<span class="account-tier">${escapeHtml(profile.tier)}</span><div class="account-points">${profile.points} P</div><div class="account-small">${escapeHtml(profile.name)} · ${profile.matches}전 ${profile.wins}승 · 누적 ${profile.totalKo} KO</div>`;
-    $("accountNameDisplay").textContent=profile.name;$("accountTierDisplay").textContent=`티어 · ${profile.tier}`;$("accountPointsDisplay").textContent=`${profile.points} P`;$("accountRecordDisplay").textContent=`${profile.matches}전 ${profile.wins}승 · 누적 ${profile.totalKo} KO`;
-    $("accountNextDisplay").textContent=profile.nextTier?`다음 티어 ${profile.nextTier}까지 ${profile.nextAt-profile.points} P`:"최고 티어 달성!";
-    $("accountProgressBar").style.width=profile.nextTier?`${clamp((profile.points-profile.tierStart)/(profile.nextAt-profile.tierStart)*100,0,100)}%`:"100%";
+    const p=accountProfile;show("accountFormPanel",!p);show("accountProfilePanel",!!p);
+    $("accountOpenBtn").textContent=p?`👤 ${p.name} · ${p.tier} ${p.points}점`:"👤 Google 로그인";
+    $("sideAccountBtn").textContent=p?"계정 보기":"Google 로그인";
+    if(!p){$("sideAccount").innerHTML='<div class="account-small">Google로 로그인하면 온라인 대전 기록이 저장됩니다.</div>';return;}
+    $("sideAccount").innerHTML=`<span class="account-tier">${escapeHtml(p.tier)}</span><div class="account-points">${p.points} P</div><div class="account-small">${escapeHtml(p.name)} · ${p.matches}전 ${p.wins}승 · 누적 ${p.totalKo} KO</div>`;
+    $("accountNameDisplay").textContent=p.name;$("accountTierDisplay").textContent=`티어 · ${p.tier}`;$("accountPointsDisplay").textContent=`${p.points} P`;$("accountRecordDisplay").textContent=`${p.matches}전 ${p.wins}승 · 누적 ${p.totalKo} KO`;
+    $("accountNextDisplay").textContent=p.nextTier?`다음 티어 ${p.nextTier}까지 ${p.nextAt-p.points} P`:"최고 티어 달성!";
+    $("accountProgressBar").style.width=p.nextTier?`${clamp((p.points-p.tierStart)/(p.nextAt-p.tierStart)*100,0,100)}%`:"100%";
   }
-  function openAccount(){if(location.protocol==="file:"){$("menuStatus").textContent="로그인은 npm start로 서버를 실행한 뒤 이용할 수 있습니다.";return;}$("accountStatus").textContent="";renderAccount();show("accountOverlay",true);}
-  async function submitAccount(kind){
-    const name=$("accountName").value.trim(),password=$("accountPassword").value;
-    $("accountStatus").textContent="처리 중...";
-    try{const response=await fetch(`/api/${kind}`,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({name,password})});const data=await response.json();if(!response.ok)throw new Error(data.error||"로그인에 실패했습니다.");setToken(data.token);accountProfile=data.profile;$("accountPassword").value="";renderAccount();$("accountStatus").textContent=`${kind==="register"?"회원가입":"로그인"} 완료! 온라인 대전에 참가할 수 있습니다.`;loadGlobalBoard();}
-    catch(error){$("accountStatus").textContent=error.message||"서버에 연결할 수 없습니다.";}
+  function openAccount(){$("accountStatus").textContent="";renderAccount();show("accountOverlay",true);}
+  async function googleLogin(){
+    try{
+      const f=window.yungeonAuth;if(!f)throw new Error("Firebase를 불러오는 중입니다. 잠시 후 다시 눌러 주세요.");
+      $("accountStatus").textContent="Google 로그인 중...";
+      const result=await f.signInWithPopup(f.auth,f.provider);
+      setToken(await result.user.getIdToken());
+      await loadProfile();$("accountStatus").textContent="Google 로그인 완료!";loadGlobalBoard();
+    }catch(e){$("accountStatus").textContent=e?.code==="auth/popup-closed-by-user"?"로그인 창이 닫혔습니다.":(e?.message||"Google 로그인에 실패했습니다.");}
   }
   async function loadProfile(){
-    if(!authToken||location.protocol==="file:")return;
-    try{const response=await fetch("/api/me",{headers:{Authorization:`Bearer ${authToken}`}});if(!response.ok)throw new Error();accountProfile=(await response.json()).profile;renderAccount();}
-    catch{setToken("");accountProfile=null;renderAccount();}
+    const u=window.yungeonAuth?.auth?.currentUser;if(!u){setToken("");accountProfile=null;renderAccount();return;}
+    try{setToken(await u.getIdToken());const r=await fetch("/api/me",{headers:{Authorization:`Bearer ${authToken}`}}),d=await r.json();if(!r.ok)throw new Error(d.error||"프로필을 불러오지 못했습니다.");accountProfile=d.profile;renderAccount();}
+    catch(e){accountProfile=null;renderAccount();$("accountStatus").textContent=e.message||"게임 서버에 연결할 수 없습니다.";}
   }
   async function loadGlobalBoard(){if(location.protocol==="file:"){$("globalBoard").textContent="온라인 서버 실행 후 이용할 수 있습니다.";return;}try{const response=await fetch("/api/leaderboard");const data=await response.json();$("globalBoard").innerHTML=data.players.length?data.players.slice(0,5).map((p,i)=>`<div class="global-row"><span>${i+1}. ${escapeHtml(p.name)} <small>${escapeHtml(p.tier)}</small></span><b>${p.points} P</b></div>`).join(""):"아직 기록이 없습니다.";}catch{$("globalBoard").textContent="랭킹을 불러오지 못했습니다.";}}
-  function getSoloBest(){
-    try{return JSON.parse(localStorage.getItem("yungeonSoloBest")||"null");}catch{return null;}
-  }
-  function renderSoloBest(){
-    const b=getSoloBest();
-    const text=b?`${escapeHtml(b.name)} · 최고 ${b.ko} KO · ${b.deaths}번 쓰러짐`:"아직 저장된 기록이 없습니다.";
-    const a=$("soloRecord"),g=$("globalBoard");
-    if(a)a.innerHTML=text;if(g)g.innerHTML=text;
-  }
-  function saveSoloBest(me){
-    if(!me)return;
-    const old=getSoloBest();
-    if(!old || me.ko>old.ko || (me.ko===old.ko && me.deaths<old.deaths)){
-      try{localStorage.setItem("yungeonSoloBest",JSON.stringify({name:me.name,ko:me.ko,deaths:me.deaths,at:Date.now()}));}catch{}
-      toast("🏆 새 최고 기록!");
-    }
-    renderSoloBest();
-  }
   function beginSolo(){closeSocket();mode="solo";onlineStatus="playing";players=[newPlayer(1,$("nameInput").value.trim()||"할루",360,965,colors[0]),newPlayer(2,"보께",360,96,colors[1],true),newPlayer(3,"모코",150,535,colors[2],true),newPlayer(4,"루미",570,535,colors[3],true)];myId=1;bullets=[];effects=[];timeLeft=180;clock=0;nextChallenge=10;lastAutoChallenge=0;lastEarned=null;endShown=false;challenge=null;angle=-Math.PI/2;show("menuOverlay",false);show("lobbyOverlay",false);show("endOverlay",false);show("missionOverlay",false);toast("⚔ 연습전 시작! 3분 동안 싸워 보세요");}
-  function finish(){if(endShown)return;endShown=true;show("missionOverlay",false);const sorted=[...players].sort((a,b)=>b.ko-a.ko||a.deaths-b.deaths);const me=getMe();saveSoloBest(me);$("endTitle").textContent=sorted[0]?.id===myId?"우승! 🎉":"경기 종료!";$("endDescription").textContent=`${me?.ko||0} KO · ${me?.deaths||0}번 쓰러짐`;$("endScores").innerHTML=sorted.map((p,i)=>`${i+1}위 · ${escapeHtml(p.name)} — ${p.ko} KO`).join("<br>");show("endOverlay",true);}
+  function finish(){if(endShown)return;endShown=true;show("missionOverlay",false);const sorted=[...players].sort((a,b)=>b.ko-a.ko||a.deaths-b.deaths);const me=getMe();$("endTitle").textContent=sorted[0]?.id===myId?"우승! 🎉":"경기 종료!";$("endDescription").textContent=`${me?.ko||0} KO · ${me?.deaths||0}번 쓰러짐${mode==="online"&&lastEarned!==null?` · +${lastEarned} P · ${accountProfile?.tier||""}`:""}`;$("endScores").innerHTML=sorted.map((p,i)=>`${i+1}위 · ${escapeHtml(p.name)} — ${p.ko} KO`).join("<br>");show("endOverlay",true);}
+  const escMap={"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"};function escapeHtml(v){return String(v).replace(/[&<>"']/g,c=>escMap[c]);}
   function shoot(p,isSuper=false){if(!p.alive||clock-p.lastShot<(isSuper?.28:.235))return;if(isSuper){if(p.super<100)return;p.super=0;}else{if(p.ammo<1)return;p.ammo--;p.lastReload=clock;}p.lastShot=clock;for(const offset of(isSuper?[-.24,-.12,0,.12,.24]:[0])){const a=p.angle+offset;bullets.push({x:p.x+Math.cos(a)*26,y:p.y+Math.sin(a)*26,vx:Math.cos(a)*(isSuper?750:700),vy:Math.sin(a)*(isSuper?750:700),owner:p.id,damage:isSuper?27:(p.boostUntil>clock?27:18),life:isSuper?.85:.76,color:p.color,super:isSuper});}particle(p.x+Math.cos(p.angle)*26,p.y+Math.sin(p.angle)*26,isSuper?"#dfb7ff":"#ffeba3",isSuper?14:5,.7);}
   function hurt(p,b){let amount=b.damage;if(p.shield>0){const absorbed=Math.min(p.shield,amount);p.shield-=absorbed;amount-=absorbed;}p.hp=Math.max(0,p.hp-amount);p.lastHurt=clock;const a=players.find(v=>v.id===b.owner);if(a&&a!==p)a.super=clamp(a.super+14,0,100);particle(p.x,p.y,p.color,15,1.3);floating(p.x,p.y-28,amount?`-${amount}`:"실드!",amount?"#fff0ad":"#b2f7ff");if(p.hp<=0){p.alive=false;p.deaths++;p.respawnAt=clock+3.2;if(a&&a!==p)a.ko++;particle(p.x,p.y,p.color,28,1.8);toast(`${a?.name||"전장"} ⚡ ${p.name} KO!`);}}
   function updateSolo(dt){clock+=dt;timeLeft=Math.max(0,180-clock);if(timeLeft<=0){finish();return;}const me=getMe();let mx=(keys.has("d")||keys.has("arrowright")?1:0)-(keys.has("a")||keys.has("arrowleft")?1:0)+moveTouch.x,my=(keys.has("s")||keys.has("arrowdown")?1:0)-(keys.has("w")||keys.has("arrowup")?1:0)+moveTouch.y;if(me?.alive){move(me,clamp(mx,-1,1),clamp(my,-1,1),dt);me.angle=angle;if(superHeld){shoot(me,true);superHeld=false;}else if(fireHeld)shoot(me);}
@@ -174,10 +172,13 @@
   window.addEventListener("keydown",e=>{const k=e.key.toLowerCase();if([" ","arrowup","arrowdown","arrowleft","arrowright"].includes(k))e.preventDefault();if(e.target instanceof HTMLInputElement)return;keys.add(k);if(k===" ")superHeld=true;if(k==="q")openMission();});window.addEventListener("keyup",e=>keys.delete(e.key.toLowerCase()));window.addEventListener("blur",()=>{keys.clear();fireHeld=false;moveTouch={x:0,y:0};aimTouch=null;});
   function setupStick(id,onChange){const el=$(id),knob=el.querySelector(".knob");let pointer=null;const end=e=>{if(pointer!==e.pointerId)return;pointer=null;knob.style.left="50%";knob.style.top="50%";onChange(0,0,false);};el.addEventListener("pointerdown",e=>{pointer=e.pointerId;el.setPointerCapture(pointer);update(e);});el.addEventListener("pointermove",e=>{if(pointer===e.pointerId)update(e);});el.addEventListener("pointerup",end);el.addEventListener("pointercancel",end);function update(e){const r=el.getBoundingClientRect(),dx=e.clientX-(r.left+r.width/2),dy=e.clientY-(r.top+r.height/2),max=r.width*.35,len=Math.hypot(dx,dy)||1,scale=Math.min(1,max/len),x=dx*scale,y=dy*scale;knob.style.left=`calc(50% + ${x}px)`;knob.style.top=`calc(50% + ${y}px)`;onChange(clamp(x/max,-1,1),clamp(y/max,-1,1),true);}}
   setupStick("moveStick",(x,y)=>{moveTouch={x,y};});setupStick("aimStick",(x,y,active)=>{aimTouch=active?{x,y}:null;fireHeld=active;if(active&&Math.hypot(x,y)>.18)angle=Math.atan2(y,x);});
-  $("soloBtn").onclick=beginSolo;
-  $("missionBtn").onclick=openMission;$("mobileMission").onclick=openMission;$("listenBtn").onclick=playWord;$("mobileSuper").onclick=()=>{superHeld=true;};
-  $("againBtn").onclick=()=>{mode="menu";onlineStatus="";players=[];clock=0;show("endOverlay",false);show("menuOverlay",true);};
-  renderSoloBest();updateHud();requestAnimationFrame(loop);
+  $("soloBtn").onclick=beginSolo;$("createBtn").onclick=()=>beginOnline(true);$("joinBtn").onclick=()=>beginOnline(false);$("roomInput").addEventListener("input",e=>e.target.value=e.target.value.toUpperCase().replace(/[^A-Z0-9]/g,""));$("startBtn").onclick=()=>send({type:"start"});$("copyBtn").onclick=()=>{navigator.clipboard?.writeText(roomCode).then(()=>toast("방 코드를 복사했어요"));};$("leaveBtn").onclick=()=>{closeSocket();mode="menu";players=[];show("lobbyOverlay",false);show("menuOverlay",true);};$("missionBtn").onclick=openMission;$("mobileMission").onclick=openMission;$("listenBtn").onclick=playWord;$("mobileSuper").onclick=()=>{superHeld=true;};$("againBtn").onclick=()=>{closeSocket();mode="menu";onlineStatus="";players=[];clock=0;show("endOverlay",false);show("menuOverlay",true);};
+  $("accountOpenBtn").onclick=openAccount;$("sideAccountBtn").onclick=openAccount;$("accountCloseBtn").onclick=()=>show("accountOverlay",false);
+  $("googleLoginBtn").onclick=googleLogin;
+  $("logoutBtn").onclick=async()=>{if(window.yungeonAuth)await window.yungeonAuth.signOut(window.yungeonAuth.auth);setToken("");accountProfile=null;renderAccount();$("accountStatus").textContent="로그아웃했습니다.";if(mode==="online"){closeSocket();mode="menu";onlineStatus="";players=[];show("lobbyOverlay",false);show("endOverlay",false);show("menuOverlay",true);}};
+  renderAccount();
+  const waitAuth=setInterval(()=>{if(window.yungeonAuth){clearInterval(waitAuth);window.yungeonAuth.onAuthStateChanged(window.yungeonAuth.auth,async u=>{if(u)await loadProfile();else{setToken("");accountProfile=null;renderAccount();}});}},50);
+  loadGlobalBoard();updateHud();requestAnimationFrame(loop);
 })();
 </script>
 </body>

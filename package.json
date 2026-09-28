@@ -1,0 +1,15 @@
+{
+  "name": "yungeon-arena",
+  "version": "1.0.0",
+  "private": true,
+  "description": "윤건언어 아레나 2~4인 실시간 대전",
+  "scripts": {
+    "start": "node server.js",
+    "test:online": "node test-online.js",
+    "sync:words": "node sync-words.js"
+  },
+  "dependencies": {
+    "ws": "^8.18.0",
+    "firebase-admin": "^13.4.0"
+  }
+}
