@@ -61,7 +61,7 @@
   </div>
   <p class="meta" id="meta"></p>
   <div class="results" id="results"></div>
-  <p class="notice">※ 현재 사전은 제공된 윤건언어 사전 자료를 기준으로 작성되었습니다.<br><small>발음 자료는 두 사람이 구간을 나누어 직접 녹음했습니다.</small></p>
+  <p class="notice">※ 현재 사전은 제공된 윤건언어 사전 자료를 기준으로 작성되었습니다.<br><small>발음은 한글 발음 표기를 기준으로 TTS로 재생됩니다.</small></p>
 </main>
 <script>
     const dictionary = [
@@ -143,25 +143,27 @@
     function escapeHTML(s) {
       return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[c]));
     }
+    let currentUtterance = null;
 
-    function audioFileName(word) {
-      return norm(word)
-        .replace(/'/g, '')
-        .replace(/[^a-z0-9]+/g, '-')
-        .replace(/^-+|-+$/g, '');
-    }
-
-    let currentAudio = null;
-    function speak(word) {
-      if (currentAudio) {
-        currentAudio.pause();
-        currentAudio.currentTime = 0;
+    function speak(pronunciation) {
+      if (!('speechSynthesis' in window)) {
+        alert('이 브라우저는 TTS 발음을 지원하지 않습니다.');
+        return;
       }
-      const src = `audio/${audioFileName(word)}.mp3`;
-      currentAudio = new Audio(src);
-      currentAudio.play().catch(() => {
-        alert('발음 파일을 재생할 수 없습니다. audio 폴더가 함께 업로드되었는지 확인해 주세요.');
-      });
+
+      window.speechSynthesis.cancel();
+
+      const utterance = new SpeechSynthesisUtterance(pronunciation);
+      utterance.lang = 'ko-KR';
+      utterance.rate = 0.85;
+      utterance.pitch = 1;
+
+      const voices = window.speechSynthesis.getVoices();
+      const koreanVoice = voices.find(v => v.lang && v.lang.toLowerCase().startsWith('ko'));
+      if (koreanVoice) utterance.voice = koreanVoice;
+
+      currentUtterance = utterance;
+      window.speechSynthesis.speak(utterance);
     }
 
     function render() {
@@ -195,12 +197,13 @@
     results.addEventListener('click', e => {
       const b = e.target.closest('.speak');
       if (!b) return;
-      speak(dictionary[Number(b.dataset.i)].word);
+      speak(dictionary[Number(b.dataset.i)].pronunciation);
     });
     render();
 </script>
 </body>
 </html>
+
 
 </body>
 </html>
