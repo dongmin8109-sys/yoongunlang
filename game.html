@@ -5,10 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
   <meta name="theme-color" content="#11182d">
   <title>윤건언어 게임 - 윤건언어 아레나</title>
-  <meta name="description" content="윤건언어 단어와 실제 발음을 활용해 즐기는 윤건언어 공식 게임, 윤건언어 아레나입니다.">
+  <meta name="description" content="윤건언어 단어와 TTS 발음을 활용해 즐기는 윤건언어 아레나입니다.">
   <link rel="canonical" href="https://yoongunlang.site/game.html">
   <meta property="og:title" content="윤건언어 게임 - 윤건언어 아레나">
-  <meta property="og:description" content="윤건언어 단어와 실제 발음을 활용해 즐기는 윤건언어 공식 게임입니다.">
+  <meta property="og:description" content="윤건언어 단어와 TTS 발음을 활용해 즐기는 윤건언어 공식 게임입니다.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://yoongunlang.site/game.html">
   <style>
@@ -26,8 +26,11 @@
     .overlay{position:absolute;inset:0;z-index:6;background:#0a1528c9;backdrop-filter:blur(5px);display:grid;place-items:center;padding:18px}.overlay.hidden{display:none}.modal{width:min(100%,410px);max-height:95%;overflow:auto;border:3px solid #a4b6c6;border-radius:24px;background:linear-gradient(150deg,#33496b,#1b2b49 65%);box-shadow:0 9px 0 #0d1526,0 25px 55px #0009;text-align:center;padding:24px 22px}.modal-kicker{font-size:12px;letter-spacing:.25em;color:#8cecff;font-weight:900}.modal h2{font-family:'Black Han Sans',Impact,sans-serif;font-size:clamp(31px,7vw,48px);font-weight:400;line-height:1.08;color:#fff;margin:13px 0 11px;text-shadow:3px 4px #b24c71}.modal p{font-size:14px;line-height:1.55;color:#d5e0ed;margin:0 0 18px;font-weight:800}.modal-actions{display:grid;gap:10px}.tiny-note{font-size:11px!important;color:#9eafc7!important;margin:14px 0 0!important}.code{font-size:39px;letter-spacing:.17em;font-weight:900;color:#ffdf7c;background:#13233d;border:2px dashed #8fa4bd;padding:7px;border-radius:12px;margin:8px 0 16px}.lobby-list{font-size:13px;line-height:1.8;color:#e6f3ff;margin:8px 0 16px}.question{background:#162844;border:2px solid #819aba;border-radius:14px;padding:14px;margin:0 0 12px}.question b{display:block;color:#ffdc80;font-size:27px;word-break:break-all}.question small{font-size:12px;color:#bcd0e5}.choices{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:14px 0}.choice{min-height:55px;border:2px solid #8095b6;background:#283c5b;border-radius:11px;color:white;font-weight:900;font-size:13px;padding:8px}.choice:hover{border-color:#ffe08b;background:#435579}.mission-time{font-weight:900;color:#ffbfae;font-size:12px}.reward-banner{position:absolute;top:18%;left:50%;transform:translate(-50%,-12px);z-index:8;background:#1b3354;border:2px solid #ffe3a0;border-radius:14px;padding:9px 17px;color:#fff;font-weight:900;box-shadow:0 5px 0 #10203a;opacity:0;pointer-events:none;transition:.25s;white-space:nowrap}.reward-banner.show{opacity:1;transform:translate(-50%,0)}
     .mobile-controls{display:none;position:absolute;z-index:4;left:0;right:0;bottom:55px;height:150px;pointer-events:none}.stick{position:absolute;bottom:5px;width:112px;height:112px;border:3px solid #fff8;background:#1529439c;border-radius:50%;pointer-events:auto;touch-action:none;box-shadow:0 5px 20px #0006,inset 0 0 25px #7bb7d533}.stick.left{left:16px}.stick.right{right:16px;border-color:#ffc386;background:#9a4c3a88}.knob{position:absolute;left:50%;top:50%;width:49px;height:49px;border-radius:50%;transform:translate(-50%,-50%);background:linear-gradient(#9cf4ff,#39bcd5);border:3px solid #fff;box-shadow:0 4px 0 #137185}.right .knob{background:linear-gradient(#ffe89a,#ff8a5d);box-shadow:0 4px 0 #a84836}.stick-label{position:absolute;left:0;right:0;bottom:-21px;text-align:center;font-size:10px;font-weight:900;text-shadow:0 2px 5px #000}.mobile-super{pointer-events:auto;position:absolute;bottom:113px;right:17px;width:58px;height:58px;border-radius:50%;background:linear-gradient(#efc1ff,#a774f0);border:3px solid white;color:#231d44;font-size:25px;font-weight:900;box-shadow:0 5px 0 #654391}.mobile-mission{pointer-events:auto;position:absolute;bottom:118px;left:23px;width:49px;height:49px;border-radius:50%;background:linear-gradient(#fff0ad,#fac954);border:3px solid white;color:#3b3140;font-size:22px;box-shadow:0 5px 0 #956c33}
     .modal{scrollbar-width:none}.modal::-webkit-scrollbar{display:none}.hidden{display:none!important}.account-card{background:linear-gradient(140deg,#3e406d,#202c4b);border-color:#817bb7}.account-tier{display:inline-block;background:#a881ec;color:#fff;border-radius:7px;padding:4px 8px;font-size:11px;font-weight:900}.account-points{font-size:24px;font-weight:900;color:#ffe19a;margin:8px 0}.account-small{font-size:11px;color:#bbcae1;line-height:1.6}.account-profile{display:grid;gap:9px;margin:12px 0;padding:14px;background:#14243f;border:2px solid #748eab;border-radius:12px}.account-profile b{color:#ffe1a2}.account-tabs{display:flex;gap:7px;margin-bottom:10px}.account-tabs button{flex:1}.global-row{display:flex;justify-content:space-between;gap:8px;font-size:12px;font-weight:900;color:#dce9fa;padding:6px 0;border-bottom:1px solid #ffffff18}.global-row b{color:#ffe19a}
+    .arena-wrap:has(#missionOverlay:not(.hidden)) .audio-panel,.arena-wrap:has(#characterOverlay:not(.hidden)) .audio-panel,.arena-wrap:has(#accountOverlay:not(.hidden)) .audio-panel,.arena-wrap:has(#endOverlay:not(.hidden)) .audio-panel,.arena-wrap:has(#lobbyOverlay:not(.hidden)) .audio-panel{z-index:5}
+    .arena-wrap:has(#menuOverlay:not(.hidden)) .audio-panel{top:8px;right:8px}
     @media(max-width:1050px){.app{grid-template-columns:minmax(0,720px);gap:0;padding:0;align-items:center}.side{display:none}.arena-wrap{position:relative;top:auto;margin:auto;width:min(100vw,calc(100dvh * .6667));height:min(100dvh,150vw);border-radius:0;border:0;box-shadow:none}.arena-wrap:after{border-radius:0}.mobile-controls{display:block}.bottom-hud{bottom:7px}}
     @media(hover:none){.mobile-controls{display:block}}
+    .character-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:7px;margin:12px 0}.character-card{min-height:100px;border:2px solid #6884a4;background:#1a2b49;color:white;border-radius:12px;padding:8px 5px;display:flex;flex-direction:column;align-items:center;gap:3px}.character-card.selected{border-color:#ffda75;background:#455579;box-shadow:0 0 0 2px #ffda7540}.character-card .icon{font-size:28px}.character-card b{font-size:12px}.character-card small{font-size:10px;color:#b9cbdb}.roster-detail{background:#132640;border-radius:12px;border:1px solid #7792ac;padding:10px;text-align:left;font-size:12px;line-height:1.55;margin-bottom:12px}.roster-detail b{color:#ffe09a}.sound-control{display:grid;grid-template-columns:54px 1fr 32px;align-items:center;gap:7px;font-size:12px;font-weight:900;margin:8px 0}.sound-control input{width:100%;accent-color:#ffce70}.audio-panel{position:absolute;z-index:9;top:60px;right:12px;background:#142641e8;border:2px solid #8aa6bb;border-radius:12px;padding:8px;min-width:177px;box-shadow:0 4px 0 #071321}.audio-panel button{background:#273b5b;color:#fff;border:1px solid #8aa6bb;border-radius:8px;font-weight:900;padding:5px 8px}.audio-panel.collapsed .audio-details{display:none}.skill-hud{height:42px;min-width:130px;display:flex;align-items:center;gap:5px;background:#152641e9;padding:6px 8px;border:2px solid #8aa6bb;border-radius:12px;box-shadow:0 4px 0 #071321;color:#fff;font-size:11px;font-weight:900;pointer-events:auto}.skill-hud.ready{border-color:#9df3c8}.mobile-skill{pointer-events:auto;position:absolute;bottom:182px;right:18px;width:56px;height:56px;border-radius:50%;background:linear-gradient(#a9f8d7,#49c49d);border:3px solid white;color:#173d38;font-size:21px;font-weight:900;box-shadow:0 5px 0 #297b61}.target-hint{position:absolute;z-index:5;left:50%;top:108px;transform:translateX(-50%);background:#192945ec;border:2px solid #ffd46c;border-radius:12px;padding:7px 12px;font-size:12px;font-weight:900;white-space:nowrap}.dictionary-note{font-size:12px!important;color:#ffe4aa!important;line-height:1.45!important;margin:6px 0 9px!important}.dictionary-link{display:block;text-decoration:none;text-align:center}.modal.roster-modal{width:min(100%,530px)}@media(max-width:1050px){.mobile-skill{bottom:178px}.audio-panel{top:57px;right:8px}.character-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
   </style>
 </head>
 <body>
@@ -36,16 +39,19 @@
     <header class="brand"><span class="eyebrow">MOKGOLELO PRESENTS</span><h1>윤건언어<br>아레나</h1><p>말의 힘으로 승리하라!</p></header>
     <section class="card"><h2>나의 전사</h2><div class="pilot"><div class="pilot-face">✦</div><div class="pilot-copy"><b id="pilotName">할루</b><small>윤건언어 탐험가</small></div></div><div class="stat"><span>체력</span><b id="hpText">100 / 100</b></div><div class="meter"><i id="hpBar"></i></div><div class="stat"><span>필살기</span><b id="superText">0%</b></div><div class="meter purple"><i id="superBar"></i></div><div class="stat"><span>KO</span><b id="koText">0</b></div></section>
     <section class="card account-card"><h2>나의 계정 · 누적 기록</h2><div id="sideAccount"><div class="account-small">Google로 로그인하면 온라인 대전 기록이 저장됩니다.</div></div><button class="blue-btn mini wide" id="sideAccountBtn">Google 로그인</button></section>
-    <section class="card"><h2>조작 방법</h2><div class="how"><span class="key">W A S D</span><span>이동</span></div><div class="how"><span class="key">마우스</span><span>조준 · 클릭하여 발사</span></div><div class="how"><span class="key">SPACE</span><span>필살기 발사</span></div><div class="how"><span class="key">Q</span><span>윤건언어 미션</span></div><div class="how"><span class="key">모바일</span><span>왼쪽 이동 · 오른쪽 조준/발사</span></div></section>
-    <div class="side-foot">윤건언어 사전의 단어와 실제 발음 녹음 65개를 사용합니다. <a href="dictionary.html">사전 보기 ↗</a> · <a href="https://yoongunlang.site/">윤건언어 공식 홈페이지 ↗</a></div>
+    <section class="card"><h2>조작 방법</h2><div class="how"><span class="key">W A S D</span><span>이동</span></div><div class="how"><span class="key">마우스</span><span>조준 · 클릭하여 발사</span></div><div class="how"><span class="key">E</span><span>일반 스킬</span></div><div class="how"><span class="key">SPACE</span><span>필살기 · 도약은 착지점 클릭</span></div><div class="how"><span class="key">Q</span><span>윤건언어 미션</span></div><div class="how"><span class="key">모바일</span><span>왼쪽 이동 · 오른쪽 조준/발사</span></div></section>
+    <div class="side-foot">윤건언어 단어의 발음은 TTS로 들려줍니다. <a href="https://yoongunlang.site/dictionary.html">온라인 사전 보기 ↗</a></div>
   </aside>
   <section class="arena-wrap" aria-label="윤건언어 아레나 경기장">
     <canvas id="game" width="720" height="1080"></canvas>
     <div class="arena-hud"><div class="hud-pill">⚡ <span id="hudMode">연습전</span></div><div class="hud-pill time" id="clock">3:00</div><div class="hud-pill">🏆 <span id="hudKo">0 KO</span></div></div>
-    <div class="bottom-hud"><div class="ammo" id="ammo" aria-label="탄약"><i class="ready"></i><i class="ready"></i><i class="ready"></i></div><div class="super-hud">✦ <div class="super-track"><i id="hudSuper"></i></div><b id="hudSuperText">0%</b></div></div>
-    <div class="mobile-controls"><div class="stick left" id="moveStick"><div class="knob"></div><span class="stick-label">이동</span></div><button class="mobile-mission" id="mobileMission" aria-label="윤건언어 미션">🔊</button><button class="mobile-super" id="mobileSuper" aria-label="필살기">✦</button><div class="stick right" id="aimStick"><div class="knob"></div><span class="stick-label">조준 · 발사</span></div></div>
+    <div class="bottom-hud"><div class="ammo" id="ammo" aria-label="탄약"><i class="ready"></i><i class="ready"></i><i class="ready"></i></div><button class="skill-hud" id="skillButton" title="일반 스킬 (E)">✦ <span id="skillLabel">스킬 준비</span></button><div class="super-hud">✦ <div class="super-track"><i id="hudSuper"></i></div><b id="hudSuperText">0%</b></div></div>
+    <div class="audio-panel collapsed" id="audioPanel"><button id="muteButton" aria-label="음소거">🔊 소리 켜짐</button><button id="audioToggle" aria-label="사운드 설정">⚙</button><div class="audio-details"><label class="sound-control">BGM <input type="range" id="bgmVolume" min="0" max="100" value="55"><span id="bgmValue">55</span></label><label class="sound-control">효과음 <input type="range" id="sfxVolume" min="0" max="100" value="70"><span id="sfxValue">70</span></label></div></div>
+    <div class="target-hint hidden" id="targetHint">착지할 위치를 터치하거나 클릭하세요</div>
+    <div class="mobile-controls"><div class="stick left" id="moveStick"><div class="knob"></div><span class="stick-label">이동</span></div><button class="mobile-mission" id="mobileMission" aria-label="윤건언어 미션">🔊</button><button class="mobile-skill" id="mobileSkill" aria-label="일반 스킬">✧</button><button class="mobile-super" id="mobileSuper" aria-label="필살기">✦</button><div class="stick right" id="aimStick"><div class="knob"></div><span class="stick-label">조준 · 발사</span></div></div>
     <div class="reward-banner" id="toast"></div>
-    <div class="overlay" id="menuOverlay"><div class="modal"><span class="modal-kicker">WELCOME TO THE ARENA</span><h2>윤건언어<br>아레나</h2><p>3분 동안 싸워 가장 많은 KO를 기록하세요.<br>녹음을 듣고 정답을 맞히면 전투 보상을 얻습니다.</p><div class="modal-actions"><button class="gold-btn" id="soloBtn">⚔ 혼자 연습 시작</button><button class="blue-btn" id="createBtn">🌐 온라인 방 만들기</button><div class="form-row"><input class="field" id="roomInput" placeholder="방 코드 4자리" maxlength="4" aria-label="방 코드"><button class="ghost-btn" id="joinBtn">참가</button></div><button class="ghost-btn" id="accountOpenBtn">👤 로그인 / 회원가입</button><input class="field" id="nameInput" maxlength="12" placeholder="연습전 이름 (기본: 할루)" aria-label="연습전 플레이어 이름"></div><p class="status" id="menuStatus"></p><p class="tiny-note">온라인 전적은 계정에 누적됩니다. 연습전은 로그인 없이 플레이할 수 있습니다.</p></div></div>
+    <div class="overlay" id="menuOverlay"><div class="modal"><span class="modal-kicker">WELCOME TO THE ARENA</span><h2>윤건언어<br>아레나</h2><p>3분 동안 싸워 가장 많은 KO를 기록하세요.<br>TTS 발음을 듣고 정답을 맞히면 전투 보상을 얻습니다.</p><div class="modal-actions"><button class="ghost-btn" id="characterOpenBtn">🎭 캐릭터 선택 · <span id="selectedCharacterName">기어탄</span></button><button class="gold-btn" id="soloBtn">⚔ 혼자 연습 시작</button><button class="blue-btn" id="createBtn">🌐 온라인 방 만들기</button><div class="form-row"><input class="field" id="roomInput" placeholder="방 코드 4자리" maxlength="4" aria-label="방 코드"><button class="ghost-btn" id="joinBtn">참가</button></div><button class="ghost-btn" id="accountOpenBtn">👤 Google 로그인</button><input class="field" id="nameInput" maxlength="12" placeholder="연습전 이름 (기본: 할루)" aria-label="연습전 플레이어 이름"></div><p class="dictionary-note">윤건언어를 온라인 사전에서 공부하고 오시면 훨씬 수월합니다.</p><a class="blue-btn dictionary-link" href="https://yoongunlang.site/dictionary.html" target="_blank" rel="noopener noreferrer">온라인 사전 바로가기</a><p class="status" id="menuStatus"></p><p class="tiny-note">온라인 전적은 계정에 누적됩니다. 연습전은 로그인 없이 플레이할 수 있습니다.</p></div></div>
+    <div class="overlay hidden" id="characterOverlay"><div class="modal roster-modal"><span class="modal-kicker">CHOOSE YOUR FIGHTER</span><h2>전사를 선택하세요</h2><p>15명의 전사 · 남 11명 / 여 4명</p><div class="character-grid" id="characterGrid"></div><div class="roster-detail" id="characterDetail"></div><button class="gold-btn wide" id="characterCloseBtn">선택 완료</button></div></div>
     <div class="overlay hidden" id="accountOverlay"><div class="modal"><span class="modal-kicker">YUNGEON PROFILE</span><h2>나의 계정</h2><div id="accountFormPanel"><p>Google 계정으로 로그인하면 온라인 점수와 티어가 계속 저장됩니다.</p><button class="blue-btn wide" id="googleLoginBtn">G&nbsp;&nbsp;Google로 로그인</button><p class="tiny-note">윤건언어 사이트는 Google 비밀번호를 저장하지 않습니다.</p></div><div id="accountProfilePanel" class="hidden"><p><span id="accountNameDisplay"></span> 님의 전적</p><div class="account-profile"><span id="accountTierDisplay"></span><b id="accountPointsDisplay"></b><span id="accountRecordDisplay"></span><div id="accountNextDisplay" class="account-small"></div><div class="meter purple"><i id="accountProgressBar"></i></div></div><button class="ghost-btn mini" id="logoutBtn">로그아웃</button></div><p class="status" id="accountStatus"></p><button class="ghost-btn mini wide" id="accountCloseBtn">닫기</button></div></div>
     <div class="overlay hidden" id="lobbyOverlay"><div class="modal"><span class="modal-kicker">ONLINE BATTLE</span><h2>친구를 초대해!</h2><p>친구에게 방 코드를 알려 주세요.<br>2~4명이 모이면 3분 개인전을 시작할 수 있습니다.</p><div class="code" id="roomCode">----</div><button class="ghost-btn mini" id="copyBtn">코드 복사</button><div class="lobby-list" id="lobbyList"></div><div class="modal-actions"><button class="gold-btn" id="startBtn">대전 시작</button><button class="ghost-btn" id="leaveBtn">방 나가기</button></div><p class="status" id="lobbyStatus"></p></div></div>
     <div class="overlay hidden" id="missionOverlay"><div class="modal"><span class="modal-kicker">🔊 YUNGEON LANGUAGE QUEST</span><h2>단어를 맞혀라!</h2><p>발음을 듣고 윤건언어 단어의 뜻을 고르세요.</p><div class="question"><b id="missionTerm">haluleno</b><small id="missionPron">할루레노</small></div><button class="blue-btn mini" id="listenBtn">🔊 TTS 발음 듣기</button><div class="choices" id="choices"></div><div class="mission-time" id="missionTime">남은 시간 14초</div></div></div>
@@ -54,7 +60,7 @@
   <aside class="side right-panel">
     <section class="card"><h2>실시간 순위</h2><div class="live-label" id="liveLabel">대기 중</div><div id="leaderboard"></div></section>
     <section class="card"><h2>누적 랭킹</h2><div id="globalBoard" class="account-small">서버에서 랭킹을 불러옵니다.</div></section>
-    <section class="card mission-card"><h2>🔊 윤건언어 미션</h2><p>실제 녹음을 듣고 뜻을 맞혀 보세요. 실드, 회복, 공격 강화, 필살기 충전 중 하나를 받습니다.</p><button class="gold-btn wide" id="missionBtn">미션 시작 <small>(Q)</small></button><p class="status" id="missionCooldown"></p></section>
+    <section class="card mission-card"><h2>🔊 윤건언어 미션</h2><p>TTS 발음을 듣고 뜻을 맞혀 보세요. 2회 피격 실드, 회복, 공격 강화, 필살기 충전 중 하나를 받습니다.</p><button class="gold-btn wide" id="missionBtn">미션 시작 <small>(Q)</small></button><p class="status" id="missionCooldown"></p></section>
     <section class="card"><h2>전투 규칙</h2><div class="how"><span>⏱️</span><span>3분 개인전 · KO 순위</span></div><div class="how"><span>🔸</span><span>탄약 3발 · 자동 재장전</span></div><div class="how"><span>💚</span><span>피격 5초 후 자동 회복</span></div><div class="how"><span>🌿</span><span>풀에 들어가면 몸이 가려짐</span></div></section>
   </aside>
 </main>
@@ -74,87 +80,346 @@ const firebaseConfig = {
 const firebaseApp=initializeApp(firebaseConfig);
 window.yungeonAuth={auth:getAuth(firebaseApp),provider:new GoogleAuthProvider(),signInWithPopup,signOut,onAuthStateChanged};
 </script>
+<!-- YUNGEON_BUNDLE_START -->
+<script>
+"use strict";
+
+// 15 characters: 11 male and 4 female (the closest whole-character split to 70/30).
+const characters = [
+  {id:"gear",name:"기어탄",gender:"남",icon:"🤖",color:"#42d9f0",role:"로봇 파일럿",description:"탑승 로봇의 중장갑과 초대형 레일포",hp:120,speed:195,attack:{name:"플라즈마 볼트",damage:18,speed:720,range:590,size:8},skill:{name:"과부하 장갑",type:"armor",cooldown:11},super:{name:"거대 레일포",type:"cannon"}},
+  {id:"flame",name:"화린",gender:"여",icon:"🔥",color:"#ff7961",role:"화염술사",description:"불씨를 퍼뜨리고 전장을 태우는 공격",hp:95,speed:220,attack:{name:"불씨탄",damage:16,speed:660,range:540,size:8,status:"burn"},skill:{name:"화염 고리",type:"flameRing",cooldown:10},super:{name:"유성 낙하",type:"meteor"}},
+  {id:"jumper",name:"도약",gender:"남",icon:"🦘",color:"#f8c462",role:"점프 선봉",description:"맵 절반 거리까지 점프해 착지 충격파",hp:105,speed:235,attack:{name:"도약 창",damage:19,speed:690,range:580,size:7},skill:{name:"전광 돌진",type:"dash",cooldown:9},super:{name:"슈퍼점프",type:"jump"}},
+  {id:"frost",name:"서리온",gender:"남",icon:"❄️",color:"#8ecbff",role:"빙결 조율사",description:"느려지는 얼음 파편과 광역 눈보라",hp:100,speed:215,attack:{name:"얼음 파편",damage:17,speed:650,range:570,size:8,status:"slow"},skill:{name:"서리 숨결",type:"freeze",cooldown:10},super:{name:"백야 눈보라",type:"blizzard"}},
+  {id:"volt",name:"볼티",gender:"남",icon:"⚡",color:"#ffdc66",role:"번개 사냥꾼",description:"빠른 탄환과 연쇄 전기 공격",hp:90,speed:245,attack:{name:"전기 펄스",damage:16,speed:790,range:600,size:6},skill:{name:"연쇄 스파크",type:"chain",cooldown:9},super:{name:"뇌전 폭풍",type:"storm"}},
+  {id:"healer",name:"루미",gender:"여",icon:"💚",color:"#72e5ad",role:"빛의 치유사",description:"회복 탄환과 생존을 돕는 보호 기술",hp:100,speed:215,attack:{name:"빛의 씨앗",damage:15,speed:650,range:550,size:8},skill:{name:"생명의 숨",type:"heal",cooldown:12},super:{name:"성역",type:"sanctuary"}},
+  {id:"sniper",name:"핀노",gender:"남",icon:"🎯",color:"#f89abd",role:"정밀 사수",description:"긴 사거리의 고위력 탄환과 관통 광선",hp:80,speed:210,attack:{name:"정밀 탄환",damage:25,speed:950,range:790,size:5,cooldown:0.42},skill:{name:"집중 조준",type:"focus",cooldown:11},super:{name:"직선 관통포",type:"rail"}},
+  {id:"trick",name:"카르도",gender:"남",icon:"🃏",color:"#bf95ff",role:"환영 마술사",description:"순간 이동과 사방으로 날리는 카드",hp:95,speed:235,attack:{name:"마법 카드",damage:17,speed:720,range:560,size:7},skill:{name:"허상 이동",type:"blink",cooldown:10},super:{name:"거울 카드",type:"mirror"}},
+  {id:"earth",name:"바위르",gender:"남",icon:"🪨",color:"#c69b74",role:"대지 수호자",description:"묵직한 투석과 지진 방어",hp:135,speed:185,attack:{name:"돌 투척",damage:21,speed:570,range:500,size:11},skill:{name:"지진 발구르기",type:"quake",cooldown:11},super:{name:"대지 요새",type:"earthwall"}},
+  {id:"wind",name:"휘나",gender:"여",icon:"🌪️",color:"#7eebd5",role:"바람 길잡이",description:"빠른 바람탄과 적을 밀어내는 돌풍",hp:90,speed:255,attack:{name:"바람 칼날",damage:16,speed:810,range:610,size:7},skill:{name:"밀어내는 숨",type:"gust",cooldown:9},super:{name:"회오리",type:"tornado"}},
+  {id:"shadow",name:"그림",gender:"남",icon:"🌑",color:"#9b9cdb",role:"그림자 잠입자",description:"은신과 뒤를 노리는 기습",hp:90,speed:245,attack:{name:"암영 단검",damage:19,speed:770,range:550,size:7},skill:{name:"그림자 망토",type:"stealth",cooldown:11},super:{name:"배후 일격",type:"teleStrike"}},
+  {id:"alchemist",name:"아루",gender:"남",icon:"🧪",color:"#b6e579",role:"연금술사",description:"독성 물약과 오래 남는 산성 비",hp:100,speed:215,attack:{name:"독 물약",damage:15,speed:630,range:520,size:9,status:"poison"},skill:{name:"독성 웅덩이",type:"poisonPool",cooldown:12},super:{name:"산성 소나기",type:"acidRain"}},
+  {id:"music",name:"리듬",gender:"남",icon:"🎵",color:"#ff95c3",role:"음파 연주자",description:"박자 강화와 원형 음파 폭발",hp:95,speed:225,attack:{name:"음표탄",damage:17,speed:700,range:570,size:8},skill:{name:"고속 박자",type:"rhythm",cooldown:10},super:{name:"대합창",type:"sonic"}},
+  {id:"plant",name:"덩굴",gender:"남",icon:"🌿",color:"#81d68d",role:"숲의 수호자",description:"가시탄과 움직임을 묶는 덩굴",hp:110,speed:210,attack:{name:"가시탄",damage:17,speed:670,range:560,size:7},skill:{name:"휘감는 뿌리",type:"roots",cooldown:10},super:{name:"생명의 정원",type:"garden"}},
+  {id:"star",name:"별하",gender:"여",icon:"🌟",color:"#ffd986",role:"별빛 탐험가",description:"빛의 탄환과 궤도 포화 공격",hp:95,speed:230,attack:{name:"별똥탄",damage:18,speed:750,range:610,size:8},skill:{name:"별빛 충전",type:"starlight",cooldown:10},super:{name:"별의 궤도",type:"orbit"}}
+];
+
+if (typeof module !== "undefined" && module.exports) module.exports = characters;
+if (typeof window !== "undefined") window.YungeonCharacters = characters;
+
+</script>
+<script>
+"use strict";
+
+const roster = typeof module !== "undefined" && module.exports ? require("./characters") : window.YungeonCharacters;
+const byId = new Map(roster.map(character => [character.id,character]));
+const TAU = Math.PI*2;
+const clamp = (value,min,max) => Math.max(min,Math.min(max,value));
+const getCharacter = id => byId.get(id) || roster[0];
+
+function applyStatus(player,status,now,owner) {
+  if(status==="burn") {player.burnUntil=Math.max(player.burnUntil||0,now+3000);player.nextBurn=now+600;player.burnOwner=owner;}
+  if(status==="poison") {player.poisonUntil=Math.max(player.poisonUntil||0,now+4000);player.nextPoison=now+700;player.poisonOwner=owner;}
+  if(status==="slow") player.slowUntil=Math.max(player.slowUntil||0,now+2600);
+  if(status==="root") player.rootUntil=Math.max(player.rootUntil||0,now+1300);
+}
+function hit(world,target,damage,owner,status,now) {
+  if(world.hit(target,damage,owner)) {if(status)applyStatus(target,status,now,owner);return true;}
+  return false;
+}
+function blast(world,owner,x,y,radius,damage,status,knockback=0,now=world.now()) {
+  world.effect({type:"blast",x,y,radius,color:getCharacter(owner.characterId).color});
+  for(const target of world.players()) {
+    if(target.id===owner.id||!target.alive)continue;
+    const dx=target.x-x,dy=target.y-y,distance=Math.hypot(dx,dy);
+    if(distance>radius+19)continue;
+    hit(world,target,damage,owner.id,status,now);
+    if(knockback&&distance>0)world.push(target,dx/distance*knockback,dy/distance*knockback);
+  }
+}
+function forwardPoint(world,p,distance) {
+  let x=p.x+Math.cos(p.angle)*distance,y=p.y+Math.sin(p.angle)*distance;
+  if(!world.canStand(x,y,19)) {x=p.x+Math.cos(p.angle)*distance*.65;y=p.y+Math.sin(p.angle)*distance*.65;}
+  return {x,y};
+}
+function dash(world,p,distance) {
+  const dx=Math.cos(p.angle),dy=Math.sin(p.angle),steps=Math.ceil(distance/12);
+  for(let i=0;i<steps;i++) {const x=p.x+dx*distance/steps,y=p.y+dy*distance/steps;if(!world.canStand(x,y,19))break;world.moveTo(p,x,y);}
+  world.effect({type:"dash",x:p.x,y:p.y,color:getCharacter(p.characterId).color});
+}
+function fireBasic(world,p,now) {
+  if(!p.alive||p.jump||p.ammo<1)return false;
+  const character=getCharacter(p.characterId),attack=character.attack;
+  const cooldown=(attack.cooldown||.265)*(p.fastFireUntil>now?.62:1)*1000;
+  if(now-(p.lastShot||0)<cooldown)return false;
+  p.ammo--;p.lastShot=now;p.lastReload=now;
+  world.shot(p,p.angle,{...attack,damage:attack.damage+(p.bonusDamageUntil>now?8:0),color:character.color});
+  world.effect({type:"shot",x:p.x,y:p.y,id:p.id,color:character.color,characterId:p.characterId});
+  return true;
+}
+function useSkill(world,p,now) {
+  if(!p.alive||p.jump||now<(p.skillReadyAt||0))return {ok:false,reason:"cooldown"};
+  const character=getCharacter(p.characterId),type=character.skill.type;
+  p.skillReadyAt=now+character.skill.cooldown*1000;
+  world.effect({type:"skill",skill:type,x:p.x,y:p.y,id:p.id,color:character.color});
+  switch(type) {
+    case "armor": p.shieldHits=clamp((p.shieldHits||0)+2,0,2);p.speedBuffUntil=now+4200;break;
+    case "flameRing": blast(world,p,p.x,p.y,120,22,"burn",0,now);break;
+    case "dash": dash(world,p,175);blast(world,p,p.x,p.y,65,15,null,0,now);break;
+    case "freeze": blast(world,p,p.x,p.y,135,14,"slow",0,now);break;
+    case "chain": for(const offset of[-.22,0,.22])world.shot(p,p.angle+offset,{damage:19,speed:860,range:560,size:7,color:character.color});break;
+    case "heal": p.hp=Math.min(character.hp,p.hp+38);world.effect({type:"heal",x:p.x,y:p.y,id:p.id});break;
+    case "focus": p.bonusDamageUntil=now+6300;p.fastFireUntil=now+6300;break;
+    case "blink": dash(world,p,180);p.shieldHits=Math.min(2,(p.shieldHits||0)+1);break;
+    case "quake": blast(world,p,p.x,p.y,115,24,"slow",0,now);break;
+    case "gust": blast(world,p,p.x,p.y,145,15,null,100,now);break;
+    case "stealth": p.stealthUntil=now+4200;p.speedBuffUntil=now+4200;break;
+    case "poisonPool": {const point=forwardPoint(world,p,165);world.fields.push({x:point.x,y:point.y,radius:83,until:now+4200,nextTick:now+400,interval:650,damage:7,status:"poison",owner:p.id,color:character.color});world.effect({type:"field",x:point.x,y:point.y,radius:83,color:character.color});break;}
+    case "rhythm": p.fastFireUntil=now+6500;p.hp=Math.min(character.hp,p.hp+16);break;
+    case "roots": world.shot(p,p.angle,{damage:16,speed:710,range:570,size:12,status:"root",color:character.color});break;
+    case "starlight": p.ammo=3;p.shieldHits=Math.min(2,(p.shieldHits||0)+1);p.super=Math.min(100,p.super+8);break;
+  }
+  return {ok:true,cooldown:character.skill.cooldown};
+}
+function useSuper(world,p,now,target) {
+  if(!p.alive||p.jump||p.super<100)return {ok:false,reason:"not-ready"};
+  const character=getCharacter(p.characterId),type=character.super.type;
+  if(type==="jump") {
+    if(!target||!Number.isFinite(target.x)||!Number.isFinite(target.y))return {ok:false,reason:"target"};
+    const distance=Math.hypot(target.x-p.x,target.y-p.y);
+    if(distance>525||distance<35||!world.canStand(target.x,target.y,21))return {ok:false,reason:"range"};
+    p.super=0;p.jump={fromX:p.x,fromY:p.y,toX:target.x,toY:target.y,startAt:now,landAt:now+650};
+    world.effect({type:"jump",x:p.x,y:p.y,toX:target.x,toY:target.y,id:p.id,color:character.color});
+    return {ok:true};
+  }
+  p.super=0;
+  world.effect({type:"super",super:type,x:p.x,y:p.y,id:p.id,color:character.color});
+  switch(type) {
+    case "cannon": for(const offset of[-.09,0,.09])world.shot(p,p.angle+offset,{damage:43,speed:900,range:800,size:15,color:character.color});break;
+    case "meteor": {const point=target&&Number.isFinite(target.x)&&Math.hypot(target.x-p.x,target.y-p.y)<420?target:forwardPoint(world,p,350);blast(world,p,point.x,point.y,135,44,"burn",0,now);break;}
+    case "blizzard": blast(world,p,p.x,p.y,225,36,"slow",0,now);break;
+    case "storm": for(let i=0;i<10;i++)world.shot(p,i*TAU/10,{damage:24,speed:810,range:650,size:9,color:character.color});break;
+    case "sanctuary": p.hp=character.hp;p.shieldHits=2;world.effect({type:"heal",x:p.x,y:p.y,id:p.id});break;
+    case "rail": {const dx=Math.cos(p.angle),dy=Math.sin(p.angle);for(const enemy of world.players()){if(enemy.id===p.id||!enemy.alive)continue;const vx=enemy.x-p.x,vy=enemy.y-p.y,along=vx*dx+vy*dy,across=Math.abs(vx*dy-vy*dx);if(along>0&&along<820&&across<36)hit(world,enemy,58,p.id,null,now);}world.effect({type:"beam",x:p.x,y:p.y,toX:p.x+dx*820,toY:p.y+dy*820,color:character.color});break;}
+    case "mirror": for(let i=0;i<12;i++)world.shot(p,i*TAU/12,{damage:23,speed:740,range:590,size:8,color:character.color});break;
+    case "earthwall": p.shieldHits=2;blast(world,p,p.x,p.y,155,28,"slow",55,now);break;
+    case "tornado": blast(world,p,p.x,p.y,205,36,"slow",135,now);break;
+    case "teleStrike": {const enemies=world.players().filter(v=>v.id!==p.id&&v.alive&&Math.hypot(v.x-p.x,v.y-p.y)<345).sort((a,b)=>Math.hypot(a.x-p.x,a.y-p.y)-Math.hypot(b.x-p.x,b.y-p.y));const enemy=enemies[0];if(enemy){const x=enemy.x-Math.cos(p.angle)*45,y=enemy.y-Math.sin(p.angle)*45;if(world.canStand(x,y,19))world.moveTo(p,x,y);hit(world,enemy,52,p.id,null,now);world.effect({type:"dash",x:p.x,y:p.y,color:character.color});}else for(const offset of[-.15,0,.15])world.shot(p,p.angle+offset,{damage:25,speed:760,range:600,size:9,color:character.color});break;}
+    case "acidRain": {const point=target&&Number.isFinite(target.x)&&Math.hypot(target.x-p.x,target.y-p.y)<420?target:forwardPoint(world,p,330);world.fields.push({x:point.x,y:point.y,radius:145,until:now+5000,nextTick:now+400,interval:650,damage:11,status:"poison",owner:p.id,color:character.color});world.effect({type:"field",x:point.x,y:point.y,radius:145,color:character.color});break;}
+    case "sonic": blast(world,p,p.x,p.y,215,40,null,80,now);break;
+    case "garden": p.hp=Math.min(character.hp,p.hp+60);blast(world,p,p.x,p.y,160,29,"root",0,now);break;
+    case "orbit": for(let i=0;i<12;i++)world.shot(p,i*TAU/12,{damage:23,speed:780,range:650,size:9,color:character.color});break;
+  }
+  return {ok:true};
+}
+function tick(world,now) {
+  for(const player of world.players()) {
+    if(player.jump&&now>=player.jump.landAt) {
+      const jump=player.jump;player.jump=null;world.moveTo(player,jump.toX,jump.toY);
+      world.effect({type:"land",x:player.x,y:player.y,radius:120,id:player.id,color:getCharacter(player.characterId).color});
+      blast(world,player,player.x,player.y,120,46,null,40,now);
+    }
+    if(!player.alive)continue;
+    if(player.burnUntil>now&&now>=(player.nextBurn||0)){player.nextBurn=now+650;world.hit(player,5,player.burnOwner);}
+    if(player.poisonUntil>now&&now>=(player.nextPoison||0)){player.nextPoison=now+760;world.hit(player,4,player.poisonOwner);}
+  }
+  for(let i=world.fields.length-1;i>=0;i--)if(world.fields[i].until<=now)world.fields.splice(i,1);
+  for(const field of world.fields)if(now>=field.nextTick){field.nextTick=now+field.interval;for(const player of world.players())if(player.id!==field.owner&&player.alive&&Math.hypot(player.x-field.x,player.y-field.y)<field.radius+19)hit(world,player,field.damage,field.owner,field.status,now);}
+}
+const rules={getCharacter,roster,applyStatus,fireBasic,useSkill,useSuper,tick};
+if(typeof module!=="undefined"&&module.exports)module.exports=rules;
+if(typeof window!=="undefined")window.YungeonCombat=rules;
+
+</script>
+<script>
+"use strict";
+
+// Original procedural soundtrack and effects. Speech synthesis stays independent.
+class YungeonSoundEngine {
+  constructor(){
+    this.context=null;this.master=null;this.musicBus=null;this.effectsBus=null;
+    this.mode="menu";this.step=0;this.nextStep=0;this.timer=null;
+    try{const saved=JSON.parse(localStorage.getItem("yungeonSound")||"{}");this.muted=!!saved.muted;this.bgmVolume=Number.isFinite(saved.bgmVolume)?saved.bgmVolume:.55;this.sfxVolume=Number.isFinite(saved.sfxVolume)?saved.sfxVolume:.7;}catch{this.muted=false;this.bgmVolume=.55;this.sfxVolume=.7;}
+  }
+  save(){try{localStorage.setItem("yungeonSound",JSON.stringify({muted:this.muted,bgmVolume:this.bgmVolume,sfxVolume:this.sfxVolume}));}catch{}}
+  unlock(){
+    if(!this.context){
+      const Context=window.AudioContext||window.webkitAudioContext;if(!Context)return;
+      this.context=new Context();this.master=this.context.createGain();this.musicBus=this.context.createGain();this.effectsBus=this.context.createGain();
+      this.musicBus.connect(this.master);this.effectsBus.connect(this.master);this.master.connect(this.context.destination);
+      this.applyVolumes();this.nextStep=this.context.currentTime+.05;this.timer=setInterval(()=>this.schedule(),70);
+    }
+    if(this.context.state==="suspended")this.context.resume().catch(()=>{});
+  }
+  applyVolumes(){if(!this.context)return;const t=this.context.currentTime;this.master.gain.setTargetAtTime(this.muted?0:.9,t,.03);this.musicBus.gain.setTargetAtTime(this.bgmVolume*.38,t,.04);this.effectsBus.gain.setTargetAtTime(this.sfxVolume*.7,t,.02);}
+  setMuted(value){this.muted=!!value;this.applyVolumes();this.save();}
+  setBgmVolume(value){this.bgmVolume=Math.max(0,Math.min(1,Number(value)));this.applyVolumes();this.save();}
+  setSfxVolume(value){this.sfxVolume=Math.max(0,Math.min(1,Number(value)));this.applyVolumes();this.save();}
+  setMode(mode){if(mode!==this.mode){this.mode=mode;this.step=0;if(this.context)this.nextStep=this.context.currentTime+.08;}}
+  note(frequency,start,duration,options={}){
+    if(!this.context)return;const c=this.context,osc=c.createOscillator(),gain=c.createGain();
+    osc.type=options.wave||"sine";osc.frequency.setValueAtTime(frequency,start);
+    if(options.end)osc.frequency.exponentialRampToValueAtTime(Math.max(30,options.end),start+duration);
+    gain.gain.setValueAtTime(.0001,start);gain.gain.exponentialRampToValueAtTime(Math.max(.0002,options.gain||.06),start+Math.min(.025,duration*.2));gain.gain.exponentialRampToValueAtTime(.0001,start+duration);
+    osc.connect(gain);gain.connect(options.bus==="sfx"?this.effectsBus:this.musicBus);osc.start(start);osc.stop(start+duration+.015);
+  }
+  noise(start,duration,gainAmount=.05,highpass=800){
+    if(!this.context)return;const c=this.context,buffer=c.createBuffer(1,Math.ceil(c.sampleRate*duration),c.sampleRate),data=buffer.getChannelData(0);
+    for(let i=0;i<data.length;i++)data[i]=(Math.random()*2-1)*(1-i/data.length);
+    const source=c.createBufferSource(),filter=c.createBiquadFilter(),gain=c.createGain();source.buffer=buffer;filter.type="highpass";filter.frequency.value=highpass;gain.gain.setValueAtTime(gainAmount,start);gain.gain.exponentialRampToValueAtTime(.0001,start+duration);source.connect(filter);filter.connect(gain);gain.connect(this.effectsBus);source.start(start);source.stop(start+duration+.01);
+  }
+  schedule(){
+    if(!this.context||this.context.state!=="running")return;
+    const c=this.context,menu=this.mode!=="battle",bpm=menu?96:138,stepTime=60/bpm/4;
+    while(this.nextStep<c.currentTime+.22){this.musicStep(this.step,this.nextStep,stepTime,menu);this.step=(this.step+1)%64;this.nextStep+=stepTime;}
+  }
+  musicStep(step,time,stepTime,menu){
+    const bar=Math.floor(step/16),beat=step%16;
+    if(menu){
+      const chords=[[261.6,329.6,392],[220,261.6,329.6],[174.6,220,349.2],[196,246.9,392]];
+      if(beat===0)for(const freq of chords[bar])this.note(freq,time,stepTime*14,{wave:"sine",gain:.026});
+      const pattern=[523.3,0,659.3,0,783.99,0,659.3,0,587.3,0,523.3,0,440,0,392,0];
+      if(pattern[beat]){this.note(pattern[beat]*(bar===2?.88:1),time,stepTime*1.65,{wave:"triangle",gain:.073});this.note(pattern[beat]*.5,time,stepTime*1.4,{wave:"sine",gain:.025});}
+      if(beat%4===0)this.note(chords[bar][0]/2,time,stepTime*3,{wave:"triangle",gain:.045});
+    }else{
+      const roots=[146.8,116.5,130.8,110];
+      if(beat%4===0){this.note(roots[bar]/2,time,stepTime*3.2,{wave:"sawtooth",gain:.085});this.note(75,time,stepTime*1.3,{wave:"sine",gain:.11,end:37});}
+      if(beat===4||beat===12){this.note(205,time,stepTime*.65,{wave:"triangle",gain:.06,end:110});this.note(480,time,stepTime*.43,{wave:"square",gain:.018,end:140});}
+      if(beat%2===0)this.note(3900,time,stepTime*.23,{wave:"triangle",gain:.018,end:2200});
+      const lead=[0,293.7,0,349.2,440,0,349.2,0,523.3,0,440,349.2,0,293.7,0,261.6];
+      if(lead[beat])this.note(lead[beat]*(bar===1?.9:1),time,stepTime*1.3,{wave:"square",gain:.027});
+      if(beat===0||beat===8)for(const ratio of[1,1.2,1.5])this.note(roots[bar]*ratio,time,stepTime*7,{wave:"sine",gain:.018});
+    }
+  }
+  play(name){
+    this.unlock();if(!this.context||this.muted||this.sfxVolume<=0)return;const t=this.context.currentTime+.006;
+    const n=(f,d,w="triangle",g=.13,end)=>this.note(f,t,d,{wave:w,gain:g,end,bus:"sfx"});
+    switch(name){
+      case "shoot":n(560,.12,"square",.052,230);n(950,.07,"triangle",.09,510);break;
+      case "hit":n(175,.18,"sawtooth",.15,72);this.noise(t,.12,.13,450);break;
+      case "ko":n(390,.43,"sawtooth",.16,80);this.noise(t,.34,.18,350);this.note(110,t+.19,.3,{wave:"sine",gain:.14,end:45,bus:"sfx"});break;
+      case "correct":for(const [i,f] of[523,659,784,1046].entries())this.note(f,t+i*.09,.25,{wave:"triangle",gain:.13,bus:"sfx"});break;
+      case "wrong":n(340,.33,"square",.1,150);this.note(190,t+.12,.24,{wave:"triangle",gain:.09,end:95,bus:"sfx"});break;
+      case "item":for(const [i,f] of[784,1046,1318].entries())this.note(f,t+i*.07,.22,{wave:"sine",gain:.12,bus:"sfx"});break;
+      case "end":for(const [i,f] of[392,523,659,784,1046].entries())this.note(f,t+i*.13,.42,{wave:"triangle",gain:.14,bus:"sfx"});break;
+      case "skill":n(440,.2,"triangle",.1,880);this.noise(t,.08,.05,1500);break;
+      case "super":n(260,.5,"sawtooth",.12,740);this.note(1046,t+.18,.34,{wave:"triangle",gain:.1,bus:"sfx"});break;
+      case "jump":n(210,.37,"triangle",.11,870);break;
+      case "land":n(150,.42,"sawtooth",.16,46);this.noise(t,.26,.13,420);break;
+      case "respawn":for(const [i,f] of[392,523,784].entries())this.note(f,t+i*.08,.24,{wave:"sine",gain:.1,bus:"sfx"});break;
+    }
+  }
+}
+
+window.YungeonSound = new YungeonSoundEngine();
+
+</script>
 <script>
 (() => {
   "use strict";
-  const W=720,H=1080,TAU=Math.PI*2, canvas=document.getElementById("game"),ctx=canvas.getContext("2d");
-  const $=id=>document.getElementById(id), clamp=(v,a,b)=>Math.max(a,Math.min(b,v)),rand=(a,b)=>a+Math.random()*(b-a), d2=(a,b,c,d)=>(a-c)**2+(b-d)**2;
+  const W=720,H=1080,TAU=Math.PI*2,canvas=document.getElementById("game"),ctx=canvas.getContext("2d");
+  const $=id=>document.getElementById(id),clamp=(v,a,b)=>Math.max(a,Math.min(b,v)),rand=(a,b)=>a+Math.random()*(b-a);
+  const d2=(a,b,c,d)=>(a-c)**2+(b-d)**2;
+  const roster=window.YungeonCharacters,combat=window.YungeonCombat,sound=window.YungeonSound;
   const walls=[[273,217,174,30],[273,815,174,30],[207,318,30,103],[483,318,30,103],[207,659,30,105],[483,659,30,105],[207,390,96,30],[417,390,96,30],[207,660,96,30],[417,660,96,30],[0,452,98,45],[622,452,98,45],[0,585,98,45],[622,585,98,45],[69,382,30,116],[621,382,30,116],[69,584,30,116],[621,584,30,116],[0,296,98,30],[622,296,98,30],[0,754,98,30],[622,754,98,30],[0,0,60,48],[660,0,60,48],[0,1032,60,48],[660,1032,60,48]];
   const waters=[[0,0,93,278],[627,0,93,278],[0,497,93,88],[627,497,93,88],[0,800,93,280],[627,800,93,280]];
   const bushes=[[273,152,174,66],[238,333,245,62],[238,686,245,78],[273,845,174,79]];
-  const words=[["ek’elenol","에길레노","기분 좋을 때 쓰는 단어"],["emileno","에밀레노","엄마"],["ebileno","에빌레노","아빠"],["insane","인세네","극도한"],["espanol de mara","이스파놀 더 마라","스페인어 해봐"],["Dance bari","댄스바리","댄스파티"],["Golin Bit Thongg","구런 빛 똥","사랑해"],["Golioli Galigali Goligali Ga","구리구리 가리가리 구리가리 까","그냥 노래 부르는 것"],["agolalo","에고라로","기분이 Dirty 할 때 쓰는 단어"],["ogolalo","오고라로","에길레노의 사투리"],["babaooIlala","바바울랄라","거시기 (기억이 잘 안나는 것을 지칭할 때의 거시기)"],["Let’s go baby","레츠 고 베이비","빨리 가자 녀석들아"],["mokgolelo","먹고레로","미식부"],["ae","예","1"],["el","엘","2"],["me’","메","3"],["zo","조","4"],["pa","파","5"],["de’","데","6"],["luc","럭","7"],["Hosbi","호스비","8"],["Gouten","구텐","9"],["burg","베르크","0"],["ajuol leno","아절레노","아저씨"],["ajoo leno","아주레노","아줌마"],["le","레","나"],["no","노","너"],["egil","에길","남자"],["megil","메길","여자"],["fellow","펠로","그들"],["BBallo","빨로","그 녀석들"],["egilmegileno","에길메길레노","성별"],["ebiuleno","이별레노","탈퇴, 헤어짐"],["gouleno","고울레노","절교"],["oola","울라","아"],["excu’ne","엑스쿠네","변명"],["haluleno","할루레노","안녕하세요, 안녕"],["TThenkcoleno","땡콜레노","감사합니다"],["nogoleno","노골레노","싫다, 싫어하다"],["goleno","골레노","좋다, 좋아하다"],["frendeno","프렌데노","친구"],["mo’ne","머네","돈"],["cocoleno","코콜레노","시간"],["ne’","네","~은, ~는, 이, 가"],["de’ne","데네","오늘"],["do’ne","도네","내일"],["dele’ne","델레네","모레"],["di’ne","디네","어제"],["dedoni’ne","데도니네","이번주"],["deldode","델도데","다음주"],["dedoni’ne deldone","데도니네 델도네","다다음주"],["mido’ne","미도네","만나다"],["sumongleno","수멍레노","멍청이, 바보"],["nomoleno","노모레노","망할"],["nogrisa haleu","구러싸 할르","싸가지가 없는 (할르 대신 ‘르’를 쓰면 싸가지가 있다로 대체가능)"],["bokerano","보께라노","양아치, 비행청소년"],["basahi","바사이","쓰레기"],["haleu","할르","없다"],["leu","르","있다"],["aguda haleu","아구다 할르","눈치가 없는(할르 대신 ‘르’를 쓰면 눈치가 있다로 대체가능)"],["haleu pole’","할르 폴레","못한다(할르 대신 ‘르’를 쓰면 할수 있다로 대체가능)"],["amide","올라 아미대","人馬 (한자니 그대로 발음하세요)"],["maloi","말로이","나쁜"],["loi","로이","착한"],["piroki","피로키","불량한, 불량"]];
-  const rewardNames={shield:"🛡 실드 +45",heal:"💚 체력 +45",boost:"⚡ 공격 강화 10초",super:"✦ 필살기 +60%"};
-  const spawn=[[360,965],[360,96],[150,535],[570,535]], colors=["#42d9f0","#ff7190","#ffc553","#ad91ff"];
-  let mode="menu",onlineStatus="",roomCode="",myId=0,hostId=0,ws=null,players=[],bullets=[],effects=[],events=[],timeLeft=180,clock=0,frame=0,last=performance.now(),fireHeld=false,superHeld=false,angle=-Math.PI/2,moveTouch={x:0,y:0},aimTouch=null,keys=new Set(),challenge=null,nextChallenge=0,lastAutoChallenge=0,toastTimer=0,endShown=false,serverTarget=[];
-  const show=(id,visible)=>$(id).classList.toggle("hidden",!visible);
-  function toast(s){const el=$("toast");el.textContent=s;el.classList.add("show");clearTimeout(toastTimer);toastTimer=setTimeout(()=>el.classList.remove("show"),2200);}
-  function newPlayer(id,name,x,y,color,bot=false){return{id,name,x,y,color,bot,hp:100,maxHp:100,ammo:3,super:0,ko:0,deaths:0,angle:-Math.PI/2,shield:0,boost:false,boostUntil:0,alive:true,respawnAt:0,lastShot:0,lastReload:0,lastHurt:0,aiDir:0,aiChange:0,hidden:false};}
-  function blocked(x,y,r=19){if(x<r||y<r||x>W-r||y>H-r)return true;return [...walls,...waters].some(([a,b,w,h])=>x+r>a&&x-r<a+w&&y+r>b&&y-r<b+h);}
-  function move(p,dx,dy,dt,speed=225){const len=Math.hypot(dx,dy)||1,vx=dx/len*speed*dt,vy=dy/len*speed*dt;if(!blocked(p.x+vx,p.y))p.x+=vx;if(!blocked(p.x,p.y+vy))p.y+=vy;}
-  function particle(x,y,color,n=8,scale=1){for(let i=0;i<n;i++)effects.push({x,y,vx:rand(-110,110)*scale,vy:rand(-150,55)*scale,life:rand(.25,.6),max:.6,size:rand(3,7)*scale,color});}
-  function floating(x,y,text,color="#fff"){effects.push({x,y,vx:rand(-15,15),vy:-75,life:.9,max:.9,text,color});}
-  function getMe(){return players.find(p=>p.id===myId);}
+  const words=[["ek’elenol","에길레노","기분 좋을 때 쓰는 단어"],["emileno","에밀레노","엄마"],["ebileno","에빌레노","아빠"],["insane","인세네","극도한"],["espanol de mara","이스파놀 더 마라","스페인어 해봐"],["Dance bari","댄스바리","댄스파티"],["Golin Bit Thongg","구런 빛 똥","사랑해"],["Golioli Galigali Goligali Ga","구리구리 가리가리 구리가리 까","그냥 노래 부르는 것"],["agolalo","에고라로","기분이 Dirty 할 때 쓰는 단어"],["ogolalo","오고라로","에길레노의 사투리"],["babaooIlala","바바울랄라","거시기 (기억이 잘 안나는 것을 지칭할 때의 거시기)"],["Let’s go baby","레츠 고 베이비","빨리 가자 녀석들아"],["mokgolelo","먹고레로","미식부"],["ae","예","1"],["el","엘","2"],["me’","메","3"],["zo","조","4"],["pa","파","5"],["de’","데","6"],["luc","럭","7"],["Hosbi","호스비","8"],["Gouten","구텐","9"],["burg","베르크","0"],["ajuol leno","아절레노","아저씨"],["ajoo leno","아주레노","아줌마"],["le","레","나"],["no","노","너"],["egil","에길","남자"],["megil","메길","여자"],["fellow","펠로","그들"],["BBallo","빨로","그 녀석들"],["egilmegileno","에길메길레노","성별"],["ebiuleno","이별레노","탈퇴, 헤어짐"],["gouleno","고울레노","절교"],["oola","울라","아"],["excu’ne","엑스쿠네","변명"],["nomaleno","노멀레노","안멀다고, 안멀다고"],["maleno","멀레노","멀다고, 안멀다고"],["wakard","와카드","구닥다리"],["co’lone","콜로네","춥다"],["ha’lole","할로네","덥다"],["haluleno","할루레노","안녕하세요, 안녕"],["TThenkcoleno","땡콜레노","감사합니다"],["nogoleno","노골레노","싫다, 싫어하다"],["goleno","골레노","좋다, 좋아하다"],["frendeno","프렌데노","친구"],["mo’ne","머네","돈"],["cocoleno","코콜레노","시간"],["ne’","네","~은, ~는, 이, 가"],["de’ne","데네","오늘"],["do’ne","도네","내일"],["dele’ne","델레네","모레"],["di’ne","디네","어제"],["dedoni’ne","데도니네","이번주"],["deldode","델도데","다음주"],["dedoni’ne deldone","데도니네 델도네","다다음주"],["mido’ne","미도네","만나다"],["sumongleno","수멍레노","멍청이, 바보"],["nomoleno","노모레노","망할"],["nogrisa haleu","구러싸 할르","싸가지가 없는 (할르 대신 ‘르’를 쓰면 싸가지가 있다로 대체가능)"],["bokerano","보께라노","양아치, 비행청소년"],["basahi","바사이","쓰레기"],["haleu","할르","없다"],["leu","르","있다"],["aguda haleu","아구다 할르","눈치가 없는(할르 대신 ‘르’를 쓰면 눈치가 있다로 대체가능)"],["haleu pole’","할르 폴레","못한다(할르 대신 ‘르’를 쓰면 할수 있다로 대체가능)"],["amide","올라 아미대","人馬 (한자니 그대로 발음하세요)"],["maloi","말로이","나쁜"],["loi","로이","착한"],["piroki","피로키","불량한, 불량"],["susno","서쓰노","화학물질을 나타내는 말에 붙는 말"],["naturoomsusno","나트룸써쓰노","나트륨"],["goyonsansusno","구연산써쓰노","구연산"],["sone","소네","음식을 나타내는 말에 붙는 말"]];
+  const spawn=[[360,965],[360,96],[150,535],[570,535]];
+  const rewardNames={shield:"🛡 2회 피격 방어막",heal:"💚 체력 +45",boost:"⚡ 공격 강화 10초",super:"✦ 필살기 +60%"};
+  const escMap={"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"};
+  const escapeHtml=value=>String(value).replace(/[&<>"']/g,c=>escMap[c]);
+  let selectedCharacterId=localStorage.getItem("yungeonCharacter")||"gear";
+  if(!roster.some(c=>c.id===selectedCharacterId))selectedCharacterId="gear";
+  let mode="menu",onlineStatus="",roomCode="",myId=0,hostId=0,ws=null;
+  let players=[],bullets=[],fields=[],effects=[],timeLeft=180,clock=0,frame=0,last=performance.now();
+  let fireHeld=false,angle=-Math.PI/2,moveTouch={x:0,y:0},keys=new Set(),challenge=null,nextChallenge=0,lastAutoChallenge=0;
+  let toastTimer=0,endShown=false,jumpTargeting=false,pointerPosition=null;
   let authToken="",accountProfile=null,lastEarned=null;
-  function setToken(token){authToken=token||"";}
-  function renderAccount(){
-    const p=accountProfile;show("accountFormPanel",!p);show("accountProfilePanel",!!p);
-    $("accountOpenBtn").textContent=p?`👤 ${p.name} · ${p.tier} ${p.points}점`:"👤 Google 로그인";
-    $("sideAccountBtn").textContent=p?"계정 보기":"Google 로그인";
+  const show=(id,visible)=>$(id).classList.toggle("hidden",!visible);
+  const nowGame=()=>mode==="online"?Date.now():performance.now();
+  const me=()=>players.find(p=>p.id===myId);
+  function toast(message){const el=$("toast");el.textContent=message;el.classList.add("show");clearTimeout(toastTimer);toastTimer=setTimeout(()=>el.classList.remove("show"),2300);}
+  function blocked(x,y,r=19){if(!Number.isFinite(x)||!Number.isFinite(y)||x<r||y<r||x>W-r||y>H-r)return true;return [...walls,...waters].some(([a,b,w,h])=>x+r>a&&x-r<a+w&&y+r>b&&y-r<b+h);}
+  function moveTo(p,x,y){if(!blocked(x,y)){p.x=x;p.y=y;return true;}return false;}
+  function move(p,dx,dy,dt){const now=nowGame();if(p.rootUntil>now||p.jump)return;const len=Math.hypot(dx,dy);if(len<.01)return;let speed=combat.getCharacter(p.characterId).speed;if(p.slowUntil>now)speed*=.57;if(p.speedBuffUntil>now)speed*=1.3;const vx=dx/len*speed*dt,vy=dy/len*speed*dt;moveTo(p,p.x+vx,p.y);moveTo(p,p.x,p.y+vy);}
+  function newPlayer(id,name,x,y,characterId,bot=false){const c=combat.getCharacter(characterId),now=performance.now();return{id,name,x,y,characterId:c.id,color:c.color,bot,hp:c.hp,maxHp:c.hp,ammo:3,super:0,ko:0,deaths:0,angle:-Math.PI/2,shieldHits:0,alive:true,respawnAt:0,invulnUntil:now+3000,skillReadyAt:0,lastShot:-1000,lastReload:now,lastHurt:now,bonusDamageUntil:0,fastFireUntil:0,speedBuffUntil:0,stealthUntil:0,burnUntil:0,poisonUntil:0,slowUntil:0,rootUntil:0,jump:null,aiDir:0,aiChange:0};}
+  function particle(x,y,color,n=8,scale=1){for(let i=0;i<n;i++)effects.push({x,y,vx:rand(-110,110)*scale,vy:rand(-150,55)*scale,life:rand(.25,.6),max:.6,size:rand(3,7)*scale,color});}
+  function floating(x,y,label,color="#fff"){effects.push({x,y,vx:rand(-15,15),vy:-75,life:.9,max:.9,text:label,color});}
+  function visualEvent(ev,local=false){if(!ev)return;
+    if(ev.type==="shot"){particle(ev.x,ev.y,ev.color||"#ffe6a3",5,.6);if(local||mode==="online")sound.play("shoot");}
+    if(ev.type==="hit"||ev.type==="shieldHit"){particle(ev.x,ev.y,ev.type==="hit"?"#ffe2a2":"#9deeff",12);floating(ev.x,ev.y-28,ev.type==="hit"?`-${Math.ceil(ev.damage)}`:"실드!",ev.type==="hit"?"#fff0b1":"#acf2ff");sound.play("hit");}
+    if(ev.type==="ko"){particle(ev.x,ev.y,"#ffca73",28,1.6);toast(`${ev.name} ⚡ ${ev.target} KO!`);sound.play("ko");}
+    if(ev.type==="reward"){particle(ev.x,ev.y,"#e4abff",24,1.4);sound.play("item");}
+    if(ev.type==="respawn"){particle(ev.x,ev.y,"#9af5ff",22);sound.play("respawn");}
+    if(ev.type==="skill"){particle(ev.x,ev.y,ev.color||"#aaf9df",14);sound.play("skill");}
+    if(ev.type==="super"){particle(ev.x,ev.y,ev.color||"#ebadff",22,1.2);sound.play("super");}
+    if(ev.type==="jump"){particle(ev.x,ev.y,ev.color||"#ffd36e",18);sound.play("jump");}
+    if(ev.type==="land"){particle(ev.x,ev.y,ev.color||"#ffd36e",34,1.8);sound.play("land");}
+    if(ev.type==="blast"||ev.type==="field"||ev.type==="dash"||ev.type==="heal")particle(ev.x,ev.y,ev.color||"#c7f5df",18,1.1);
+    if(ev.type==="beam")for(let i=0;i<18;i++)particle(ev.x+(ev.toX-ev.x)*i/18,ev.y+(ev.toY-ev.y)*i/18,ev.color||"#fff",1,.5);
+  }
+  function soloDamage(target,amount,ownerId){const now=performance.now();if(!target.alive||target.jump||target.invulnUntil>now)return false;if(target.shieldHits>0){target.shieldHits--;visualEvent({type:"shieldHit",x:target.x,y:target.y,id:target.id},true);return false;}
+    target.hp=Math.max(0,target.hp-amount);target.lastHurt=now;const owner=players.find(p=>p.id===ownerId);if(owner&&owner.id!==target.id)owner.super=clamp(owner.super+14,0,100);visualEvent({type:"hit",x:target.x,y:target.y,id:target.id,damage:amount},true);
+    if(target.hp<=0){target.alive=false;target.deaths++;target.respawnAt=now+5000;target.jump=null;if(owner&&owner.id!==target.id)owner.ko++;visualEvent({type:"ko",x:target.x,y:target.y,name:owner?.name||"전장",target:target.name},true);}return true;
+  }
+  const soloWorld={fields,now:()=>performance.now(),players:()=>players,hit:soloDamage,canStand:(x,y,r)=>!blocked(x,y,r),moveTo,
+    push:(p,dx,dy)=>{for(let i=0;i<6;i++){moveTo(p,p.x+dx/6,p.y);moveTo(p,p.x,p.y+dy/6);}},
+    shot:(p,a,options)=>{const speed=options.speed||700,range=options.range||560;bullets.push({x:p.x+Math.cos(a)*27,y:p.y+Math.sin(a)*27,vx:Math.cos(a)*speed,vy:Math.sin(a)*speed,life:range/speed,owner:p.id,damage:options.damage||18,size:options.size||8,status:options.status||null,color:options.color||p.color,superShot:(options.damage||0)>=35});},
+    effect:ev=>visualEvent(ev,true)};
+  function renderCharacterSelect(){const c=combat.getCharacter(selectedCharacterId);$("selectedCharacterName").textContent=c.name;$("pilotName").textContent=me()?.name||c.name;document.querySelector(".pilot-face").textContent=c.icon;
+    $("characterGrid").innerHTML=roster.map(v=>`<button class="character-card ${v.id===c.id?"selected":""}" data-character="${v.id}" style="--fighter:${v.color}"><span class="icon">${v.icon}</span><b>${escapeHtml(v.name)}</b><small>${escapeHtml(v.role)}</small></button>`).join("");
+    $("characterDetail").innerHTML=`<b>${c.icon} ${escapeHtml(c.name)} · ${escapeHtml(c.role)}</b><br>${escapeHtml(c.description)}<br>체력 ${c.hp} · 속도 ${c.speed} · 원거리 공격 ${escapeHtml(c.attack.name)} (${c.attack.damage})<br>일반 스킬 ${escapeHtml(c.skill.name)} (${c.skill.cooldown}초) · 필살기 ${escapeHtml(c.super.name)}`;
+    $("characterGrid").querySelectorAll("button").forEach(b=>b.onclick=()=>{selectedCharacterId=b.dataset.character;localStorage.setItem("yungeonCharacter",selectedCharacterId);renderCharacterSelect();});
+  }
+  function renderAccount(){const p=accountProfile;show("accountFormPanel",!p);show("accountProfilePanel",!!p);$("accountOpenBtn").textContent=p?`👤 ${p.name} · ${p.tier} ${p.points}점`:"👤 Google 로그인";$("sideAccountBtn").textContent=p?"계정 보기":"Google 로그인";
     if(!p){$("sideAccount").innerHTML='<div class="account-small">Google로 로그인하면 온라인 대전 기록이 저장됩니다.</div>';return;}
     $("sideAccount").innerHTML=`<span class="account-tier">${escapeHtml(p.tier)}</span><div class="account-points">${p.points} P</div><div class="account-small">${escapeHtml(p.name)} · ${p.matches}전 ${p.wins}승 · 누적 ${p.totalKo} KO</div>`;
     $("accountNameDisplay").textContent=p.name;$("accountTierDisplay").textContent=`티어 · ${p.tier}`;$("accountPointsDisplay").textContent=`${p.points} P`;$("accountRecordDisplay").textContent=`${p.matches}전 ${p.wins}승 · 누적 ${p.totalKo} KO`;
-    $("accountNextDisplay").textContent=p.nextTier?`다음 티어 ${p.nextTier}까지 ${p.nextAt-p.points} P`:"최고 티어 달성!";
-    $("accountProgressBar").style.width=p.nextTier?`${clamp((p.points-p.tierStart)/(p.nextAt-p.tierStart)*100,0,100)}%`:"100%";
+    $("accountNextDisplay").textContent=p.nextTier?`다음 티어 ${p.nextTier}까지 ${p.nextAt-p.points} P`:"최고 티어 달성!";$("accountProgressBar").style.width=p.nextTier?`${clamp((p.points-p.tierStart)/(p.nextAt-p.tierStart)*100,0,100)}%`:"100%";
   }
   function openAccount(){$("accountStatus").textContent="";renderAccount();show("accountOverlay",true);}
-  async function googleLogin(){
-    try{
-      const f=window.yungeonAuth;if(!f)throw new Error("Firebase를 불러오는 중입니다. 잠시 후 다시 눌러 주세요.");
-      $("accountStatus").textContent="Google 로그인 중...";
-      const result=await f.signInWithPopup(f.auth,f.provider);
-      setToken(await result.user.getIdToken());
-      await loadProfile();$("accountStatus").textContent="Google 로그인 완료!";loadGlobalBoard();
-    }catch(e){$("accountStatus").textContent=e?.code==="auth/popup-closed-by-user"?"로그인 창이 닫혔습니다.":(e?.message||"Google 로그인에 실패했습니다.");}
-  }
-  async function loadProfile(){
-    const u=window.yungeonAuth?.auth?.currentUser;if(!u){setToken("");accountProfile=null;renderAccount();return;}
-    try{setToken(await u.getIdToken());const r=await fetch("/api/me",{headers:{Authorization:`Bearer ${authToken}`}}),d=await r.json();if(!r.ok)throw new Error(d.error||"프로필을 불러오지 못했습니다.");accountProfile=d.profile;renderAccount();}
-    catch(e){accountProfile=null;renderAccount();$("accountStatus").textContent=e.message||"게임 서버에 연결할 수 없습니다.";}
-  }
-  async function loadGlobalBoard(){if(location.protocol==="file:"){$("globalBoard").textContent="온라인 서버 실행 후 이용할 수 있습니다.";return;}try{const response=await fetch("/api/leaderboard");const data=await response.json();$("globalBoard").innerHTML=data.players.length?data.players.slice(0,5).map((p,i)=>`<div class="global-row"><span>${i+1}. ${escapeHtml(p.name)} <small>${escapeHtml(p.tier)}</small></span><b>${p.points} P</b></div>`).join(""):"아직 기록이 없습니다.";}catch{$("globalBoard").textContent="랭킹을 불러오지 못했습니다.";}}
-  function beginSolo(){closeSocket();mode="solo";onlineStatus="playing";players=[newPlayer(1,$("nameInput").value.trim()||"할루",360,965,colors[0]),newPlayer(2,"보께",360,96,colors[1],true),newPlayer(3,"모코",150,535,colors[2],true),newPlayer(4,"루미",570,535,colors[3],true)];myId=1;bullets=[];effects=[];timeLeft=180;clock=0;nextChallenge=10;lastAutoChallenge=0;lastEarned=null;endShown=false;challenge=null;angle=-Math.PI/2;show("menuOverlay",false);show("lobbyOverlay",false);show("endOverlay",false);show("missionOverlay",false);toast("⚔ 연습전 시작! 3분 동안 싸워 보세요");}
-  function finish(){if(endShown)return;endShown=true;show("missionOverlay",false);const sorted=[...players].sort((a,b)=>b.ko-a.ko||a.deaths-b.deaths);const me=getMe();$("endTitle").textContent=sorted[0]?.id===myId?"우승! 🎉":"경기 종료!";$("endDescription").textContent=`${me?.ko||0} KO · ${me?.deaths||0}번 쓰러짐${mode==="online"&&lastEarned!==null?` · +${lastEarned} P · ${accountProfile?.tier||""}`:""}`;$("endScores").innerHTML=sorted.map((p,i)=>`${i+1}위 · ${escapeHtml(p.name)} — ${p.ko} KO`).join("<br>");show("endOverlay",true);}
-  const escMap={"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"};function escapeHtml(v){return String(v).replace(/[&<>"']/g,c=>escMap[c]);}
-  function shoot(p,isSuper=false){if(!p.alive||clock-p.lastShot<(isSuper?.28:.235))return;if(isSuper){if(p.super<100)return;p.super=0;}else{if(p.ammo<1)return;p.ammo--;p.lastReload=clock;}p.lastShot=clock;for(const offset of(isSuper?[-.24,-.12,0,.12,.24]:[0])){const a=p.angle+offset;bullets.push({x:p.x+Math.cos(a)*26,y:p.y+Math.sin(a)*26,vx:Math.cos(a)*(isSuper?750:700),vy:Math.sin(a)*(isSuper?750:700),owner:p.id,damage:isSuper?27:(p.boostUntil>clock?27:18),life:isSuper?.85:.76,color:p.color,super:isSuper});}particle(p.x+Math.cos(p.angle)*26,p.y+Math.sin(p.angle)*26,isSuper?"#dfb7ff":"#ffeba3",isSuper?14:5,.7);}
-  function hurt(p,b){let amount=b.damage;if(p.shield>0){const absorbed=Math.min(p.shield,amount);p.shield-=absorbed;amount-=absorbed;}p.hp=Math.max(0,p.hp-amount);p.lastHurt=clock;const a=players.find(v=>v.id===b.owner);if(a&&a!==p)a.super=clamp(a.super+14,0,100);particle(p.x,p.y,p.color,15,1.3);floating(p.x,p.y-28,amount?`-${amount}`:"실드!",amount?"#fff0ad":"#b2f7ff");if(p.hp<=0){p.alive=false;p.deaths++;p.respawnAt=clock+3.2;if(a&&a!==p)a.ko++;particle(p.x,p.y,p.color,28,1.8);toast(`${a?.name||"전장"} ⚡ ${p.name} KO!`);}}
-  function updateSolo(dt){clock+=dt;timeLeft=Math.max(0,180-clock);if(timeLeft<=0){finish();return;}const me=getMe();let mx=(keys.has("d")||keys.has("arrowright")?1:0)-(keys.has("a")||keys.has("arrowleft")?1:0)+moveTouch.x,my=(keys.has("s")||keys.has("arrowdown")?1:0)-(keys.has("w")||keys.has("arrowup")?1:0)+moveTouch.y;if(me?.alive){move(me,clamp(mx,-1,1),clamp(my,-1,1),dt);me.angle=angle;if(superHeld){shoot(me,true);superHeld=false;}else if(fireHeld)shoot(me);}
-    for(const p of players){if(!p.alive){if(clock>=p.respawnAt){const [x,y]=spawn[Math.floor(rand(0,spawn.length))];p.x=x;p.y=y;p.hp=100;p.ammo=3;p.shield=20;p.alive=true;p.lastHurt=clock;particle(x,y,p.color,25);toast(`${p.name} 부활!`);}continue;}if(p.bot){const targets=players.filter(v=>v.id!==p.id&&v.alive);targets.sort((a,b)=>d2(p.x,p.y,a.x,a.y)-d2(p.x,p.y,b.x,b.y));const target=targets[0];if(target){const d=Math.hypot(target.x-p.x,target.y-p.y),a=Math.atan2(target.y-p.y,target.x-p.x);p.angle=a;if(clock>p.aiChange){p.aiDir=rand(-1,1);p.aiChange=clock+rand(1,3);}const forward=d>255?1:d<150?-.85:.12;move(p,Math.cos(a)*forward+Math.cos(a+Math.PI/2)*p.aiDir*.65,Math.sin(a)*forward+Math.sin(a+Math.PI/2)*p.aiDir*.65,dt,165);if(d<540&&Math.random()<dt*1.7)shoot(p);}}
-      if(p.ammo<3&&clock-p.lastReload>=1.6){p.ammo++;p.lastReload=clock;}if(clock-p.lastHurt>=5&&p.hp<100)p.hp=Math.min(100,p.hp+5*dt);p.boost=p.boostUntil>clock;
+  async function loadProfile(){const user=window.yungeonAuth?.auth?.currentUser;if(!user){authToken="";accountProfile=null;renderAccount();return;}try{authToken=await user.getIdToken();const response=await fetch("/api/me",{headers:{Authorization:`Bearer ${authToken}`}}),data=await response.json();if(!response.ok)throw Error(data.error||"프로필을 불러오지 못했습니다.");accountProfile=data.profile;renderAccount();}catch(error){accountProfile=null;renderAccount();$("accountStatus").textContent=error.message||"게임 서버에 연결할 수 없습니다.";}}
+  async function googleLogin(){try{const f=window.yungeonAuth;if(!f)throw Error("Firebase를 불러오는 중입니다. 잠시 후 다시 눌러 주세요.");$("accountStatus").textContent="Google 로그인 중...";const result=await f.signInWithPopup(f.auth,f.provider);authToken=await result.user.getIdToken();await loadProfile();$("accountStatus").textContent="Google 로그인 완료!";loadGlobalBoard();}catch(error){$("accountStatus").textContent=error?.code==="auth/popup-closed-by-user"?"로그인 창이 닫혔습니다.":error.message||"Google 로그인에 실패했습니다.";}}
+  async function loadGlobalBoard(){if(location.protocol==="file:"){$("globalBoard").textContent="온라인 서버 실행 후 이용할 수 있습니다.";return;}try{const response=await fetch("/api/leaderboard"),data=await response.json();$("globalBoard").innerHTML=data.players.length?data.players.slice(0,5).map((p,i)=>`<div class="global-row"><span>${i+1}. ${escapeHtml(p.name)} <small>${escapeHtml(p.tier)}</small></span><b>${p.points} P</b></div>`).join(""):"아직 기록이 없습니다.";}catch{$("globalBoard").textContent="랭킹을 불러오지 못했습니다.";}}
+  function beginSolo(){closeSocket();mode="solo";onlineStatus="playing";const bots=roster.filter(c=>c.id!==selectedCharacterId).sort(()=>Math.random()-.5).slice(0,3);players=[newPlayer(1,$("nameInput").value.trim()||combat.getCharacter(selectedCharacterId).name,360,965,selectedCharacterId),newPlayer(2,bots[0].name,360,96,bots[0].id,true),newPlayer(3,bots[1].name,150,535,bots[1].id,true),newPlayer(4,bots[2].name,570,535,bots[2].id,true)];myId=1;bullets=[];fields=[];soloWorld.fields=fields;effects=[];timeLeft=180;clock=0;nextChallenge=10;lastAutoChallenge=0;lastEarned=null;endShown=false;challenge=null;angle=-Math.PI/2;jumpTargeting=false;show("targetHint",false);for(const id of["menuOverlay","lobbyOverlay","endOverlay","missionOverlay","characterOverlay"])show(id,false);sound.setMode("battle");toast("⚔ 연습전 시작! 3분 동안 싸워 보세요");}
+  function finish(){if(endShown)return;endShown=true;show("missionOverlay",false);const sorted=[...players].sort((a,b)=>b.ko-a.ko||a.deaths-b.deaths),self=me();$("endTitle").textContent=sorted[0]?.id===myId?"우승! 🎉":"경기 종료!";$("endDescription").textContent=`${self?.ko||0} KO · ${self?.deaths||0}번 쓰러짐${mode==="online"&&lastEarned!==null?` · +${lastEarned} P · ${accountProfile?.tier||""}`:""}`;$("endScores").innerHTML=sorted.map((p,i)=>`${i+1}위 · ${escapeHtml(p.name)} (${escapeHtml(combat.getCharacter(p.characterId).name)}) — ${p.ko} KO`).join("<br>");show("endOverlay",true);sound.play("end");sound.setMode("menu");}
+  function updateSolo(dt){clock+=dt;timeLeft=Math.max(0,180-clock);if(timeLeft<=0){finish();return;}const now=performance.now(),self=me();
+    if(self?.alive){const m=movement();move(self,m.x,m.y,dt);self.angle=angle;if(fireHeld)combat.fireBasic(soloWorld,self,now);}
+    for(const p of players){if(!p.alive){if(now>=p.respawnAt){const [x,y]=spawn[Math.floor(rand(0,spawn.length))];p.x=x;p.y=y;p.hp=p.maxHp;p.ammo=3;p.shieldHits=0;p.alive=true;p.invulnUntil=now+3000;p.lastHurt=now;p.burnUntil=0;p.poisonUntil=0;p.slowUntil=0;p.rootUntil=0;visualEvent({type:"respawn",x,y,id:p.id},true);}continue;}
+      if(p.bot){const targets=players.filter(v=>v.id!==p.id&&v.alive).sort((a,b)=>d2(p.x,p.y,a.x,a.y)-d2(p.x,p.y,b.x,b.y)),target=targets[0];if(target){const d=Math.hypot(target.x-p.x,target.y-p.y),a=Math.atan2(target.y-p.y,target.x-p.x);p.angle=a;if(now>p.aiChange){p.aiDir=rand(-1,1);p.aiChange=now+rand(900,2700);}const forward=d>260?1:d<155?-.8:.12;move(p,Math.cos(a)*forward+Math.cos(a+Math.PI/2)*p.aiDir*.65,Math.sin(a)*forward+Math.sin(a+Math.PI/2)*p.aiDir*.65,dt);if(d<600&&Math.random()<dt*2.7)combat.fireBasic(soloWorld,p,now);if(d<190&&now>=p.skillReadyAt&&Math.random()<dt*.35)combat.useSkill(soloWorld,p,now);if(p.super>=100&&Math.random()<dt*.25)combat.useSuper(soloWorld,p,now,p.characterId==="jumper"?{x:target.x,y:target.y}:null);}}
+      if(p.ammo<3&&now-p.lastReload>=1600){p.ammo++;p.lastReload=now;}if(now-p.lastHurt>=5000&&p.hp<p.maxHp)p.hp=Math.min(p.maxHp,p.hp+5*dt);
     }
-    bullets=bullets.filter(b=>{b.x+=b.vx*dt;b.y+=b.vy*dt;b.life-=dt;if(b.life<=0||blocked(b.x,b.y,5)){particle(b.x,b.y,b.color,3,.5);return false;}for(const p of players)if(p.id!==b.owner&&p.alive&&d2(p.x,p.y,b.x,b.y)<24*24){hurt(p,b);return false;}return true;});
+    combat.tick(soloWorld,now);
+    bullets=bullets.filter(b=>{b.x+=b.vx*dt;b.y+=b.vy*dt;b.life-=dt;if(b.life<=0||blocked(b.x,b.y,Math.min(b.size,6))){particle(b.x,b.y,b.color,3,.5);return false;}for(const p of players)if(p.id!==b.owner&&p.alive&&d2(p.x,p.y,b.x,b.y)<(19+b.size)**2){if(soloDamage(p,b.damage,b.owner)&&b.status)combat.applyStatus(p,b.status,now,b.owner);return false;}return true;});
     if(clock>=nextChallenge&&!challenge){openMission();nextChallenge=clock+38;}
   }
-  function beginOnline(create){if(!accountProfile||!authToken){$("menuStatus").textContent="온라인 대전은 먼저 로그인해 주세요.";openAccount();return;}if(ws){closeSocket();}const code=$("roomInput").value.trim().toUpperCase();if(!create&&!/^[A-Z0-9]{4}$/.test(code)){$("menuStatus").textContent="방 코드 4자리를 입력해 주세요.";return;}if(location.protocol==="file:"){$("menuStatus").textContent="온라인 대전은 npm start로 서버를 실행한 뒤 접속해 주세요.";return;}$("menuStatus").textContent="서버에 연결 중...";let socket;try{socket=new WebSocket(`${location.protocol==="https:"?"wss":"ws"}://${location.host}`);}catch{$("menuStatus").textContent="서버에 연결할 수 없습니다.";return;}ws=socket;socket.onopen=()=>socket.send(JSON.stringify({type:create?"create":"join",token:authToken,code}));socket.onmessage=e=>{let m;try{m=JSON.parse(e.data);}catch{return;}handleMessage(m);};socket.onerror=()=>{$("menuStatus").textContent="서버에 연결할 수 없습니다. npm start를 확인해 주세요.";};socket.onclose=()=>{if(ws!==socket)return;ws=null;if(mode==="online"&&!endShown){mode="menu";show("lobbyOverlay",false);show("missionOverlay",false);show("menuOverlay",true);$("menuStatus").textContent="서버 연결이 끊어졌습니다.";}};}
+  async function beginOnline(create){const user=window.yungeonAuth?.auth?.currentUser;if(!user){$("menuStatus").textContent="온라인 대전은 먼저 Google로 로그인해 주세요.";openAccount();return;}const code=$("roomInput").value.trim().toUpperCase();if(!create&&!/^[A-Z0-9]{4}$/.test(code)){$("menuStatus").textContent="방 코드 4자리를 입력해 주세요.";return;}if(location.protocol==="file:"){$("menuStatus").textContent="온라인 대전은 npm start로 서버를 실행한 뒤 접속해 주세요.";return;}
+    $("menuStatus").textContent="서버에 연결 중...";try{authToken=await user.getIdToken();await loadProfile();if(!accountProfile)throw Error("로그인 프로필을 불러오지 못했습니다.");closeSocket();const socket=new WebSocket(`${location.protocol==="https:"?"wss":"ws"}://${location.host}`);ws=socket;socket.onopen=()=>socket.send(JSON.stringify({type:create?"create":"join",token:authToken,code,characterId:selectedCharacterId}));socket.onmessage=e=>{try{handleMessage(JSON.parse(e.data));}catch(error){console.error(error);}};socket.onerror=()=>{$("menuStatus").textContent="서버에 연결할 수 없습니다.";};socket.onclose=()=>{if(ws!==socket)return;ws=null;if(mode==="online"&&!endShown){mode="menu";sound.setMode("menu");show("lobbyOverlay",false);show("missionOverlay",false);show("menuOverlay",true);$("menuStatus").textContent="서버 연결이 끊어졌습니다.";}};}catch(error){$("menuStatus").textContent=error.message||"서버에 연결할 수 없습니다.";}}
   function closeSocket(){if(ws){const socket=ws;ws=null;socket.close();}}
-  function send(m){if(ws?.readyState===1)ws.send(JSON.stringify(m));}
-  function handleMessage(m){
-    if(m.type==="joined")lastEarned=null;
-    if(m.type==="result"){
-      lastEarned=m.earned;accountProfile=m.profile;renderAccount();loadGlobalBoard();
-      toast(`경기 기록 저장! +${m.earned} P · ${m.profile.tier}`);return;
-    }
-    handleBaseMessage(m);
+  function send(message){if(ws?.readyState===1)ws.send(JSON.stringify(message));}
+  function handleMessage(message){if(message.type==="error"){$("menuStatus").textContent=message.message;$("lobbyStatus").textContent=message.message;toast(message.message);return;}
+    if(message.type==="joined"){mode="online";onlineStatus="waiting";myId=message.id;roomCode=message.code;hostId=message.host;lastEarned=null;$("roomCode").textContent=message.code;show("menuOverlay",false);show("lobbyOverlay",true);return;}
+    if(message.type==="result"){lastEarned=message.earned;accountProfile=message.profile;renderAccount();loadGlobalBoard();toast(`경기 기록 저장! +${message.earned} P · ${message.profile.tier}`);return;}
+    if(message.type==="state"){const previous=onlineStatus;onlineStatus=message.status;roomCode=message.code;hostId=message.host;timeLeft=message.remaining;const existing=new Map(players.map(p=>[p.id,p]));players=message.players.map(p=>{const old=existing.get(p.id);return{...p,x:old?.x??p.x,y:old?.y??p.y,tx:p.x,ty:p.y};});bullets=message.bullets;fields=message.fields||[];for(const ev of message.events||[])visualEvent(ev,false);
+      if(message.status==="waiting"){show("lobbyOverlay",true);$("lobbyList").innerHTML=players.map(p=>`<span style="color:${p.color}">●</span> ${escapeHtml(p.name)} · ${escapeHtml(combat.getCharacter(p.characterId).name)} ${p.id===message.host?"👑":""}`).join("<br>");$("startBtn").disabled=myId!==message.host||players.length<2;$("lobbyStatus").textContent=players.length<2?"친구가 1명 이상 참가하면 시작할 수 있어요.":`${players.length}/4명 준비 완료`;}
+      if(message.status==="playing"){if(previous!=="playing"){clock=.001;lastAutoChallenge=performance.now()/1000+14;sound.setMode("battle");}show("lobbyOverlay",false);if(endShown){endShown=false;show("endOverlay",false);}}
+      if(message.status==="ended")finish();return;}
+    if(message.type==="challenge"){challenge={...message,answer:null};renderMission();return;}
+    if(message.type==="challengeResult"){challenge=null;show("missionOverlay",false);if(message.correct){sound.play("correct");sound.play("item");toast(`정답! ${rewardNames[message.reward]}`);}else{sound.play("wrong");toast(message.expired?"시간 초과!":"아쉬워요, 다음 문제에 도전!");}return;}
+    if(message.type==="abilityResult"&&!message.ok&&message.reason==="range")toast("점프 범위 밖이거나 장애물이 있습니다.");
   }
-  function handleBaseMessage(m){if(m.type==="error"){$("menuStatus").textContent=m.message;return;}if(m.type==="joined"){mode="online";onlineStatus="waiting";myId=m.id;roomCode=m.code;hostId=m.host;$("roomCode").textContent=m.code;show("menuOverlay",false);show("lobbyOverlay",true);return;}if(m.type==="state"){onlineStatus=m.status;roomCode=m.code;hostId=m.host;timeLeft=m.remaining;serverTarget=m.players;const existing=new Map(players.map(p=>[p.id,p]));players=m.players.map(v=>{const old=existing.get(v.id);return{...v,x:old?old.x:v.x,y:old?old.y:v.y,tx:v.x,ty:v.y};});bullets=m.bullets;for(const ev of m.events)onlineEvent(ev);if(m.status==="waiting"){show("lobbyOverlay",true);$("lobbyList").innerHTML=m.players.map(p=>`<span style="color:${p.color}">●</span> ${escapeHtml(p.name)} ${p.id===m.host?"👑":""}`).join("<br>");$("startBtn").disabled=myId!==m.host||m.players.length<2;$("lobbyStatus").textContent=m.players.length<2?"친구가 1명 이상 참가하면 시작할 수 있어요.":`${m.players.length}/4명 준비 완료`;}if(m.status==="playing"){show("lobbyOverlay",false);if(!clock){clock=.001;lastAutoChallenge=performance.now()/1000+14;}if(endShown){endShown=false;show("endOverlay",false);}}if(m.status==="ended")finish();return;}if(m.type==="challenge"){challenge={...m,answer:null};renderMission();return;}if(m.type==="challengeResult"){challenge=null;show("missionOverlay",false);toast(m.correct?`정답! ${rewardNames[m.reward]}`:(m.expired?"시간 초과!":"아쉬워요, 다음 문제에 도전!"));return;}}
-  function onlineEvent(ev){if(ev.type==="hit"){particle(ev.x,ev.y,"#ffe2a2",10);floating(ev.x,ev.y-25,ev.damage?`-${ev.damage}`:"실드!","#fff0b1");}if(ev.type==="ko")toast(`${ev.name} ⚡ ${ev.target} KO!`);if(ev.type==="reward")particle(ev.x,ev.y,"#e4abff",18);if(ev.type==="respawn")particle(ev.x,ev.y,"#9af5ff",22);}
-  function openMission(){if(challenge||mode==="menu"||endShown||onlineStatus!=="playing")return;if(mode==="online"){send({type:"challenge"});return;}if(clock<nextChallenge)return;const item=words[Math.floor(rand(0,words.length))];const options=[item[2]];while(options.length<4){const v=words[Math.floor(rand(0,words.length))][2];if(!options.includes(v))options.push(v);}options.sort(()=>Math.random()-.5);challenge={term:item[0],pronunciation:item[1],options,answer:options.indexOf(item[2]),until:performance.now()+14000};nextChallenge=clock+30;renderMission();}
-  function renderMission(){$("missionTerm").textContent=challenge.term;$("missionPron").textContent=challenge.pronunciation;$("choices").innerHTML="";challenge.options.forEach((option,index)=>{const b=document.createElement("button");b.className="choice";b.textContent=option;b.onclick=()=>answerMission(index);$("choices").appendChild(b);});show("missionOverlay",true);playWord();}
-  function slug(term){return term.toLowerCase().normalize("NFKD").replace(/[’'`]/g,"").replace(/\s+/g,"-");}
-  let activeUtterance=null;function playWord(){if(!challenge)return;if(!("speechSynthesis" in window)){toast("이 브라우저는 TTS를 지원하지 않아요");return;}window.speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(challenge.pronunciation);u.lang="ko-KR";u.rate=.85;u.pitch=1;const voices=window.speechSynthesis.getVoices();const ko=voices.find(v=>v.lang&&v.lang.toLowerCase().startsWith("ko"));if(ko)u.voice=ko;activeUtterance=u;window.speechSynthesis.speak(u);}
-  function answerMission(index){if(!challenge)return;if(mode==="online"){send({type:"answer",index});return;}const correct=index===challenge.answer;challenge=null;show("missionOverlay",false);if(correct){const me=getMe(),reward=["shield","heal","boost","super"][Math.floor(rand(0,4))];if(reward==="shield")me.shield=Math.min(70,me.shield+45);if(reward==="heal")me.hp=Math.min(100,me.hp+45);if(reward==="boost")me.boostUntil=clock+10;if(reward==="super")me.super=Math.min(100,me.super+60);particle(me.x,me.y,"#e6adff",20,1.4);toast(`정답! ${rewardNames[reward]}`);}else toast("아쉬워요! 다음 문제에 도전하세요");}
-  function updateHud(){const me=getMe(),sec=Math.ceil(timeLeft);$("clock").textContent=`${Math.floor(sec/60)}:${String(sec%60).padStart(2,"0")}`;$("hudMode").textContent=mode==="online"?"온라인 대전":"연습전";$("hudKo").textContent=`${me?.ko||0} KO`;$("pilotName").textContent=me?.name||"할루";$("hpText").textContent=`${Math.ceil(me?.hp||0)} / 100`;$("hpBar").style.width=`${me?.hp||0}%`;$("superText").textContent=`${Math.floor(me?.super||0)}%`;$("superBar").style.width=`${me?.super||0}%`;$("hudSuper").style.width=`${me?.super||0}%`;$("hudSuperText").textContent=`${Math.floor(me?.super||0)}%`;$("koText").textContent=me?.ko||0;[...$("ammo").children].forEach((el,i)=>el.classList.toggle("ready",i<(me?.ammo||0)));$("liveLabel").textContent=mode==="menu"?"대기 중":mode==="online"?"온라인 연결됨":"연습전 진행 중";$("leaderboard").innerHTML=[...players].sort((a,b)=>b.ko-a.ko||a.deaths-b.deaths).map((p,i)=>`<div class="leader"><span class="rank">${i+1}</span><span class="dot" style="background:${p.color}"></span><span class="name">${escapeHtml(p.name)}${p.id===myId?" (나)":""}</span><span class="kos">${p.ko} KO</span></div>`).join("");const remaining=mode==="solo"?Math.max(0,Math.ceil(nextChallenge-clock)):0;$("missionCooldown").textContent=challenge?"미션 진행 중":mode==="solo"&&remaining>0?`${remaining}초 후 다시 도전 가능`:"정답 보상 4종 중 랜덤 지급";$("missionBtn").disabled=mode==="menu"||onlineStatus!=="playing"||!!challenge||(mode==="solo"&&remaining>0);$("mobileSuper").disabled=!me||me.super<100;}
+  function useSkill(){if(endShown||onlineStatus!=="playing")return;const self=me();if(!self||!self.alive)return;if(mode==="online"){send({type:"skill"});return;}const result=combat.useSkill(soloWorld,self,performance.now());if(!result.ok&&result.reason==="cooldown")toast("스킬 재사용 대기 중입니다.");}
+  function useSuper(){if(endShown||onlineStatus!=="playing")return;const self=me();if(!self||!self.alive||self.super<100)return;if(self.characterId==="jumper"){jumpTargeting=!jumpTargeting;show("targetHint",jumpTargeting);if(jumpTargeting)toast("맵 절반 이내 착지점을 클릭하거나 터치하세요");return;}
+    if(mode==="online")send({type:"super",x:pointerPosition?.x,y:pointerPosition?.y});else{const result=combat.useSuper(soloWorld,self,performance.now(),pointerPosition);if(!result.ok)toast("필살기를 사용할 수 없습니다.");}
+  }
+  function jumpTo(point){const self=me();if(!self)return;const dist=Math.hypot(point.x-self.x,point.y-self.y);if(dist>525||dist<35||blocked(point.x,point.y,21)){toast("점프 범위 밖이거나 장애물이 있습니다.");return;}jumpTargeting=false;show("targetHint",false);if(mode==="online")send({type:"super",x:point.x,y:point.y});else combat.useSuper(soloWorld,self,performance.now(),point);}
+  function openMission(){if(challenge||mode==="menu"||endShown||onlineStatus!=="playing")return;if(mode==="online"){send({type:"challenge"});return;}if(clock<nextChallenge)return;const item=words[Math.floor(rand(0,words.length))],options=[item[2]];while(options.length<4){const value=words[Math.floor(rand(0,words.length))][2];if(!options.includes(value))options.push(value);}options.sort(()=>Math.random()-.5);challenge={term:item[0],pronunciation:item[1],options,answer:options.indexOf(item[2]),until:performance.now()+14000};nextChallenge=clock+30;renderMission();}
+  function renderMission(){$("missionTerm").textContent=challenge.term;$("missionPron").textContent=challenge.pronunciation;$("choices").innerHTML="";challenge.options.forEach((option,index)=>{const button=document.createElement("button");button.className="choice";button.textContent=option;button.onclick=()=>answerMission(index);$("choices").appendChild(button);});show("missionOverlay",true);playWord();}
+  let activeUtterance=null;function playWord(){if(!challenge)return;if(!("speechSynthesis" in window)){toast("이 브라우저는 TTS를 지원하지 않아요");return;}window.speechSynthesis.cancel();const utterance=new SpeechSynthesisUtterance(challenge.pronunciation);utterance.lang="ko-KR";utterance.rate=.85;utterance.pitch=1;const voice=window.speechSynthesis.getVoices().find(v=>v.lang&&v.lang.toLowerCase().startsWith("ko"));if(voice)utterance.voice=voice;activeUtterance=utterance;window.speechSynthesis.speak(utterance);}
+  function answerMission(index){if(!challenge)return;if(mode==="online"){send({type:"answer",index});return;}const correct=index===challenge.answer;challenge=null;show("missionOverlay",false);if(correct){sound.play("correct");const self=me(),reward=["shield","heal","boost","super"][Math.floor(rand(0,4))];if(reward==="shield")self.shieldHits=2;if(reward==="heal")self.hp=Math.min(self.maxHp,self.hp+45);if(reward==="boost")self.bonusDamageUntil=performance.now()+10000;if(reward==="super")self.super=Math.min(100,self.super+60);visualEvent({type:"reward",x:self.x,y:self.y,id:self.id,reward},true);toast(`정답! ${rewardNames[reward]}`);}else{sound.play("wrong");toast("아쉬워요! 다음 문제에 도전하세요");}}
+  function updateHud(){const self=me(),max=self?.maxHp||combat.getCharacter(selectedCharacterId).hp,sec=Math.max(0,Math.ceil(timeLeft));$("clock").textContent=`${Math.floor(sec/60)}:${String(sec%60).padStart(2,"0")}`;$("hudMode").textContent=mode==="online"?"온라인 대전":"연습전";$("hudKo").textContent=`${self?.ko||0} KO`;$("pilotName").textContent=self?.name||combat.getCharacter(selectedCharacterId).name;document.querySelector(".pilot-face").textContent=combat.getCharacter(self?.characterId||selectedCharacterId).icon;$("hpText").textContent=`${Math.ceil(self?.hp||0)} / ${max}`;$("hpBar").style.width=`${clamp((self?.hp||0)/max*100,0,100)}%`;for(const id of["superText","hudSuperText"])$(id).textContent=`${Math.floor(self?.super||0)}%`;for(const id of["superBar","hudSuper"])$(id).style.width=`${self?.super||0}%`;$("koText").textContent=self?.ko||0;[...$("ammo").children].forEach((el,i)=>el.classList.toggle("ready",i<(self?.ammo||0)));$("liveLabel").textContent=mode==="menu"?"대기 중":mode==="online"?"온라인 연결됨":"연습전 진행 중";$("leaderboard").innerHTML=[...players].sort((a,b)=>b.ko-a.ko||a.deaths-b.deaths).map((p,i)=>`<div class="leader"><span class="rank">${i+1}</span><span class="dot" style="background:${p.color}"></span><span class="name">${escapeHtml(p.name)} ${combat.getCharacter(p.characterId).icon}${p.id===myId?" (나)":""}</span><span class="kos">${p.ko} KO</span></div>`).join("");const remaining=mode==="solo"?Math.max(0,Math.ceil(nextChallenge-clock)):0;$("missionCooldown").textContent=challenge?"미션 진행 중":mode==="solo"&&remaining>0?`${remaining}초 후 다시 도전 가능`:"정답 보상 4종 중 랜덤 지급";$("missionBtn").disabled=mode==="menu"||onlineStatus!=="playing"||!!challenge||(mode==="solo"&&remaining>0);$("mobileSuper").disabled=!self||self.super<100;const cd=Math.max(0,Math.ceil(((self?.skillReadyAt||0)-nowGame())/1000)),skill=combat.getCharacter(self?.characterId||selectedCharacterId).skill;$("skillLabel").textContent=cd?`${skill.name} ${cd}초`:skill.name;$("skillButton").classList.toggle("ready",!!self&&!cd);$("mobileSkill").disabled=!self||cd>0;}
   function rect(x,y,w,h,color){ctx.fillStyle=color;ctx.fillRect(x,y,w,h);}function roundRect(x,y,w,h,r,color){ctx.fillStyle=color;ctx.beginPath();ctx.roundRect(x,y,w,h,r);ctx.fill();}function circle(x,y,r,color){ctx.fillStyle=color;ctx.beginPath();ctx.arc(x,y,r,0,TAU);ctx.fill();}
-  function drawMap(){rect(0,0,W,H,"#ed986c");for(let y=0;y<H;y+=30)for(let x=0;x<W;x+=30){rect(x,y,30,30,(Math.floor(x/30)+Math.floor(y/30))%2?"#ed986c":"#f6a377");if((x*17+y*23)%11===0)rect(x+4,y+5,3,3,"#ffc09555");}for(let i=0;i<45;i++){const x=(i*157+23)%W,y=(i*251+71)%H;circle(x,y,2,"#fff1bf44");}
+    function drawMap(){rect(0,0,W,H,"#ed986c");for(let y=0;y<H;y+=30)for(let x=0;x<W;x+=30){rect(x,y,30,30,(Math.floor(x/30)+Math.floor(y/30))%2?"#ed986c":"#f6a377");if((x*17+y*23)%11===0)rect(x+4,y+5,3,3,"#ffc09555");}for(let i=0;i<45;i++){const x=(i*157+23)%W,y=(i*251+71)%H;circle(x,y,2,"#fff1bf44");}
     for(const [x,y,w,h] of waters){roundRect(x+5,y+7,w,h,9,"#995d4a");roundRect(x,y,w,h,8,"#8ee0f5");const g=ctx.createLinearGradient(x,y,x+w,y+h);g.addColorStop(0,"#35b3e5");g.addColorStop(1,"#198cc8");roundRect(x+4,y+4,w-8,h-8,5,g);ctx.strokeStyle="#ffffff38";ctx.lineWidth=2;for(let yy=y+26;yy<y+h;yy+=42){ctx.beginPath();ctx.moveTo(x+12,yy);ctx.quadraticCurveTo(x+w*.45,yy-6,x+w-14,yy);ctx.stroke();}}
     for(const [x,y,w,h] of bushes)drawBush(x,y,w,h);
     // central stone arena
@@ -165,34 +430,38 @@ window.yungeonAuth={auth:getAuth(firebaseApp),provider:new GoogleAuthProvider(),
   }
   function drawBush(x,y,w,h){roundRect(x+2,y+8,w,h,4,"#8c4a69");rect(x,y,w,h,"#b668ab");for(let yy=y;yy<y+h;yy+=19)for(let xx=x;xx<x+w;xx+=17){ctx.fillStyle=((xx+yy)%3)?"#cf81bd":"#a6549d";ctx.beginPath();ctx.moveTo(xx,yy+19);ctx.lineTo(xx+8.5,yy);ctx.lineTo(xx+17,yy+19);ctx.fill();}rect(x,y+h-4,w,4,"#754466");}
   function drawWall(x,y,w,h){roundRect(x+3,y+9,w,h,3,"#955a36");const tile=30;for(let xx=x;xx<x+w;xx+=tile)for(let yy=y;yy<y+h;yy+=tile){const tw=Math.min(tile,w-(xx-x)),th=Math.min(tile,h-(yy-y));rect(xx,yy,tw,th,"#104e56");rect(xx+2,yy+2,tw-4,th-5,"#1ec4a5");rect(xx+5,yy+5,tw-10,Math.max(4,th-12),"#158e83");rect(xx+8,yy+6,Math.max(3,tw-16),3,"#63e4c4");rect(xx+3,yy+th-10,tw-6,7,"#ad622c");rect(xx+9,yy+th-8,Math.max(2,tw-18),4,"#d28a3c");}}
-  function drawPlayer(p){if(!p.alive)return;const x=p.x,y=p.y;ctx.save();ctx.translate(x,y);const bush=bushes.some(([bx,by,bw,bh])=>x>bx&&x<bx+bw&&y>by&&y<by+bh);if(bush&&p.id!==myId)ctx.globalAlpha=.54;circle(3,13,21,"#22274366");if(p.shield>0){ctx.strokeStyle="#92e8ffb9";ctx.lineWidth=4;ctx.beginPath();ctx.arc(0,0,27,0,TAU);ctx.stroke();}if(p.boost||p.boostUntil>clock){ctx.strokeStyle="#ffe57b";ctx.lineWidth=3;ctx.beginPath();ctx.arc(0,0,30,0,TAU);ctx.stroke();}ctx.rotate(p.angle+Math.PI/2);roundRect(-7,-31,14,21,4,"#26374d");roundRect(-5,-33,10,18,3,"#fff4ae");const body=ctx.createLinearGradient(-20,-20,19,20);body.addColorStop(0,"#ffffff");body.addColorStop(.17,p.color);body.addColorStop(1,"#344b72");circle(0,0,21,"#223451");circle(0,-3,19,body);roundRect(-12,-11,24,17,7,"#253956");circle(-5,-4,3.5,"#fff");circle(5,-4,3.5,"#fff");circle(-5,-4,1.4,"#192340");circle(5,-4,1.4,"#192340");roundRect(-7,11,14,5,3,"#ffffff77");ctx.restore();ctx.save();ctx.font="900 12px Nunito, sans-serif";ctx.textAlign="center";ctx.lineWidth=3;ctx.strokeStyle="#172037";ctx.strokeText(p.name,x,y-43);ctx.fillStyle="#fff";ctx.fillText(p.name,x,y-43);roundRect(x-23,y-38,46,6,3,"#26394a");roundRect(x-23,y-38,46*clamp(p.hp/100,0,1),6,3,p.id===myId?"#7ef9be":"#ff6e85");if(p.shield)roundRect(x-23,y-40,46*clamp(p.shield/70,0,1),2,1,"#90efff");ctx.restore();}
-  function drawBullet(b){ctx.save();ctx.shadowColor=b.color;ctx.shadowBlur=b.super?22:13;circle(b.x,b.y,b.super?10:7,b.color);circle(b.x-2,b.y-2,b.super?5:3,"#fff8d8");ctx.restore();}
+
+  function drawPlayer(p){if(!p.alive)return;const c=combat.getCharacter(p.characterId),now=nowGame();let x=p.x,y=p.y;if(p.jump){const t=clamp((now-p.jump.startAt)/(p.jump.landAt-p.jump.startAt),0,1);x=p.jump.fromX+(p.jump.toX-p.jump.fromX)*t;y=p.jump.fromY+(p.jump.toY-p.jump.fromY)*t;circle(p.jump.toX,p.jump.toY,120,"#ffe58826");ctx.strokeStyle="#ffe588ae";ctx.lineWidth=4;ctx.beginPath();ctx.arc(p.jump.toX,p.jump.toY,120,0,TAU);ctx.stroke();y-=Math.sin(t*Math.PI)*95;}
+    ctx.save();ctx.translate(x,y);const bush=bushes.some(([bx,by,bw,bh])=>x>bx&&x<bx+bw&&y>by&&y<by+bh);if(bush&&p.id!==myId)ctx.globalAlpha=.58;if(p.stealthUntil>now&&p.id!==myId)ctx.globalAlpha=.3;circle(3,14,22,"#1b284a77");if(p.shieldHits>0){ctx.strokeStyle="#a8f5ff";ctx.lineWidth=4;ctx.beginPath();ctx.arc(0,0,28,0,TAU*p.shieldHits/2);ctx.stroke();}if(p.invulnUntil>now){ctx.strokeStyle="#fff4a7";ctx.lineWidth=3;ctx.beginPath();ctx.arc(0,0,33,0,TAU);ctx.stroke();}if(p.bonusDamageUntil>now){ctx.strokeStyle="#ffd571";ctx.lineWidth=3;ctx.beginPath();ctx.arc(0,0,36,0,TAU);ctx.stroke();}
+    ctx.rotate(p.angle+Math.PI/2);roundRect(-7,-33,14,22,4,"#26374d");roundRect(-5,-35,10,18,3,"#fff4ae");const body=ctx.createLinearGradient(-20,-20,19,20);body.addColorStop(0,"#fff");body.addColorStop(.24,c.color);body.addColorStop(1,"#344b72");circle(0,0,c.id==="gear"?25:22,"#223451");circle(0,-3,c.id==="gear"?22:19,body);ctx.rotate(-p.angle-Math.PI/2);ctx.font=c.id==="gear"?"23px sans-serif":"20px sans-serif";ctx.textAlign="center";ctx.fillText(c.icon,0,5);ctx.restore();ctx.save();ctx.font="900 12px Nunito, sans-serif";ctx.textAlign="center";ctx.lineWidth=3;ctx.strokeStyle="#172037";ctx.strokeText(p.name,x,y-47);ctx.fillStyle="#fff";ctx.fillText(p.name,x,y-47);roundRect(x-25,y-40,50,7,3,"#26394a");roundRect(x-25,y-40,50*clamp(p.hp/(p.maxHp||c.hp),0,1),7,3,p.id===myId?"#7ef9be":"#ff6e85");ctx.restore();}
+  function drawBullet(b){ctx.save();ctx.shadowColor=b.color;ctx.shadowBlur=b.superShot?22:13;circle(b.x,b.y,b.size||7,b.color);circle(b.x-2,b.y-2,(b.size||7)*.43,"#fff8d8");ctx.restore();}
   function drawEffects(dt){for(const e of effects){e.life-=dt;e.x+=e.vx*dt;e.y+=e.vy*dt;e.vy+=e.text?0:230*dt;if(e.life<=0)continue;ctx.save();ctx.globalAlpha=clamp(e.life/e.max,0,1);if(e.text){ctx.font="900 19px Nunito, sans-serif";ctx.textAlign="center";ctx.lineWidth=4;ctx.strokeStyle="#17263d";ctx.strokeText(e.text,e.x,e.y);ctx.fillStyle=e.color;ctx.fillText(e.text,e.x,e.y);}else circle(e.x,e.y,e.size,e.color);ctx.restore();}effects=effects.filter(e=>e.life>0);}
-  function draw(dt){ctx.clearRect(0,0,W,H);drawMap();for(const b of bullets)drawBullet(b);for(const p of players)drawPlayer(p);drawEffects(dt);if(mode==="menu"){ctx.fillStyle="#24355954";ctx.fillRect(0,0,W,H);}if(mode!=="menu"&&getMe()&&!getMe().alive){ctx.fillStyle="#0f1b3a9c";ctx.fillRect(0,0,W,H);ctx.textAlign="center";ctx.font="900 44px Nunito, sans-serif";ctx.fillStyle="#fff";ctx.fillText("잠시 후 부활!",W/2,H/2);}}
-  function loop(now){const dt=Math.min((now-last)/1000,.05);last=now;frame++;if(mode==="solo"&&!endShown)updateSolo(dt);if(mode==="online"&&onlineStatus==="playing"&&!endShown){clock+=dt;for(const p of players){p.x+=(p.tx-p.x)*Math.min(1,dt*13);p.y+=(p.ty-p.y)*Math.min(1,dt*13);}if(frame%3===0){const m=movement();send({type:"input",x:m.x,y:m.y,angle,fire:fireHeld,super:superHeld});superHeld=false;}if(now/1000>=lastAutoChallenge&&!challenge){send({type:"challenge"});lastAutoChallenge=now/1000+38;}}
-    if(challenge){const remain=Math.max(0,Math.ceil(((mode==="online"?challenge.until-Date.now():challenge.until-performance.now()))/1000));$("missionTime").textContent=`남은 시간 ${remain}초`;if(remain<=0&&mode==="solo"){challenge=null;show("missionOverlay",false);toast("시간 초과! 다음 미션에 도전하세요");}}
-    draw(dt);if(frame%6===0)updateHud();requestAnimationFrame(loop);}
+  function draw(dt){ctx.clearRect(0,0,W,H);drawMap();for(const field of fields){ctx.fillStyle=`${field.color||"#a4e9c2"}35`;ctx.beginPath();ctx.arc(field.x,field.y,field.radius,0,TAU);ctx.fill();ctx.strokeStyle=field.color||"#a4e9c2";ctx.lineWidth=3;ctx.stroke();}for(const b of bullets)drawBullet(b);for(const p of players)drawPlayer(p);drawEffects(dt);
+    if(jumpTargeting&&me()){const self=me();ctx.strokeStyle="#ffdd6f9c";ctx.lineWidth=4;ctx.setLineDash([12,9]);ctx.beginPath();ctx.arc(self.x,self.y,525,0,TAU);ctx.stroke();if(pointerPosition){const okay=Math.hypot(pointerPosition.x-self.x,pointerPosition.y-self.y)<=525&&!blocked(pointerPosition.x,pointerPosition.y,21);ctx.strokeStyle=okay?"#a5f5b8":"#ff7c80";ctx.beginPath();ctx.arc(pointerPosition.x,pointerPosition.y,120,0,TAU);ctx.stroke();}ctx.setLineDash([]);}
+    if(mode==="menu"){ctx.fillStyle="#24355954";ctx.fillRect(0,0,W,H);}if(mode!=="menu"&&me()&&!me().alive){ctx.fillStyle="#0f1b3a9c";ctx.fillRect(0,0,W,H);ctx.textAlign="center";ctx.font="900 40px Nunito, sans-serif";ctx.fillStyle="#fff";ctx.fillText("잠시 후 부활!",W/2,H/2);ctx.font="900 24px Nunito, sans-serif";ctx.fillText(`${Math.max(0,Math.ceil((me().respawnAt-nowGame())/1000))}초`,W/2,H/2+38);}}
+  function loop(now){const dt=Math.min((now-last)/1000,.05);last=now;frame++;if(mode==="solo"&&!endShown)updateSolo(dt);if(mode==="online"&&onlineStatus==="playing"&&!endShown){clock+=dt;for(const p of players){p.x+=(p.tx-p.x)*Math.min(1,dt*13);p.y+=(p.ty-p.y)*Math.min(1,dt*13);}if(frame%2===0){const m=movement();send({type:"input",x:m.x,y:m.y,angle,fire:fireHeld});}if(now/1000>=lastAutoChallenge&&!challenge){send({type:"challenge"});lastAutoChallenge=now/1000+38;}}
+    if(challenge){const remain=Math.max(0,Math.ceil((challenge.until-nowGame())/1000));$("missionTime").textContent=`남은 시간 ${remain}초`;if(remain<=0&&mode==="solo"){challenge=null;show("missionOverlay",false);sound.play("wrong");toast("시간 초과! 다음 미션에 도전하세요");}}
+    draw(dt);if(frame%5===0)updateHud();requestAnimationFrame(loop);}
   function movement(){return{x:clamp((keys.has("d")||keys.has("arrowright")?1:0)-(keys.has("a")||keys.has("arrowleft")?1:0)+moveTouch.x,-1,1),y:clamp((keys.has("s")||keys.has("arrowdown")?1:0)-(keys.has("w")||keys.has("arrowup")?1:0)+moveTouch.y,-1,1)};}
-  function aimAt(e){const r=canvas.getBoundingClientRect(),x=(e.clientX-r.left)*W/r.width,y=(e.clientY-r.top)*H/r.height,me=getMe();if(me)angle=Math.atan2(y-me.y,x-me.x);}
-  canvas.addEventListener("pointermove",e=>{if(e.pointerType==="mouse")aimAt(e);});canvas.addEventListener("pointerdown",e=>{if(e.pointerType==="mouse"&&e.button===0){aimAt(e);fireHeld=true;}});window.addEventListener("pointerup",e=>{if(e.pointerType==="mouse")fireHeld=false;});canvas.addEventListener("contextmenu",e=>e.preventDefault());
-  window.addEventListener("keydown",e=>{const k=e.key.toLowerCase();if([" ","arrowup","arrowdown","arrowleft","arrowright"].includes(k))e.preventDefault();if(e.target instanceof HTMLInputElement)return;keys.add(k);if(k===" ")superHeld=true;if(k==="q")openMission();});window.addEventListener("keyup",e=>keys.delete(e.key.toLowerCase()));window.addEventListener("blur",()=>{keys.clear();fireHeld=false;moveTouch={x:0,y:0};aimTouch=null;});
+  function pointFromEvent(e){const r=canvas.getBoundingClientRect();return{x:(e.clientX-r.left)*W/r.width,y:(e.clientY-r.top)*H/r.height};}
+  canvas.addEventListener("pointermove",e=>{pointerPosition=pointFromEvent(e);if(e.pointerType==="mouse"&&!jumpTargeting&&me())angle=Math.atan2(pointerPosition.y-me().y,pointerPosition.x-me().x);});
+  canvas.addEventListener("pointerdown",e=>{if(e.pointerType==="mouse"&&e.button!==0)return;pointerPosition=pointFromEvent(e);if(jumpTargeting){jumpTo(pointerPosition);return;}if(e.pointerType==="mouse"){if(me())angle=Math.atan2(pointerPosition.y-me().y,pointerPosition.x-me().x);fireHeld=true;}});
+  window.addEventListener("pointerup",e=>{if(e.pointerType==="mouse")fireHeld=false;});canvas.addEventListener("contextmenu",e=>e.preventDefault());
+  window.addEventListener("keydown",e=>{const key=e.key.toLowerCase();if([" ","arrowup","arrowdown","arrowleft","arrowright"].includes(key))e.preventDefault();if(e.target instanceof HTMLInputElement)return;keys.add(key);if(key===" "&&!e.repeat)useSuper();if(key==="e"&&!e.repeat)useSkill();if(key==="q"&&!e.repeat)openMission();if(key==="escape"&&jumpTargeting){jumpTargeting=false;show("targetHint",false);}});window.addEventListener("keyup",e=>keys.delete(e.key.toLowerCase()));window.addEventListener("blur",()=>{keys.clear();fireHeld=false;moveTouch={x:0,y:0};});
   function setupStick(id,onChange){const el=$(id),knob=el.querySelector(".knob");let pointer=null;const end=e=>{if(pointer!==e.pointerId)return;pointer=null;knob.style.left="50%";knob.style.top="50%";onChange(0,0,false);};el.addEventListener("pointerdown",e=>{pointer=e.pointerId;el.setPointerCapture(pointer);update(e);});el.addEventListener("pointermove",e=>{if(pointer===e.pointerId)update(e);});el.addEventListener("pointerup",end);el.addEventListener("pointercancel",end);function update(e){const r=el.getBoundingClientRect(),dx=e.clientX-(r.left+r.width/2),dy=e.clientY-(r.top+r.height/2),max=r.width*.35,len=Math.hypot(dx,dy)||1,scale=Math.min(1,max/len),x=dx*scale,y=dy*scale;knob.style.left=`calc(50% + ${x}px)`;knob.style.top=`calc(50% + ${y}px)`;onChange(clamp(x/max,-1,1),clamp(y/max,-1,1),true);}}
-  setupStick("moveStick",(x,y)=>{moveTouch={x,y};});setupStick("aimStick",(x,y,active)=>{aimTouch=active?{x,y}:null;fireHeld=active;if(active&&Math.hypot(x,y)>.18)angle=Math.atan2(y,x);});
-  $("soloBtn").onclick=beginSolo;$("createBtn").onclick=()=>beginOnline(true);$("joinBtn").onclick=()=>beginOnline(false);$("roomInput").addEventListener("input",e=>e.target.value=e.target.value.toUpperCase().replace(/[^A-Z0-9]/g,""));$("startBtn").onclick=()=>send({type:"start"});$("copyBtn").onclick=()=>{navigator.clipboard?.writeText(roomCode).then(()=>toast("방 코드를 복사했어요"));};$("leaveBtn").onclick=()=>{closeSocket();mode="menu";players=[];show("lobbyOverlay",false);show("menuOverlay",true);};$("missionBtn").onclick=openMission;$("mobileMission").onclick=openMission;$("listenBtn").onclick=playWord;$("mobileSuper").onclick=()=>{superHeld=true;};$("againBtn").onclick=()=>{closeSocket();mode="menu";onlineStatus="";players=[];clock=0;show("endOverlay",false);show("menuOverlay",true);};
-  $("accountOpenBtn").onclick=openAccount;$("sideAccountBtn").onclick=openAccount;$("accountCloseBtn").onclick=()=>show("accountOverlay",false);
-  $("googleLoginBtn").onclick=googleLogin;
-  $("logoutBtn").onclick=async()=>{if(window.yungeonAuth)await window.yungeonAuth.signOut(window.yungeonAuth.auth);setToken("");accountProfile=null;renderAccount();$("accountStatus").textContent="로그아웃했습니다.";if(mode==="online"){closeSocket();mode="menu";onlineStatus="";players=[];show("lobbyOverlay",false);show("endOverlay",false);show("menuOverlay",true);}};
-  renderAccount();
-  const waitAuth=setInterval(()=>{if(window.yungeonAuth){clearInterval(waitAuth);window.yungeonAuth.onAuthStateChanged(window.yungeonAuth.auth,async u=>{if(u)await loadProfile();else{setToken("");accountProfile=null;renderAccount();}});}},50);
-  loadGlobalBoard();updateHud();requestAnimationFrame(loop);
+  setupStick("moveStick",(x,y)=>{moveTouch={x,y};});setupStick("aimStick",(x,y,active)=>{fireHeld=active;if(active&&Math.hypot(x,y)>.18)angle=Math.atan2(y,x);});
+  $("soloBtn").onclick=beginSolo;$("createBtn").onclick=()=>beginOnline(true);$("joinBtn").onclick=()=>beginOnline(false);$("roomInput").addEventListener("input",e=>e.target.value=e.target.value.toUpperCase().replace(/[^A-Z0-9]/g,""));$("startBtn").onclick=()=>send({type:"start"});$("copyBtn").onclick=()=>navigator.clipboard?.writeText(roomCode).then(()=>toast("방 코드를 복사했어요"));$("leaveBtn").onclick=()=>{closeSocket();mode="menu";players=[];sound.setMode("menu");show("lobbyOverlay",false);show("menuOverlay",true);};
+  $("missionBtn").onclick=openMission;$("mobileMission").onclick=openMission;$("listenBtn").onclick=playWord;$("skillButton").onclick=useSkill;$("mobileSkill").onclick=useSkill;$("mobileSuper").onclick=useSuper;$("againBtn").onclick=()=>{closeSocket();mode="menu";onlineStatus="";players=[];clock=0;fields=[];sound.setMode("menu");show("endOverlay",false);show("menuOverlay",true);};
+  $("characterOpenBtn").onclick=()=>{renderCharacterSelect();show("characterOverlay",true);};$("characterCloseBtn").onclick=()=>show("characterOverlay",false);
+  $("accountOpenBtn").onclick=openAccount;$("sideAccountBtn").onclick=openAccount;$("accountCloseBtn").onclick=()=>show("accountOverlay",false);$("googleLoginBtn").onclick=googleLogin;
+  $("logoutBtn").onclick=async()=>{if(window.yungeonAuth)await window.yungeonAuth.signOut(window.yungeonAuth.auth);authToken="";accountProfile=null;renderAccount();$("accountStatus").textContent="로그아웃했습니다.";if(mode==="online"){closeSocket();mode="menu";onlineStatus="";players=[];sound.setMode("menu");show("lobbyOverlay",false);show("endOverlay",false);show("menuOverlay",true);}};
+  function renderAudio(){const muted=sound.muted;$("muteButton").textContent=muted?"🔇 음소거":"🔊 소리 켜짐";$("muteButton").setAttribute("aria-pressed",String(muted));$("bgmVolume").value=Math.round(sound.bgmVolume*100);$("sfxVolume").value=Math.round(sound.sfxVolume*100);$("bgmValue").textContent=$("bgmVolume").value;$("sfxValue").textContent=$("sfxVolume").value;}
+  $("muteButton").onclick=()=>{sound.unlock();sound.setMuted(!sound.muted);renderAudio();};$("audioToggle").onclick=()=>$("audioPanel").classList.toggle("collapsed");$("bgmVolume").oninput=e=>{sound.unlock();sound.setBgmVolume(e.target.value/100);renderAudio();};$("sfxVolume").oninput=e=>{sound.unlock();sound.setSfxVolume(e.target.value/100);renderAudio();};
+  window.addEventListener("pointerdown",()=>sound.unlock(),{once:true});window.addEventListener("keydown",()=>sound.unlock(),{once:true});
+  renderCharacterSelect();renderAccount();renderAudio();sound.setMode("menu");const waitAuth=setInterval(()=>{if(window.yungeonAuth){clearInterval(waitAuth);window.yungeonAuth.onAuthStateChanged(window.yungeonAuth.auth,async user=>{if(user)await loadProfile();else{authToken="";accountProfile=null;renderAccount();}});}},50);loadGlobalBoard();updateHud();requestAnimationFrame(loop);
 })();
+
 </script>
+<!-- YUNGEON_BUNDLE_END -->
 </body>
 </html>
-
-
-
-
-
-
-

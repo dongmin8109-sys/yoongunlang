@@ -5,11 +5,12 @@
   "description": "윤건언어 아레나 2~4인 실시간 대전",
   "scripts": {
     "start": "node server.js",
+    "test:combat": "node test-combat.js",
     "test:online": "node test-online.js",
+    "build:html": "node build-html.js",
     "sync:words": "node sync-words.js"
   },
   "dependencies": {
-    "ws": "^8.18.0",
-    "firebase-admin": "^13.4.0"
+    "ws": "^8.18.0"
   }
 }
