@@ -6,6 +6,7 @@
   "scripts": {
     "start": "node server.js",
     "test:combat": "node test-combat.js",
+    "test:maps": "node test-maps.js",
     "test:online": "node test-online.js",
     "build:html": "node build-html.js",
     "sync:words": "node sync-words.js"

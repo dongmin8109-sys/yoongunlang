@@ -3,7 +3,7 @@
 const fs=require("node:fs");
 const path=require("node:path");
 const gamePath=path.join(__dirname,"game.html");
-const files=["characters.js","combat-rules.js","sound.js","game-client.js"];
+const files=["characters.js","combat-rules.js","maps.js","sound.js","game-client.js"];
 const start="<!-- YUNGEON_BUNDLE_START -->";
 const end="<!-- YUNGEON_BUNDLE_END -->";
 let html=fs.readFileSync(gamePath,"utf8");
