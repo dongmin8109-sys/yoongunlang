@@ -184,12 +184,13 @@ async function api(req,res,pathname){
   }
   json(res,404,{error:"찾을 수 없습니다."});
 }
-const served=new Set(["game.html","index.html","dictionary.html","characters.js","combat-rules.js","maps.js","sound.js","game-client.js","assets/characters/roster-atlas.png"]);
+const served=new Set(["game.html","index.html","dictionary.html","characters.js","combat-rules.js","maps.js","sound.js","game-client.js"]);
 const server=http.createServer((req,res)=>{
   let pathname;try{pathname=decodeURIComponent(new URL(req.url,"http://localhost").pathname);}catch{res.writeHead(400);res.end("Bad request");return;}
   if(pathname.startsWith("/api/")){api(req,res,pathname).catch(()=>json(res,500,{error:"서버 오류"}));return;}
   const requested=pathname==="/"?"game.html":pathname.replace(/^\//,"");
-  if(!served.has(requested)){res.writeHead(404);res.end("Not found");return;}
+  const isCharacterAsset=/^assets\/characters\/[a-z0-9_-]+\.png$/i.test(requested);
+  if(!served.has(requested)&&!isCharacterAsset){res.writeHead(404);res.end("Not found");return;}
   const target=path.join(ROOT,requested);
   fs.stat(target,(error,stat)=>{
     if(error||!stat.isFile()){res.writeHead(404);res.end("Not found");return;}
