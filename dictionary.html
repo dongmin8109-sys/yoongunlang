@@ -151,19 +151,30 @@
         return;
       }
 
-      window.speechSynthesis.cancel();
-
+      const synth = window.speechSynthesis;
+      synth.cancel();
       const utterance = new SpeechSynthesisUtterance(pronunciation);
       utterance.lang = 'ko-KR';
       utterance.rate = 0.85;
       utterance.pitch = 1;
 
-      const voices = window.speechSynthesis.getVoices();
-      const koreanVoice = voices.find(v => v.lang && v.lang.toLowerCase().startsWith('ko'));
+      const voices = synth.getVoices();
+      const koreanVoice = voices.find(v => v.name === 'Google 한국의') ||
+        voices.find(v => v.lang === 'ko-KR' && /Google/i.test(v.name)) ||
+        voices.find(v => v.lang === 'ko-KR');
       if (koreanVoice) utterance.voice = koreanVoice;
 
+      utterance.onerror = e => {
+        if (e.error !== 'interrupted' && e.error !== 'canceled') {
+          console.error('윤건언어 TTS 오류:', e.error);
+        }
+      };
       currentUtterance = utterance;
-      window.speechSynthesis.speak(utterance);
+      setTimeout(() => {
+        if (currentUtterance !== utterance) return;
+        synth.speak(utterance);
+        if (synth.paused) synth.resume();
+      }, 1000);
     }
 
     function render() {
@@ -201,9 +212,5 @@
     });
     render();
 </script>
-</body>
-</html>
-
-
 </body>
 </html>
