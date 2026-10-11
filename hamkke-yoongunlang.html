@@ -72,12 +72,13 @@
 "use strict";
 const $=id=>document.getElementById(id);
 const offline=location.protocol==="file:";
+ const API_BASE="https://api.yoongunlang.site";
 const state={role:null,suggestions:[],news:[],editing:null};
 if(offline)$("api-notice").hidden=false;
 const esc=value=>String(value==null?"":value).replace(/[&<>"']/g,ch=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[ch]));
 const shortDate=stamp=>{const d=new Date(typeof stamp==="string" && !/^\d+$/.test(stamp)?stamp:Number(stamp));return Number.isNaN(d.getTime())?"날짜 미상":new Intl.DateTimeFormat("ko-KR",{month:"long",day:"numeric"}).format(d)};
 function err(id,message){$(id).textContent=message||"";$(id).hidden=!message}
-async function api(path,options){if(offline)throw Error("저장과 관리자 기능은 서버 API가 연결된 사이트에서 사용할 수 있습니다.");const response=await fetch(path,Object.assign({cache:"no-store",credentials:"same-origin"},options||{})).catch(()=>{throw Error("서버에 연결할 수 없습니다. 이 페이지를 API 서버와 같은 도메인에서 열었는지 확인해 주세요.")});const data=await response.json().catch(()=>({}));if(!response.ok)throw Error(data.error||("서버 요청 실패 ("+response.status+"). 잠시 후 다시 시도해 주세요."));return data}
+async function api(path,options){if(offline)throw Error("저장과 관리자 기능은 서버 API가 연결된 사이트에서 사용할 수 있습니다.");const response=await fetch(API_BASE+path,Object.assign({cache:"no-store",credentials:"include"},options||{})).catch(()=>{throw Error("서버에 연결할 수 없습니다. api.yoongunlang.site 연결 상태를 확인해 주세요.")});const data=await response.json().catch(()=>({}));if(!response.ok)throw Error(data.error||("서버 요청 실패 ("+response.status+"). 잠시 후 다시 시도해 주세요."));return data}
 function payload(method,body){return {method,headers:{"Content-Type":"application/json"},body:JSON.stringify(body)}}
 function route(){const admin=location.hash==="#admin";$("home-view").hidden=admin;$("admin-view").hidden=!admin;if(admin)checkLogin();else if(location.hash==="#home")window.scrollTo({top:0,behavior:"smooth"})}
 window.addEventListener("hashchange",route);
