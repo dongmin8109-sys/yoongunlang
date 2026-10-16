@@ -1,0 +1,20 @@
+{
+  "version": "7",
+  "dialect": "sqlite",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "6",
+      "when": 1791617900442,
+      "tag": "0000_woozy_bloodaxe",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "6",
+      "when": 1792064542565,
+      "tag": "0001_content_features",
+      "breakpoints": true
+    }
+  ]
+}
